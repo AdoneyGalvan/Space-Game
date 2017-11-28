@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1511829630">
+  <File Type="PWROPT-DCP" Name="SPACE_GAME_pwropt.dcp"/>
+  <File Type="ROUTE-PWR" Name="SPACE_GAME_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="SPACE_GAME.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="SPACE_GAME_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="SPACE_GAME_reports.tcl"/>
+  <File Type="BG-DRC" Name="SPACE_GAME.drc"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="SPACE_GAME_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="SPACE_GAME_timing_summary_init.rpt"/>
+  <File Type="OPT-HWDEF" Name="SPACE_GAME.hwdef"/>
+  <File Type="OPT-DCP" Name="SPACE_GAME_opt.dcp"/>
+  <File Type="OPT-DRC" Name="SPACE_GAME_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="SPACE_GAME_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="SPACE_GAME_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="SPACE_GAME_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="SPACE_GAME_placed.dcp"/>
+  <File Type="PLACE-IO" Name="SPACE_GAME_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="SPACE_GAME_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="SPACE_GAME_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="SPACE_GAME_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="SPACE_GAME_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="SPACE_GAME_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="SPACE_GAME_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="SPACE_GAME_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="SPACE_GAME_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="SPACE_GAME_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="SPACE_GAME_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="SPACE_GAME_drc_physopted.rpt"/>
+  <File Type="BG-BIT" Name="SPACE_GAME.bit"/>
+  <File Type="PHYSOPT-TIMING" Name="SPACE_GAME_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="SPACE_GAME_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="SPACE_GAME_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="SPACE_GAME_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="SPACE_GAME_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="SPACE_GAME_drc_routed.pb"/>
+  <File Type="BITSTR-MSK" Name="SPACE_GAME.msk"/>
+  <File Type="ROUTE-DRC-RPX" Name="SPACE_GAME_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="SPACE_GAME.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="SPACE_GAME_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-RBT" Name="SPACE_GAME.rbt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="SPACE_GAME_methodology_drc_routed.rpx"/>
+  <File Type="BG-BIN" Name="SPACE_GAME.bin"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="SPACE_GAME_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="SPACE_GAME_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="SPACE_GAME_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="SPACE_GAME_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="SPACE_GAME_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="SPACE_GAME_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="SPACE_GAME_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="SPACE_GAME_incremental_reuse_routed.rpt"/>
+  <File Type="RDI-RDI" Name="SPACE_GAME.vdi"/>
+  <File Type="ROUTE-CLK" Name="SPACE_GAME_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="SPACE_GAME_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="SPACE_GAME_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="SPACE_GAME_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="SPACE_GAME_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="SPACE_GAME_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="SPACE_GAME.nky"/>
+  <File Type="BITSTR-BMM" Name="SPACE_GAME_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="SPACE_GAME.mmi"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="SPACE_GAME.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="SPACE_GAME.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/Text/Text.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/COLLSION_DETECT.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/COLOR_DECODER.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/GAME_STATE.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/HOR_COUNTER.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/HOR_SYNC.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/OBJECT.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/PIXEL_CLOCK.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/PRIORITY_MUX.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/PS2_DECODER.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/PS_INTERFACE.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SLOW_CLOCK.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/TEST_BLUE.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/TIMER_25.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/VER_COUNTER.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/VER_SYNC.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SPACE_GAME.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MOVE_COUNTER.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/TEST_DIS_MUX.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SPI_CLK.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SPI_INTERFACE.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SLAVE_SELECT.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/TIMER_15.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/TEST_STATE.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/VGA_SYNC.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Desktop/text.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Color.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SPACE_SHIP.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/TextV2.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="SPACE_GAME"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/GAME_Constraints.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="Graphics"/>
+</GenRun>
