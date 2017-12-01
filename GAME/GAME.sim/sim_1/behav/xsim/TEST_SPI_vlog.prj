@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../GAME.srcs/sources_1/new/SPI_CLK.v" \
+"../../../../GAME.srcs/sources_1/new/SPI_INTERFACE.v" \
+"../../../../GAME.srcs/sources_1/new/TIMER_15.v" \
+"../../../../GAME.srcs/sim_1/new/TEST_SPI.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -19,6 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module SPI_CLK(output reg SIGNAL, input CLK, input RESET);
+        
     reg [31:0] COUNT;
     always @ (posedge CLK)
         begin
@@ -27,11 +28,11 @@ module SPI_CLK(output reg SIGNAL, input CLK, input RESET);
             COUNT <= 0;
             SIGNAL <= 0;
             end
-        if(COUNT <= 49)
+        if(COUNT <= 1249)
             begin
             COUNT <= COUNT + 1;
             end
-        else if(COUNT == 50)
+        else if(COUNT == 1250)
             begin
             COUNT <= 0;
             SIGNAL <= ~SIGNAL;

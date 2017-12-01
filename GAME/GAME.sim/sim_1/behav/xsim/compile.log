@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_CLK.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_CLK
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_INTERFACE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_INTERFACE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/TIMER_15.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TIMER_15
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sim_1/new/TEST_SPI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TEST_SPI

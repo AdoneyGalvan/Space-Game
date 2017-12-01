@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TEST_SPI_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TEST_SPI" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="89800001fs"></ZoomEndTime>
+      <Cursor1Time time="34000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/TEST_SPI/MISO" type="logic">
+      <obj_property name="ElementShortName">MISO</obj_property>
+      <obj_property name="ObjectShortName">MISO</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_SPI/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_SPI/RESET" type="logic">
+      <obj_property name="ElementShortName">RESET</obj_property>
+      <obj_property name="ObjectShortName">RESET</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_SPI/LED" type="array">
+      <obj_property name="ElementShortName">LED[39:0]</obj_property>
+      <obj_property name="ObjectShortName">LED[39:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_SPI/MOSI" type="logic">
+      <obj_property name="ElementShortName">MOSI</obj_property>
+      <obj_property name="ObjectShortName">MOSI</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_SPI/SCLK" type="logic">
+      <obj_property name="ElementShortName">SCLK</obj_property>
+      <obj_property name="ObjectShortName">SCLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_SPI/S" type="logic">
+      <obj_property name="ElementShortName">S</obj_property>
+      <obj_property name="ObjectShortName">S</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_SPI/UTT/CS" type="array">
+      <obj_property name="ElementShortName">CS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CS[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_SPI/UTT/NS" type="array">
+      <obj_property name="ElementShortName">NS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NS[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_SPI/UTT/BIT_COUNT" type="array">
+      <obj_property name="ElementShortName">BIT_COUNT[10:0]</obj_property>
+      <obj_property name="ObjectShortName">BIT_COUNT[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_SPI/UTT/COUNTUP" type="logic">
+      <obj_property name="ElementShortName">COUNTUP</obj_property>
+      <obj_property name="ObjectShortName">COUNTUP</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_SPI/UTT/EN_TIMER" type="logic">
+      <obj_property name="ElementShortName">EN_TIMER</obj_property>
+      <obj_property name="ObjectShortName">EN_TIMER</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_SPI/UTT/SERCLK" type="logic">
+      <obj_property name="ElementShortName">SERCLK</obj_property>
+      <obj_property name="ObjectShortName">SERCLK</obj_property>
+   </wvobject>
+</wave_config>

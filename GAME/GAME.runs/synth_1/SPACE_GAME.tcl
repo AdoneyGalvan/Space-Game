@@ -36,26 +36,28 @@ add_files {{C:/Users/AdoneyGalvan/Vivado Projects/GAME/TextV2.coe}}
 read_verilog -library xil_defaultlib {
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/COLLSION_DETECT.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/COLOR_DECODER.v}
-  {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GAME_STATE.v}
+  {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GAME_CONTROLLER.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/HOR_COUNTER.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/HOR_SYNC.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/OBJECT.v}
+  {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_CLOCK.v}
+  {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_COUNT.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PIXEL_CLOCK.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PRIORITY_MUX.v}
-  {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PS2_DECODER.v}
-  {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PS_INTERFACE.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SLOW_CLOCK.v}
-  {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/TEST_BLUE.v}
+  {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_CLK.v}
+  {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_DATA_DECODER.v}
+  {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_INTERFACE.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/TIMER_25.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/VER_COUNTER.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/VER_SYNC.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPACE_GAME.v}
 }
-read_ip -quiet {{C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/ip/Text/Text.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/ip/Text/Text_ooc.xdc}}]
-
 read_ip -quiet {{C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/ip/Graphics/Graphics.xci}}
 set_property used_in_implementation false [get_files -all {{c:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/ip/Graphics/Graphics_ooc.xdc}}]
+
+read_ip -quiet {{C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/ip/Text/Text.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/ip/Text/Text_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -68,8 +70,6 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc {{C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME_Constraints.xdc}}
 set_property used_in_implementation false [get_files {{C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME_Constraints.xdc}}]
 
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 
 synth_design -top SPACE_GAME -part xc7a100tcsg324-1
 

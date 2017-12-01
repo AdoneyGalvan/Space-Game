@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Mon Nov 27 13:30:51 2017
+// Date        : Wed Nov 29 12:11:59 2017
 // Host        : Adoney running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top Text -prefix
-//               Text_ Text_stub.v
+// Command     : write_verilog -force -mode synth_stub {C:/Users/AdoneyGalvan/Vivado
+//               Projects/GAME/GAME.srcs/sources_1/ip/Text/Text_stub.v}
 // Design      : Text
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1

@@ -21,8 +21,6 @@
 module OBJECT(
     output [12:0] ADDRESS, 
     output OB_EN,
-    output [9:0] OB_CUR_X_POS,
-    output [9:0] OB_CUR_Y_POS,
     input [9:0] OB_ADDRESS_OFF_SET, 
     input [9:0] OB_INT_X_POS, 
     input [9:0] OB_INT_Y_POS, 
@@ -35,7 +33,8 @@ module OBJECT(
     input [9:0] HCNT, 
     input [9:0] VCNT,
     input CLK,
-    input EN);
+    input EN,
+    input RESET);
 
     parameter STOP = 0;
     parameter FORWARD = 1;
@@ -53,17 +52,20 @@ module OBJECT(
     wire [8:0] ROW;
     wire [3:0] COLUMN;
     wire VIDEO_ON;     
-    
+ 
+    wire [9:0] OB_CUR_X_POS;
+    wire [9:0] OB_CUR_Y_POS;
+        
   assign VIDEO_ON = ((HCNT >= 144) && (HCNT <= 784)) && ((VCNT >= 35) && (VCNT <= 515));  
-  assign OB_CUR_X_POS = OB_INT_X_POS + OB_X_MOVE_UPDATE;
-  assign OB_CUR_Y_POS =  OB_INT_X_POS + OB_X_MOVE_UPDATE;
-  assign OB_EN = (VIDEO_ON) && ((HCNT > (OB_INT_X_POS + OB_X_MOVE_UPDATE)) && (HCNT < ((OB_INT_X_POS + OB_X_MOVE_UPDATE) + OB_WIDTH*OB_SCALE))) && ((VCNT > (OB_INT_Y_POS + OB_Y_MOVE_UPDATE)) && (VCNT < ((OB_INT_Y_POS + OB_Y_MOVE_UPDATE) + OB_HEIGHT*OB_SCALE))); 
-  assign ROW = ((VCNT - (OB_INT_Y_POS + OB_Y_MOVE_UPDATE))/OB_SCALE) + OB_ADDRESS_OFF_SET; 
-  assign COLUMN = (HCNT - (OB_INT_X_POS + OB_X_MOVE_UPDATE))/OB_SCALE; 
+  assign OB_CUR_X_POS = RESET ? OB_INT_X_POS : OB_INT_X_POS + OB_X_MOVE_UPDATE;
+  assign OB_CUR_Y_POS = RESET ? OB_INT_Y_POS : OB_INT_Y_POS + OB_Y_MOVE_UPDATE;
+  assign OB_EN = (EN) && (VIDEO_ON) && ((HCNT > (OB_CUR_X_POS)) && (HCNT < ((OB_CUR_X_POS) + OB_WIDTH*OB_SCALE))) && ((VCNT > (OB_CUR_Y_POS)) && (VCNT < ((OB_CUR_Y_POS) + OB_HEIGHT*OB_SCALE))); 
+  assign ROW = ((VCNT - (OB_CUR_Y_POS))/OB_SCALE) + OB_ADDRESS_OFF_SET; 
+  assign COLUMN = (HCNT - (OB_CUR_X_POS))/OB_SCALE; 
   assign ADDRESS[12:0] = {ROW[8:0],COLUMN[3:0]}; 
 
      always @(posedge CLK)
-       begin
+       begin   
            case(DIR)
            STOP:begin
            OB_X_MOVE_UPDATE <= OB_X_MOVE_UPDATE;

@@ -75,8 +75,8 @@ set rc [catch {
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   add_files -quiet {{C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/SPACE_GAME.dcp}}
-  read_ip -quiet {{C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/ip/Text/Text.xci}}
   read_ip -quiet {{C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/ip/Graphics/Graphics.xci}}
+  read_ip -quiet {{C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/ip/Text/Text.xci}}
   read_xdc {{C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME_Constraints.xdc}}
   link_design -top SPACE_GAME -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
