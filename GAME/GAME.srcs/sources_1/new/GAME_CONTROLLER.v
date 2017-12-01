@@ -70,7 +70,7 @@ always @ (*) begin
         end
         
         LEVEL1:begin
-            EN <= 8191;
+            EN <= 131071;
             EN_COUNT <= 1;
             if(COUNT == 120)begin
                 NS <= LEVEL2;

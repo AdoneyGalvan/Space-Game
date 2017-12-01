@@ -17,6 +17,7 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -34,14 +35,18 @@ add_files C:/Users/AdoneyGalvan/Desktop/text.coe
 add_files {{C:/Users/AdoneyGalvan/Vivado Projects/GAME/Color.coe}}
 add_files {{C:/Users/AdoneyGalvan/Vivado Projects/GAME/TextV2.coe}}
 read_verilog -library xil_defaultlib {
+  {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA1_STATE.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/COLLSION_DETECT.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/COLOR_DECODER.v}
+  {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA1_STATE.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GAME_CONTROLLER.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/HOR_COUNTER.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/HOR_SYNC.v}
+  {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/LONG_TIMER.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/OBJECT.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_CLOCK.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_COUNT.v}
+  {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA1_STATE.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PIXEL_CLOCK.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PRIORITY_MUX.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA1_STATE.v}

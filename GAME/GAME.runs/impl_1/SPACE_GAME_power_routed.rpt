@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date             : Fri Dec  1 12:05:54 2017
+| Date             : Fri Dec  1 14:09:46 2017
 | Host             : Adoney running 64-bit major release  (build 9200)
 | Command          : report_power -file SPACE_GAME_power_routed.rpt -pb SPACE_GAME_power_summary_routed.pb -rpx SPACE_GAME_power_routed.rpx
 | Design           : SPACE_GAME
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.130        |
+| Total On-Chip Power (W)  | 0.121        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.033        |
+| Dynamic (W)              | 0.024        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.4         |
@@ -52,19 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.013 |     5109 |       --- |             --- |
-|   LUT as Logic |     0.011 |     3280 |     63400 |            5.17 |
-|   CARRY4       |     0.002 |     1086 |     15850 |            6.85 |
-|   Register     |    <0.001 |      382 |    126800 |            0.30 |
+| Clocks         |     0.003 |        3 |       --- |             --- |
+| Slice Logic    |     0.009 |     4976 |       --- |             --- |
+|   LUT as Logic |     0.007 |     2996 |     63400 |            4.73 |
+|   CARRY4       |     0.001 |      916 |     15850 |            5.78 |
+|   Register     |    <0.001 |      559 |    126800 |            0.44 |
 |   BUFG         |    <0.001 |        5 |        32 |           15.63 |
-|   Others       |     0.000 |      101 |       --- |             --- |
-| Signals        |     0.013 |     4252 |       --- |             --- |
+|   Others       |     0.000 |      115 |       --- |             --- |
+| Signals        |     0.008 |     3858 |       --- |             --- |
 | Block RAM      |     0.004 |        2 |       135 |            1.48 |
-| DSPs           |     0.000 |       40 |       240 |           16.67 |
+| DSPs           |     0.000 |       28 |       240 |           11.67 |
 | I/O            |    <0.001 |       30 |       210 |           14.29 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.130 |          |           |                 |
+| Total          |     0.121 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.047 |       0.032 |      0.015 |
+| Vccint    |       1.000 |     0.039 |       0.024 |      0.015 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -143,28 +143,38 @@ Table of Contents
 +----------------------------------------------+-----------+
 | Name                                         | Power (W) |
 +----------------------------------------------+-----------+
-| SPACE_GAME                                   |     0.033 |
+| SPACE_GAME                                   |     0.024 |
 |   A1                                         |     0.000 |
 |   A2                                         |     0.000 |
-|   BA1                                        |     0.000 |
-|   BA2                                        |     0.000 |
-|   BA3                                        |     0.000 |
+|   BA1                                        |    <0.001 |
+|   BA2                                        |    <0.001 |
+|   BA3                                        |    <0.001 |
 |   BA4                                        |     0.000 |
+|   BLUE_ALIEN_1                               |    <0.001 |
+|     tecl                                     |    <0.001 |
 |   EXPLOSION                                  |     0.000 |
 |   ct                                         |    <0.001 |
 |     t                                        |    <0.001 |
-|   GA1                                        |     0.000 |
-|   GA2                                        |     0.000 |
-|   GA3                                        |     0.000 |
-|   GA4                                        |     0.000 |
+|   GA1                                        |    <0.001 |
+|   GA2                                        |    <0.001 |
+|   GA3                                        |    <0.001 |
+|   GA4                                        |    <0.001 |
 |   GC                                         |    <0.001 |
 |     nolabel_line42                           |    <0.001 |
 |     osc                                      |    <0.001 |
+|   GREEN_ALIEN_1                              |    <0.001 |
+|     nolabel_line35                           |    <0.001 |
 |   L                                          |     0.000 |
-|   RA1                                        |     0.000 |
-|   RA2                                        |     0.000 |
-|   RA3                                        |     0.000 |
-|   RA4                                        |     0.000 |
+|   PA1                                        |    <0.001 |
+|   PA2                                        |     0.000 |
+|   PA3                                        |    <0.001 |
+|   PA4                                        |    <0.001 |
+|   PURPLE_ALIEN_1                             |    <0.001 |
+|     tecl                                     |    <0.001 |
+|   RA1                                        |    <0.001 |
+|   RA2                                        |    <0.001 |
+|   RA3                                        |    <0.001 |
+|   RA4                                        |    <0.001 |
 |   RED_ALIEN_1                                |    <0.001 |
 |     nolabel_line35                           |    <0.001 |
 |   SPACE_SHIP                                 |     0.000 |
@@ -178,11 +188,10 @@ Table of Contents
 |           valid.cstr                         |     0.002 |
 |             ramloop[0].ram.r                 |     0.002 |
 |               prim_init.ram                  |     0.002 |
-|   hc                                         |     0.007 |
-|   hs                                         |    <0.001 |
-|   nolabel_line381                            |    <0.001 |
+|   hc                                         |     0.004 |
+|   nolabel_line393                            |     0.000 |
 |   pc                                         |    <0.001 |
-|   pm                                         |     0.012 |
+|   pm                                         |     0.006 |
 |   sc                                         |    <0.001 |
 |   spic                                       |    <0.001 |
 |   spiint                                     |    <0.001 |
@@ -194,7 +203,6 @@ Table of Contents
 |             ramloop[0].ram.r                 |     0.002 |
 |               prim_init.ram                  |     0.002 |
 |   vc                                         |    <0.001 |
-|   vs                                         |     0.000 |
 +----------------------------------------------+-----------+
 
 
