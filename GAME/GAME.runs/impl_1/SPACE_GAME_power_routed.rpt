@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date             : Wed Nov 29 22:55:30 2017
+| Date             : Fri Dec  1 12:05:54 2017
 | Host             : Adoney running 64-bit major release  (build 9200)
 | Command          : report_power -file SPACE_GAME_power_routed.rpt -pb SPACE_GAME_power_summary_routed.pb -rpx SPACE_GAME_power_routed.rpx
 | Design           : SPACE_GAME
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.013 |     4932 |       --- |             --- |
-|   LUT as Logic |     0.011 |     3205 |     63400 |            5.06 |
-|   CARRY4       |     0.002 |     1068 |     15850 |            6.74 |
-|   Register     |    <0.001 |      324 |    126800 |            0.26 |
+| Slice Logic    |     0.013 |     5109 |       --- |             --- |
+|   LUT as Logic |     0.011 |     3280 |     63400 |            5.17 |
+|   CARRY4       |     0.002 |     1086 |     15850 |            6.85 |
+|   Register     |    <0.001 |      382 |    126800 |            0.30 |
 |   BUFG         |    <0.001 |        5 |        32 |           15.63 |
-|   Others       |     0.000 |       95 |       --- |             --- |
-| Signals        |     0.013 |     4115 |       --- |             --- |
+|   Others       |     0.000 |      101 |       --- |             --- |
+| Signals        |     0.013 |     4252 |       --- |             --- |
 | Block RAM      |     0.004 |        2 |       135 |            1.48 |
 | DSPs           |     0.000 |       40 |       240 |           16.67 |
 | I/O            |    <0.001 |       30 |       210 |           14.29 |
@@ -165,6 +165,8 @@ Table of Contents
 |   RA2                                        |     0.000 |
 |   RA3                                        |     0.000 |
 |   RA4                                        |     0.000 |
+|   RED_ALIEN_1                                |    <0.001 |
+|     nolabel_line35                           |    <0.001 |
 |   SPACE_SHIP                                 |     0.000 |
 |   X                                          |     0.000 |
 |   Y                                          |     0.000 |
@@ -178,7 +180,7 @@ Table of Contents
 |               prim_init.ram                  |     0.002 |
 |   hc                                         |     0.007 |
 |   hs                                         |    <0.001 |
-|   nolabel_line374                            |    <0.001 |
+|   nolabel_line381                            |    <0.001 |
 |   pc                                         |    <0.001 |
 |   pm                                         |     0.012 |
 |   sc                                         |    <0.001 |

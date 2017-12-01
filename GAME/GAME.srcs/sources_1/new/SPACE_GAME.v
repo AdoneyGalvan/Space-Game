@@ -124,6 +124,9 @@ module SPACE_GAME(output VGA_VS, output VGA_HS, output [3:0] VGA_R, output [3:0]
      wire READ;
      wire [39:0] SPI_DATA;
      wire [7:0] SS_BUTTONS;
+     
+     //game controller wires
+     wire [9:0] speed;
     
      //module GAME_CONTROLLER(input CLK, input RESET, input SWITCH, output reg [22:0] EN );
     GAME_CONTROLLER GC(CLK, RESET, SW[1], EN_SIGNALS[22:0]);
@@ -170,8 +173,12 @@ module SPACE_GAME(output VGA_VS, output VGA_HS, output [3:0] VGA_R, output [3:0]
       OBJECT SPACE_SHIP(SS_ADDRESS[12:0], SS_EN, SPACE_SHIP_ADDRESS, 150, 211, 16, 16, 2, 4, 4, SS_DIR[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[0], RESET);
 //Space Ship-----------------------------      
 
+wire [9:0] RA1_speed;
+wire [9:0] RA1_motion;
+//module RA1_STATE( input CLK, input RESET, input EN, output reg [9:0] RA1_speed, output reg [9:0] RA1_motion);
+RA1_STATE RED_ALIEN_1(CLK, RESET, EN_SIGNALS[1], RA1_speed[9:0], RA1_motion[9:0]);
 //Red Aliens Ship-----------------------------    
-      OBJECT RA1(RA1_ADDRESS[12:0], RA1_EN, RED_ALIEN_ADDRESS, 150, 50, 16, 16, 1, 2, 2, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[1], RESET);
+      OBJECT RA1(RA1_ADDRESS[12:0], RA1_EN, RED_ALIEN_ADDRESS, 150, 50, 16, 16, 1, RA1_speed[9:0], RA1_speed[9:0], RA1_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[1], RESET);
       OBJECT RA2(RA2_ADDRESS[12:0], RA2_EN, RED_ALIEN_ADDRESS, 170, 50, 16, 16, 1, 2, 2, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[2], RESET);
       OBJECT RA3(RA3_ADDRESS[12:0], RA3_EN, RED_ALIEN_ADDRESS, 190, 50, 16, 16, 1, 2, 2, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[3], RESET);
       OBJECT RA4(RA4_ADDRESS[12:0], RA4_EN, RED_ALIEN_ADDRESS, 210, 50, 16, 16, 1, 2, 2, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[4], RESET);

@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module GAME_CONTROLLER(input CLK, input RESET, input SWITCH, output reg [22:0] EN );
+module GAME_CONTROLLER(input CLK, input RESET, input SWITCH, output reg [22:0] EN);
 
 reg [9:0] CS;
 reg [9:0] NS;

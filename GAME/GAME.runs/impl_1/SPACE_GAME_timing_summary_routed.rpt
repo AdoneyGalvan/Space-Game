@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Wed Nov 29 22:55:31 2017
+| Date         : Fri Dec  1 12:05:55 2017
 | Host         : Adoney running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -file SPACE_GAME_timing_summary_routed.rpt -warn_on_violation -rpx SPACE_GAME_timing_summary_routed.rpx
 | Design       : SPACE_GAME
@@ -592,45 +592,43 @@ Table of Contents
 
  There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN3/P[9] (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN2/P[0] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN2/P[1] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_X_MOVE_UPDATE_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN2/P[2] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_X_MOVE_UPDATE_reg[3]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN2/P[3] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_X_MOVE_UPDATE_reg[4]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN2/P[4] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_X_MOVE_UPDATE_reg[5]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN2/P[5] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_X_MOVE_UPDATE_reg[6]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN2/P[6] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_X_MOVE_UPDATE_reg[7]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN2/P[7] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_X_MOVE_UPDATE_reg[8]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN2/P[8] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN2/P[9] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_Y_MOVE_UPDATE_reg[0]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN3/P[0] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_Y_MOVE_UPDATE_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN3/P[1] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_Y_MOVE_UPDATE_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN3/P[2] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_Y_MOVE_UPDATE_reg[3]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN3/P[3] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_Y_MOVE_UPDATE_reg[4]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN3/P[4] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_Y_MOVE_UPDATE_reg[5]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN3/P[5] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_Y_MOVE_UPDATE_reg[6]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN3/P[6] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_Y_MOVE_UPDATE_reg[7]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN3/P[7] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_Y_MOVE_UPDATE_reg[8]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN3/P[8] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_EN3/P[9] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_Y_MOVE_UPDATE_reg[9]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: RA2/OB_EN2/P[0] (HIGH)
 
@@ -751,6 +749,10 @@ Table of Contents
  There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_EN3/P[8] (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_EN3/P[9] (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: RED_ALIEN_1/CS_reg[0]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: RED_ALIEN_1/CS_reg[1]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: SPACE_SHIP/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
@@ -896,7 +898,7 @@ Table of Contents
 
  There are 41 register/latch pins with no clock driven by root clock pin: pc/SIGNAL_reg/Q (HIGH)
 
- There are 36 register/latch pins with no clock driven by root clock pin: sc/SIGNAL_reg/Q (HIGH)
+ There are 55 register/latch pins with no clock driven by root clock pin: sc/SIGNAL_reg/Q (HIGH)
 
  There are 52 register/latch pins with no clock driven by root clock pin: spic/SIGNAL_reg/Q (HIGH)
 
@@ -935,7 +937,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 452 pins that are not constrained for maximum delay. (HIGH)
+ There are 494 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -994,7 +996,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      4.859        0.000                      0                  196        0.087        0.000                      0                  196        4.500        0.000                       0                   107  
+      4.719        0.000                      0                  263        0.123        0.000                      0                  263        4.500        0.000                       0                   142  
 
 
 All user specified timing constraints are met.
@@ -1017,7 +1019,7 @@ sys_clk_pin  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-sys_clk_pin         4.859        0.000                      0                  196        0.087        0.000                      0                  196        4.500        0.000                       0                   107  
+sys_clk_pin         4.719        0.000                      0                  263        0.123        0.000                      0                  263        4.500        0.000                       0                   142  
 
 
 ------------------------------------------------------------------------------------------------
@@ -1048,27 +1050,27 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  sys_clk_pin
   To Clock:  sys_clk_pin
 
-Setup :            0  Failing Endpoints,  Worst Slack        4.859ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.087ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        4.719ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.123ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             4.859ns  (required time - arrival time)
-  Source:                 GC/osc/COUNT_reg[20]/C
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            GC/osc/COUNT_reg[25]/D
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             4.719ns  (required time - arrival time)
+  Source:                 RED_ALIEN_1/nolabel_line35/COUNT_reg[15]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            RED_ALIEN_1/nolabel_line35/COUNT_reg[0]/CE
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        5.142ns  (logic 2.388ns (46.444%)  route 2.754ns (53.556%))
-  Logic Levels:           11  (CARRY4=7 LUT3=1 LUT4=1 LUT6=2)
-  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.910ns = ( 14.910 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.212ns
+  Data Path Delay:        5.024ns  (logic 1.214ns (24.162%)  route 3.810ns (75.838%))
+  Logic Levels:           5  (LUT3=1 LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.016ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.930ns = ( 14.930 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.222ns
     Clock Pessimism Removal (CPR):    0.276ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -1085,41 +1087,22 @@ Slack (MET) :             4.859ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  CLK_IBUF_inst/O
                          net (fo=1, routed)           2.025     3.506    CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  CLK_IBUF_BUFG_inst/O
-                         net (fo=106, routed)         1.610     5.212    GC/osc/CLK_IBUF_BUFG
-    SLICE_X55Y102        FDRE                                         r  GC/osc/COUNT_reg[20]/C
+                         net (fo=141, routed)         1.619     5.222    RED_ALIEN_1/nolabel_line35/CLK_IBUF_BUFG
+    SLICE_X39Y74         FDCE                                         r  RED_ALIEN_1/nolabel_line35/COUNT_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X55Y102        FDRE (Prop_fdre_C_Q)         0.456     5.668 f  GC/osc/COUNT_reg[20]/Q
-                         net (fo=3, routed)           0.854     6.522    GC/osc/COUNT_reg[20]
-    SLICE_X54Y100        LUT4 (Prop_lut4_I1_O)        0.124     6.646 f  GC/osc/COUNT[0]_i_17/O
-                         net (fo=1, routed)           0.680     7.326    GC/osc/COUNT[0]_i_17_n_0
-    SLICE_X54Y100        LUT6 (Prop_lut6_I2_O)        0.124     7.450 f  GC/osc/COUNT[0]_i_14/O
-                         net (fo=1, routed)           0.353     7.803    GC/osc/COUNT[0]_i_14_n_0
-    SLICE_X54Y99         LUT6 (Prop_lut6_I5_O)        0.124     7.927 r  GC/osc/COUNT[0]_i_4/O
-                         net (fo=27, routed)          0.866     8.793    GC/osc/COUNT[0]_i_4_n_0
-    SLICE_X55Y97         LUT3 (Prop_lut3_I1_O)        0.124     8.917 r  GC/osc/COUNT[0]_i_9/O
-                         net (fo=1, routed)           0.000     8.917    GC/osc/COUNT[0]_i_9_n_0
-    SLICE_X55Y97         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.532     9.449 r  GC/osc/COUNT_reg[0]_i_2/CO[3]
-                         net (fo=1, routed)           0.000     9.449    GC/osc/COUNT_reg[0]_i_2_n_0
-    SLICE_X55Y98         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     9.563 r  GC/osc/COUNT_reg[4]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.563    GC/osc/COUNT_reg[4]_i_1_n_0
-    SLICE_X55Y99         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     9.677 r  GC/osc/COUNT_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.001     9.678    GC/osc/COUNT_reg[8]_i_1_n_0
-    SLICE_X55Y100        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     9.792 r  GC/osc/COUNT_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.792    GC/osc/COUNT_reg[12]_i_1_n_0
-    SLICE_X55Y101        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     9.906 r  GC/osc/COUNT_reg[16]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.906    GC/osc/COUNT_reg[16]_i_1_n_0
-    SLICE_X55Y102        CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    10.020 r  GC/osc/COUNT_reg[20]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.020    GC/osc/COUNT_reg[20]_i_1_n_0
-    SLICE_X55Y103        CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.334    10.354 r  GC/osc/COUNT_reg[24]_i_1/O[1]
-                         net (fo=1, routed)           0.000    10.354    GC/osc/COUNT_reg[24]_i_1_n_6
-    SLICE_X55Y103        FDRE                                         r  GC/osc/COUNT_reg[25]/D
+    SLICE_X39Y74         FDCE (Prop_fdce_C_Q)         0.419     5.641 r  RED_ALIEN_1/nolabel_line35/COUNT_reg[15]/Q
+                         net (fo=2, routed)           0.877     6.518    RED_ALIEN_1/nolabel_line35/COUNT[15]
+    SLICE_X37Y73         LUT4 (Prop_lut4_I0_O)        0.299     6.817 f  RED_ALIEN_1/nolabel_line35/COUNT[31]_i_10/O
+                         net (fo=1, routed)           0.594     7.411    RED_ALIEN_1/nolabel_line35/COUNT[31]_i_10_n_0
+    SLICE_X37Y72         LUT5 (Prop_lut5_I4_O)        0.124     7.535 f  RED_ALIEN_1/nolabel_line35/COUNT[31]_i_8/O
+                         net (fo=1, routed)           0.447     7.981    RED_ALIEN_1/nolabel_line35/COUNT[31]_i_8_n_0
+    SLICE_X39Y70         LUT6 (Prop_lut6_I5_O)        0.124     8.105 f  RED_ALIEN_1/nolabel_line35/COUNT[31]_i_4/O
+                         net (fo=1, routed)           0.637     8.743    RED_ALIEN_1/nolabel_line35/COUNT[31]_i_4_n_0
+    SLICE_X37Y75         LUT6 (Prop_lut6_I0_O)        0.124     8.867 f  RED_ALIEN_1/nolabel_line35/COUNT[31]_i_3/O
+                         net (fo=34, routed)          0.369     9.235    RED_ALIEN_1/nolabel_line35/COUNT[31]_i_3_n_0
+    SLICE_X40Y75         LUT3 (Prop_lut3_I0_O)        0.124     9.359 r  RED_ALIEN_1/nolabel_line35/COUNT[31]_i_1/O
+                         net (fo=32, routed)          0.887    10.246    RED_ALIEN_1/nolabel_line35/COUNT_0
+    SLICE_X39Y70         FDCE                                         r  RED_ALIEN_1/nolabel_line35/COUNT_reg[0]/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1129,16 +1112,16 @@ Slack (MET) :             4.859ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  CLK_IBUF_inst/O
                          net (fo=1, routed)           1.920    13.331    CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  CLK_IBUF_BUFG_inst/O
-                         net (fo=106, routed)         1.488    14.910    GC/osc/CLK_IBUF_BUFG
-    SLICE_X55Y103        FDRE                                         r  GC/osc/COUNT_reg[25]/C
-                         clock pessimism              0.276    15.186    
-                         clock uncertainty           -0.035    15.151    
-    SLICE_X55Y103        FDRE (Setup_fdre_C_D)        0.062    15.213    GC/osc/COUNT_reg[25]
+                         net (fo=141, routed)         1.507    14.930    RED_ALIEN_1/nolabel_line35/CLK_IBUF_BUFG
+    SLICE_X39Y70         FDCE                                         r  RED_ALIEN_1/nolabel_line35/COUNT_reg[0]/C
+                         clock pessimism              0.276    15.206    
+                         clock uncertainty           -0.035    15.170    
+    SLICE_X39Y70         FDCE (Setup_fdce_C_CE)      -0.205    14.965    RED_ALIEN_1/nolabel_line35/COUNT_reg[0]
   -------------------------------------------------------------------
-                         required time                         15.213    
-                         arrival time                         -10.354    
+                         required time                         14.965    
+                         arrival time                         -10.246    
   -------------------------------------------------------------------
-                         slack                                  4.859    
+                         slack                                  4.719    
 
 
 
@@ -1146,19 +1129,19 @@ Slack (MET) :             4.859ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.087ns  (arrival time - required time)
-  Source:                 sc/COUNT_reg[19]/C
+Slack (MET) :             0.123ns  (arrival time - required time)
+  Source:                 sc/COUNT_reg[15]/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            sc/COUNT_reg[11]/D
+  Destination:            sc/COUNT_reg[16]/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.498ns  (logic 0.273ns (54.807%)  route 0.225ns (45.193%))
-  Logic Levels:           2  (CARRY4=1 LUT5=1)
-  Clock Path Skew:        0.277ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.003ns
-    Source Clock Delay      (SCD):    1.480ns
+  Data Path Delay:        0.521ns  (logic 0.371ns (71.219%)  route 0.150ns (28.781%))
+  Logic Levels:           3  (CARRY4=2 LUT5=1)
+  Clock Path Skew:        0.264ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.995ns
+    Source Clock Delay      (SCD):    1.485ns
     Clock Pessimism Removal (CPR):    0.245ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1170,17 +1153,20 @@ Slack (MET) :             0.087ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  CLK_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  CLK_IBUF_BUFG_inst/O
-                         net (fo=106, routed)         0.561     1.480    sc/CLK_IBUF_BUFG
-    SLICE_X46Y101        FDRE                                         r  sc/COUNT_reg[19]/C
+                         net (fo=141, routed)         0.566     1.485    sc/CLK_IBUF_BUFG
+    SLICE_X50Y99         FDRE                                         r  sc/COUNT_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X46Y101        FDRE (Prop_fdre_C_Q)         0.164     1.644 f  sc/COUNT_reg[19]/Q
-                         net (fo=23, routed)          0.225     1.870    sc/COUNT_reg[19]
-    SLICE_X46Y99         LUT5 (Prop_lut5_I0_O)        0.045     1.915 r  sc/COUNT[8]_i_2__1/O
-                         net (fo=1, routed)           0.000     1.915    sc/COUNT[8]_i_2__1_n_0
-    SLICE_X46Y99         CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.064     1.979 r  sc/COUNT_reg[8]_i_1__1/O[3]
-                         net (fo=1, routed)           0.000     1.979    sc/COUNT_reg[8]_i_1__1_n_4
-    SLICE_X46Y99         FDRE                                         r  sc/COUNT_reg[11]/D
+    SLICE_X50Y99         FDRE (Prop_fdre_C_Q)         0.164     1.649 r  sc/COUNT_reg[15]/Q
+                         net (fo=3, routed)           0.149     1.799    sc/COUNT_reg[15]
+    SLICE_X50Y99         LUT5 (Prop_lut5_I4_O)        0.045     1.844 r  sc/COUNT[12]_i_2__0/O
+                         net (fo=1, routed)           0.000     1.844    sc/COUNT[12]_i_2__0_n_0
+    SLICE_X50Y99         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.109     1.953 r  sc/COUNT_reg[12]_i_1__1/CO[3]
+                         net (fo=1, routed)           0.001     1.953    sc/COUNT_reg[12]_i_1__1_n_0
+    SLICE_X50Y100        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.053     2.006 r  sc/COUNT_reg[16]_i_1__1/O[0]
+                         net (fo=1, routed)           0.000     2.006    sc/COUNT_reg[16]_i_1__1_n_7
+    SLICE_X50Y100        FDRE                                         r  sc/COUNT_reg[16]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1190,15 +1176,15 @@ Slack (MET) :             0.087ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  CLK_IBUF_inst/O
                          net (fo=1, routed)           0.699     1.136    CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  CLK_IBUF_BUFG_inst/O
-                         net (fo=106, routed)         0.838     2.003    sc/CLK_IBUF_BUFG
-    SLICE_X46Y99         FDRE                                         r  sc/COUNT_reg[11]/C
-                         clock pessimism             -0.245     1.757    
-    SLICE_X46Y99         FDRE (Hold_fdre_C_D)         0.134     1.891    sc/COUNT_reg[11]
+                         net (fo=141, routed)         0.830     1.995    sc/CLK_IBUF_BUFG
+    SLICE_X50Y100        FDRE                                         r  sc/COUNT_reg[16]/C
+                         clock pessimism             -0.245     1.749    
+    SLICE_X50Y100        FDRE (Hold_fdre_C_D)         0.134     1.883    sc/COUNT_reg[16]
   -------------------------------------------------------------------
-                         required time                         -1.891    
-                         arrival time                           1.979    
+                         required time                         -1.883    
+                         arrival time                           2.006    
   -------------------------------------------------------------------
-                         slack                                  0.087    
+                         slack                                  0.123    
 
 
 
@@ -1212,9 +1198,9 @@ Period(ns):         10.000
 Sources:            { CLK }
 
 Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X1Y18  g/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X62Y91  GC/FSM_onehot_CS_reg[1]/C
-High Pulse Width  Slow    FDSE/C              n/a            0.500         5.000       4.500      SLICE_X61Y91  GC/FSM_onehot_CS_reg[0]/C
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X0Y18  g/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         5.000       4.500      SLICE_X36Y79  ct/t/COUNT_reg[10]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X56Y98  spic/COUNT_reg[5]/C
 
 
 

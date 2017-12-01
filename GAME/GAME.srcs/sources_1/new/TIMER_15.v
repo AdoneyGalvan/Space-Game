@@ -14,7 +14,7 @@ module TIMER_15(output reg SIGNAL, input CLK, input RESET, input EN);
                COUNT <= COUNT + 1;
                SIGNAL <= 0;
                end
-             if(COUNT == 15)
+             if(COUNT == 10000000)
                 begin
                 COUNT <= 0;
                 SIGNAL <= 1;

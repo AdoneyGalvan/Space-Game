@@ -44,10 +44,12 @@ read_verilog -library xil_defaultlib {
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_COUNT.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PIXEL_CLOCK.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PRIORITY_MUX.v}
+  {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA1_STATE.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SLOW_CLOCK.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_CLK.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_DATA_DECODER.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_INTERFACE.v}
+  {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/TIMER_15.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/TIMER_25.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/VER_COUNTER.v}
   {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/VER_SYNC.v}
