@@ -2,8 +2,8 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Fri Dec  1 14:06:57 2017
-# Process ID: 10136
+# Start of session at: Wed Dec  6 10:54:53 2017
+# Process ID: 8856
 # Current directory: C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1
 # Command line: vivado.exe -log SPACE_GAME.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SPACE_GAME.tcl
 # Log file: C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/SPACE_GAME.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8492 
+INFO: Helper process launched with PID 4308 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 391.578 ; gain = 95.535
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 393.219 ; gain = 96.160
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'SPACE_GAME' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPACE_GAME.v:23]
 	Parameter SPACE_SHIP_ADDRESS bound to: 0 - type: integer 
@@ -26,6 +26,7 @@ INFO: [Synth 8-638] synthesizing module 'SPACE_GAME' [C:/Users/AdoneyGalvan/Viva
 	Parameter GREEN_ALIEN_ADDRESS bound to: 48 - type: integer 
 	Parameter PURPLE_ALIEN_ADDRESS bound to: 64 - type: integer 
 	Parameter EXPLOSION_ADDRESS bound to: 80 - type: integer 
+	Parameter BULLET_ADDRESS bound to: 96 - type: integer 
 	Parameter G_ADDRESS_OFF bound to: 0 - type: integer 
 	Parameter A_ADDRESS_OFF bound to: 16 - type: integer 
 	Parameter L_ADDRESS_OFF bound to: 32 - type: integer 
@@ -37,12 +38,12 @@ INFO: [Synth 8-638] synthesizing module 'GAME_CONTROLLER' [C:/Users/AdoneyGalvan
 	Parameter LEVEL2 bound to: 2 - type: integer 
 	Parameter LEVEL3 bound to: 3 - type: integer 
 	Parameter WIN bound to: 4 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GAME_CONTROLLER.v:52]
+INFO: [Synth 8-256] done synthesizing module 'GAME_CONTROLLER' (1#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GAME_CONTROLLER.v:23]
 INFO: [Synth 8-638] synthesizing module 'ONE_SEC_CLOCK' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_CLOCK.v:21]
-INFO: [Synth 8-256] done synthesizing module 'ONE_SEC_CLOCK' (1#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_CLOCK.v:21]
+INFO: [Synth 8-256] done synthesizing module 'ONE_SEC_CLOCK' (2#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_CLOCK.v:21]
 INFO: [Synth 8-638] synthesizing module 'ONE_SEC_COUNT' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_COUNT.v:23]
-INFO: [Synth 8-256] done synthesizing module 'ONE_SEC_COUNT' (2#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_COUNT.v:23]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GAME_CONTROLLER.v:60]
-INFO: [Synth 8-256] done synthesizing module 'GAME_CONTROLLER' (3#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GAME_CONTROLLER.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ONE_SEC_COUNT' (3#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_COUNT.v:23]
 INFO: [Synth 8-638] synthesizing module 'PIXEL_CLOCK' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PIXEL_CLOCK.v:25]
 INFO: [Synth 8-256] done synthesizing module 'PIXEL_CLOCK' (4#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PIXEL_CLOCK.v:25]
 INFO: [Synth 8-638] synthesizing module 'HOR_COUNTER' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/HOR_COUNTER.v:23]
@@ -55,6 +56,18 @@ INFO: [Synth 8-638] synthesizing module 'VER_SYNC' [C:/Users/AdoneyGalvan/Vivado
 INFO: [Synth 8-256] done synthesizing module 'VER_SYNC' (8#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/VER_SYNC.v:23]
 INFO: [Synth 8-638] synthesizing module 'SLOW_CLOCK' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SLOW_CLOCK.v:21]
 INFO: [Synth 8-256] done synthesizing module 'SLOW_CLOCK' (9#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SLOW_CLOCK.v:21]
+INFO: [Synth 8-638] synthesizing module 'SPACE_SHIP' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPACE_SHIP.v:21]
+	Parameter STOP bound to: 0 - type: integer 
+	Parameter FORWARD bound to: 1 - type: integer 
+	Parameter REVERSE bound to: 2 - type: integer 
+	Parameter UP bound to: 3 - type: integer 
+	Parameter DOWN bound to: 4 - type: integer 
+	Parameter FORWARD_UP bound to: 5 - type: integer 
+	Parameter REVERSE_UP bound to: 6 - type: integer 
+	Parameter REVERSE_DOWN bound to: 7 - type: integer 
+	Parameter FORWARD_DOWN bound to: 8 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPACE_SHIP.v:68]
+INFO: [Synth 8-256] done synthesizing module 'SPACE_SHIP' (10#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPACE_SHIP.v:21]
 INFO: [Synth 8-638] synthesizing module 'OBJECT' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/OBJECT.v:21]
 	Parameter STOP bound to: 0 - type: integer 
 	Parameter FORWARD bound to: 1 - type: integer 
@@ -66,21 +79,49 @@ INFO: [Synth 8-638] synthesizing module 'OBJECT' [C:/Users/AdoneyGalvan/Vivado P
 	Parameter REVERSE_DOWN bound to: 7 - type: integer 
 	Parameter FORWARD_DOWN bound to: 8 - type: integer 
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/OBJECT.v:69]
-INFO: [Synth 8-256] done synthesizing module 'OBJECT' (10#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/OBJECT.v:21]
+INFO: [Synth 8-256] done synthesizing module 'OBJECT' (11#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/OBJECT.v:21]
 INFO: [Synth 8-638] synthesizing module 'RA1_STATE' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA1_STATE.v:23]
 	Parameter WAIT bound to: 0 - type: integer 
 	Parameter DELAY1 bound to: 1 - type: integer 
 	Parameter DELAY2 bound to: 2 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'TIMER_15' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/TIMER_15.v:1]
-INFO: [Synth 8-256] done synthesizing module 'TIMER_15' (11#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/TIMER_15.v:1]
+INFO: [Synth 8-256] done synthesizing module 'TIMER_15' (12#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/TIMER_15.v:1]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA1_STATE.v:50]
-INFO: [Synth 8-256] done synthesizing module 'RA1_STATE' (12#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA1_STATE.v:23]
+INFO: [Synth 8-256] done synthesizing module 'RA1_STATE' (13#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA1_STATE.v:23]
+INFO: [Synth 8-638] synthesizing module 'RA2_STATE' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA2_STATE.v:23]
+	Parameter WAIT bound to: 0 - type: integer 
+	Parameter DELAY1 bound to: 1 - type: integer 
+	Parameter DELAY2 bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'LONG_TIMER' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/LONG_TIMER.v:21]
+INFO: [Synth 8-256] done synthesizing module 'LONG_TIMER' (14#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/LONG_TIMER.v:21]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA2_STATE.v:51]
+INFO: [Synth 8-256] done synthesizing module 'RA2_STATE' (15#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA2_STATE.v:23]
+INFO: [Synth 8-638] synthesizing module 'RA3_STATE' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA3_STATE.v:23]
+	Parameter WAIT bound to: 0 - type: integer 
+	Parameter DELAY1 bound to: 1 - type: integer 
+	Parameter DELAY2 bound to: 2 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA3_STATE.v:51]
+INFO: [Synth 8-256] done synthesizing module 'RA3_STATE' (16#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA3_STATE.v:23]
 INFO: [Synth 8-638] synthesizing module 'GA1_STATE' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA1_STATE.v:23]
 	Parameter WAIT bound to: 0 - type: integer 
 	Parameter DELAY1 bound to: 1 - type: integer 
 	Parameter DELAY2 bound to: 2 - type: integer 
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA1_STATE.v:50]
-INFO: [Synth 8-256] done synthesizing module 'GA1_STATE' (13#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA1_STATE.v:23]
+INFO: [Synth 8-256] done synthesizing module 'GA1_STATE' (17#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA1_STATE.v:23]
+INFO: [Synth 8-638] synthesizing module 'GA2_STATE' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA2_STATE.v:23]
+	Parameter WAIT bound to: 0 - type: integer 
+	Parameter DELAY1 bound to: 1 - type: integer 
+	Parameter DELAY2 bound to: 2 - type: integer 
+	Parameter DELAY3 bound to: 3 - type: integer 
+	Parameter DELAY4 bound to: 4 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA2_STATE.v:54]
+INFO: [Synth 8-256] done synthesizing module 'GA2_STATE' (18#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA2_STATE.v:23]
+INFO: [Synth 8-638] synthesizing module 'GA3_STATE' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA3_STATE.v:23]
+	Parameter WAIT bound to: 0 - type: integer 
+	Parameter DELAY1 bound to: 1 - type: integer 
+	Parameter DELAY2 bound to: 2 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA3_STATE.v:50]
+INFO: [Synth 8-256] done synthesizing module 'GA3_STATE' (19#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA3_STATE.v:23]
 INFO: [Synth 8-638] synthesizing module 'BA1_STATE' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA1_STATE.v:23]
 	Parameter HOLD bound to: 0 - type: integer 
 	Parameter FORWARD bound to: 1 - type: integer 
@@ -117,18 +158,41 @@ INFO: [Synth 8-638] synthesizing module 'BA1_STATE' [C:/Users/AdoneyGalvan/Vivad
 	Parameter DELAY16 bound to: 16 - type: integer 
 	Parameter ON bound to: 1 - type: integer 
 	Parameter OFF bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'LONG_TIMER' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/LONG_TIMER.v:21]
-INFO: [Synth 8-256] done synthesizing module 'LONG_TIMER' (14#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/LONG_TIMER.v:21]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA1_STATE.v:93]
-INFO: [Synth 8-256] done synthesizing module 'BA1_STATE' (15#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA1_STATE.v:23]
+INFO: [Synth 8-256] done synthesizing module 'BA1_STATE' (20#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA1_STATE.v:23]
+INFO: [Synth 8-638] synthesizing module 'BA2_STATE' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA2_STATE.v:23]
+	Parameter WAIT bound to: 0 - type: integer 
+	Parameter DELAY1 bound to: 1 - type: integer 
+	Parameter DELAY2 bound to: 2 - type: integer 
+	Parameter DELAY3 bound to: 3 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA2_STATE.v:52]
+INFO: [Synth 8-256] done synthesizing module 'BA2_STATE' (21#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA2_STATE.v:23]
+INFO: [Synth 8-638] synthesizing module 'BA3_STATE' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA3_STATE.v:23]
+	Parameter WAIT bound to: 0 - type: integer 
+	Parameter DELAY1 bound to: 1 - type: integer 
+	Parameter DELAY2 bound to: 2 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA3_STATE.v:50]
+INFO: [Synth 8-256] done synthesizing module 'BA3_STATE' (22#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA3_STATE.v:23]
 INFO: [Synth 8-638] synthesizing module 'PA1_STATE' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA1_STATE.v:23]
 	Parameter WAIT bound to: 0 - type: integer 
 	Parameter DELAY1 bound to: 1 - type: integer 
 	Parameter DELAY2 bound to: 2 - type: integer 
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA1_STATE.v:51]
-INFO: [Synth 8-256] done synthesizing module 'PA1_STATE' (16#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA1_STATE.v:23]
+INFO: [Synth 8-256] done synthesizing module 'PA1_STATE' (23#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA1_STATE.v:23]
+INFO: [Synth 8-638] synthesizing module 'PA2_STATE' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA2_STATE.v:23]
+	Parameter WAIT bound to: 0 - type: integer 
+	Parameter DELAY1 bound to: 1 - type: integer 
+	Parameter DELAY2 bound to: 2 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA2_STATE.v:50]
+INFO: [Synth 8-256] done synthesizing module 'PA2_STATE' (24#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA2_STATE.v:23]
+INFO: [Synth 8-638] synthesizing module 'PA3_STATE' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA3_STATE.v:23]
+	Parameter WAIT bound to: 0 - type: integer 
+	Parameter DELAY1 bound to: 1 - type: integer 
+	Parameter DELAY2 bound to: 2 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA3_STATE.v:50]
+INFO: [Synth 8-256] done synthesizing module 'PA3_STATE' (25#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA3_STATE.v:23]
 INFO: [Synth 8-638] synthesizing module 'PRIORITY_MUX' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PRIORITY_MUX.v:21]
-INFO: [Synth 8-256] done synthesizing module 'PRIORITY_MUX' (17#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PRIORITY_MUX.v:21]
+INFO: [Synth 8-256] done synthesizing module 'PRIORITY_MUX' (26#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PRIORITY_MUX.v:21]
 INFO: [Synth 8-638] synthesizing module 'COLOR_DECODER' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/COLOR_DECODER.v:23]
 	Parameter BLACK bound to: 0 - type: integer 
 	Parameter WHITE bound to: 1 - type: integer 
@@ -138,11 +202,11 @@ INFO: [Synth 8-638] synthesizing module 'COLOR_DECODER' [C:/Users/AdoneyGalvan/V
 	Parameter YELLOW bound to: 5 - type: integer 
 	Parameter PURPLE bound to: 6 - type: integer 
 	Parameter ORANGE bound to: 7 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'COLOR_DECODER' (18#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/COLOR_DECODER.v:23]
-INFO: [Synth 8-638] synthesizing module 'Graphics' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/.Xil/Vivado-10136-Adoney/realtime/Graphics_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'Graphics' (19#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/.Xil/Vivado-10136-Adoney/realtime/Graphics_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'Text' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/.Xil/Vivado-10136-Adoney/realtime/Text_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'Text' (20#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/.Xil/Vivado-10136-Adoney/realtime/Text_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'COLOR_DECODER' (27#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/COLOR_DECODER.v:23]
+INFO: [Synth 8-638] synthesizing module 'Graphics' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/.Xil/Vivado-8856-Adoney/realtime/Graphics_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'Graphics' (28#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/.Xil/Vivado-8856-Adoney/realtime/Graphics_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'Text' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/.Xil/Vivado-8856-Adoney/realtime/Text_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'Text' (29#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/.Xil/Vivado-8856-Adoney/realtime/Text_stub.v:6]
 INFO: [Synth 8-638] synthesizing module 'COLLSION_DETECT' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/COLLSION_DETECT.v:23]
 	Parameter WAIT bound to: 0 - type: integer 
 	Parameter DISPLAYEX bound to: 1 - type: integer 
@@ -150,9 +214,9 @@ INFO: [Synth 8-638] synthesizing module 'COLLSION_DETECT' [C:/Users/AdoneyGalvan
 	Parameter ON bound to: 1 - type: integer 
 	Parameter OFF bound to: 0 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'TIMER_25' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/TIMER_25.v:21]
-INFO: [Synth 8-256] done synthesizing module 'TIMER_25' (21#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/TIMER_25.v:21]
+INFO: [Synth 8-256] done synthesizing module 'TIMER_25' (30#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/TIMER_25.v:21]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/COLLSION_DETECT.v:82]
-INFO: [Synth 8-256] done synthesizing module 'COLLSION_DETECT' (22#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/COLLSION_DETECT.v:23]
+INFO: [Synth 8-256] done synthesizing module 'COLLSION_DETECT' (31#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/COLLSION_DETECT.v:23]
 INFO: [Synth 8-638] synthesizing module 'SPI_INTERFACE' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_INTERFACE.v:142]
 	Parameter setLED bound to: 8'b10000001 
 	Parameter getPosition bound to: 8'b11000000 
@@ -163,9 +227,9 @@ INFO: [Synth 8-638] synthesizing module 'SPI_INTERFACE' [C:/Users/AdoneyGalvan/V
 	Parameter unSetSCK bound to: 3'b100 
 	Parameter RX bound to: 3'b101 
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_INTERFACE.v:179]
-INFO: [Synth 8-256] done synthesizing module 'SPI_INTERFACE' (23#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_INTERFACE.v:142]
+INFO: [Synth 8-256] done synthesizing module 'SPI_INTERFACE' (32#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_INTERFACE.v:142]
 INFO: [Synth 8-638] synthesizing module 'SPI_CLK' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_CLK.v:21]
-INFO: [Synth 8-256] done synthesizing module 'SPI_CLK' (24#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_CLK.v:21]
+INFO: [Synth 8-256] done synthesizing module 'SPI_CLK' (33#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_CLK.v:21]
 INFO: [Synth 8-638] synthesizing module 'SPI_DATA_DECODER' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_DATA_DECODER.v:23]
 	Parameter STOP bound to: 0 - type: integer 
 	Parameter FORWARD bound to: 1 - type: integer 
@@ -176,10 +240,40 @@ INFO: [Synth 8-638] synthesizing module 'SPI_DATA_DECODER' [C:/Users/AdoneyGalva
 	Parameter REVERSE_UP bound to: 6 - type: integer 
 	Parameter REVERSE_DOWN bound to: 7 - type: integer 
 	Parameter FORWARD_DOWN bound to: 8 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'SPI_DATA_DECODER' (25#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_DATA_DECODER.v:23]
+INFO: [Synth 8-256] done synthesizing module 'SPI_DATA_DECODER' (34#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_DATA_DECODER.v:23]
+INFO: [Synth 8-638] synthesizing module 'TEST_STATE' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/TEST_STATE.v:23]
+	Parameter WAIT bound to: 0 - type: integer 
+	Parameter DISPLAYEX bound to: 1 - type: integer 
+	Parameter RESTORE bound to: 2 - type: integer 
+	Parameter INT bound to: 3 - type: integer 
+	Parameter TURNOFF bound to: 4 - type: integer 
+	Parameter ON bound to: 1 - type: integer 
+	Parameter OFF bound to: 0 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/TEST_STATE.v:61]
+WARNING: [Synth 8-3848] Net RETURN in module/entity TEST_STATE does not have driver. [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/TEST_STATE.v:24]
+INFO: [Synth 8-256] done synthesizing module 'TEST_STATE' (35#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/TEST_STATE.v:23]
+INFO: [Synth 8-638] synthesizing module 'SEG_CLOCK' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SEG_CLOCK.v:21]
+INFO: [Synth 8-256] done synthesizing module 'SEG_CLOCK' (36#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SEG_CLOCK.v:21]
+INFO: [Synth 8-638] synthesizing module 'SELECT_COUNTER' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SELECT_COUNTER.v:23]
+INFO: [Synth 8-256] done synthesizing module 'SELECT_COUNTER' (37#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SELECT_COUNTER.v:23]
+INFO: [Synth 8-638] synthesizing module 'DIGIT_SELECT' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/DIGIT_SELECT.v:21]
+WARNING: [Synth 8-567] referenced signal 'HEX_1' should be on the sensitivity list [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/DIGIT_SELECT.v:22]
+WARNING: [Synth 8-567] referenced signal 'HEX_2' should be on the sensitivity list [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/DIGIT_SELECT.v:22]
+WARNING: [Synth 8-567] referenced signal 'HEX_3' should be on the sensitivity list [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/DIGIT_SELECT.v:22]
+WARNING: [Synth 8-567] referenced signal 'HEX_4' should be on the sensitivity list [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/DIGIT_SELECT.v:22]
+INFO: [Synth 8-256] done synthesizing module 'DIGIT_SELECT' (38#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/DIGIT_SELECT.v:21]
+INFO: [Synth 8-638] synthesizing module 'ANODE_MUX' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ANODE_MUX.v:22]
+INFO: [Synth 8-256] done synthesizing module 'ANODE_MUX' (39#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ANODE_MUX.v:22]
+INFO: [Synth 8-638] synthesizing module 'SCORE_DECODER' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SCORE_DECODER.v:23]
+INFO: [Synth 8-256] done synthesizing module 'SCORE_DECODER' (40#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SCORE_DECODER.v:23]
+INFO: [Synth 8-638] synthesizing module 'SEG_DISPLAY' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SEG_DISPLAY.v:21]
+INFO: [Synth 8-256] done synthesizing module 'SEG_DISPLAY' (41#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SEG_DISPLAY.v:21]
 WARNING: [Synth 8-3848] Net LED in module/entity SPACE_GAME does not have driver. [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPACE_GAME.v:23]
-INFO: [Synth 8-256] done synthesizing module 'SPACE_GAME' (26#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPACE_GAME.v:23]
+INFO: [Synth 8-256] done synthesizing module 'SPACE_GAME' (42#1) [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPACE_GAME.v:23]
+WARNING: [Synth 8-3331] design SEG_CLOCK has unconnected port RESET
+WARNING: [Synth 8-3331] design TEST_STATE has unconnected port MC_EN
 WARNING: [Synth 8-3331] design OBJECT has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design SPACE_SHIP has unconnected port OB_ADDRESS_OFF_SET[9]
 WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port LED[7]
 WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port LED[6]
 WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port LED[5]
@@ -190,8 +284,11 @@ WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port LED[1]
 WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port LED[0]
 WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port PS2_CLK
 WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port PS2_DATA
+WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port SW[4]
+WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port SW[3]
+WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port SW[2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 435.664 ; gain = 139.621
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 440.313 ; gain = 143.254
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -201,19 +298,21 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 435.664 ; gain = 139.621
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 440.313 ; gain = 143.254
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/.Xil/Vivado-10136-Adoney/dcp5/Graphics_in_context.xdc] for cell 'g'
-Finished Parsing XDC File [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/.Xil/Vivado-10136-Adoney/dcp5/Graphics_in_context.xdc] for cell 'g'
-Parsing XDC File [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/.Xil/Vivado-10136-Adoney/dcp7/Text_in_context.xdc] for cell 't'
-Finished Parsing XDC File [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/.Xil/Vivado-10136-Adoney/dcp7/Text_in_context.xdc] for cell 't'
+Parsing XDC File [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/.Xil/Vivado-8856-Adoney/dcp5/Graphics_in_context.xdc] for cell 'g'
+Finished Parsing XDC File [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/.Xil/Vivado-8856-Adoney/dcp5/Graphics_in_context.xdc] for cell 'g'
+Parsing XDC File [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/.Xil/Vivado-8856-Adoney/dcp7/Text_in_context.xdc] for cell 't'
+Finished Parsing XDC File [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/.Xil/Vivado-8856-Adoney/dcp7/Text_in_context.xdc] for cell 't'
 Parsing XDC File [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME_Constraints.xdc]
+WARNING: [Vivado 12-584] No ports matched 'P'. [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME_Constraints.xdc:68]
 Finished Parsing XDC File [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME_Constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME_Constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/SPACE_GAME_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME_Constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/SPACE_GAME_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/SPACE_GAME_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
@@ -221,18 +320,18 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 768.949 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.081 . Memory (MB): peak = 774.645 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'g' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 't' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 768.949 ; gain = 472.906
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 774.645 ; gain = 477.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 768.949 ; gain = 472.906
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 774.645 ; gain = 477.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -240,24 +339,34 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for g. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for t. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 768.949 ; gain = 472.906
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 774.645 ; gain = 477.586
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5545] ROM "COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element COUNT_reg was removed.  [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_CLOCK.v:27]
-WARNING: [Synth 8-6014] Unused sequential element COUNT_reg was removed.  [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_COUNT.v:28]
 INFO: [Synth 8-802] inferred FSM for state register 'CS_reg' in module 'GAME_CONTROLLER'
 INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "NS" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "NS" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "NS" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "NS" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element COUNT_reg was removed.  [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_CLOCK.v:27]
+WARNING: [Synth 8-6014] Unused sequential element COUNT_reg was removed.  [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_COUNT.v:28]
 INFO: [Synth 8-5546] ROM "EN" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-6014] Unused sequential element COUNT_reg was removed.  [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/HOR_COUNTER.v:30]
 INFO: [Synth 8-5546] ROM "VCNT" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-6014] Unused sequential element COUNT_reg was removed.  [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SLOW_CLOCK.v:27]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPACE_SHIP.v:59]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPACE_SHIP.v:60]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPACE_SHIP.v:61]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPACE_SHIP.v:61]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPACE_SHIP.v:61]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPACE_SHIP.v:61]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPACE_SHIP.v:61]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPACE_SHIP.v:61]
+INFO: [Synth 8-5546] ROM "OB_X_MOVE_UPDATE" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "OB_Y_MOVE_UPDATE" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/OBJECT.v:60]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/OBJECT.v:61]
 INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/OBJECT.v:62]
@@ -273,11 +382,20 @@ INFO: [Synth 8-5545] ROM "SIGNAL" won't be mapped to RAM because address size (3
 INFO: [Synth 8-5545] ROM "COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'CS_reg' in module 'GA2_STATE'
+INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'CS_reg' in module 'BA1_STATE'
 INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "BA1_speed" won't be mapped to RAM because it is too sparse
@@ -297,6 +415,14 @@ INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size 
 INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'CS_reg' in module 'BA2_STATE'
+INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -314,7 +440,14 @@ INFO: [Synth 8-5546] ROM "mode" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-6014] Unused sequential element COUNT_reg was removed.  [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_CLK.v:28]
-WARNING: [Synth 8-327] inferring latch for variable 'EN_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GAME_CONTROLLER.v:62]
+INFO: [Synth 8-802] inferred FSM for state register 'CS_reg' in module 'TEST_STATE'
+INFO: [Synth 8-5546] ROM "EN_TIMER" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "T_CLK" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "COUNT" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'EN_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GAME_CONTROLLER.v:54]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -325,13 +458,35 @@ WARNING: [Synth 8-327] inferring latch for variable 'EN_reg' [C:/Users/AdoneyGal
                      WIN |                            10000 |                       0000000100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'CS_reg' using encoding 'one-hot' in module 'GAME_CONTROLLER'
-WARNING: [Synth 8-327] inferring latch for variable 'EN_COUNT_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GAME_CONTROLLER.v:42]
+WARNING: [Synth 8-327] inferring latch for variable 'EN_COUNT_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GAME_CONTROLLER.v:55]
 WARNING: [Synth 8-327] inferring latch for variable 'RA1_speed_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA1_STATE.v:53]
 WARNING: [Synth 8-327] inferring latch for variable 'RA1_motion_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA1_STATE.v:54]
 WARNING: [Synth 8-327] inferring latch for variable 'EN_TIMER_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA1_STATE.v:35]
+WARNING: [Synth 8-327] inferring latch for variable 'RA2_speed_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA2_STATE.v:54]
+WARNING: [Synth 8-327] inferring latch for variable 'RA2_motion_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA2_STATE.v:55]
+WARNING: [Synth 8-327] inferring latch for variable 'EN_TIMER_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA2_STATE.v:36]
+WARNING: [Synth 8-327] inferring latch for variable 'RA3_speed_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA3_STATE.v:54]
+WARNING: [Synth 8-327] inferring latch for variable 'RA3_motion_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA3_STATE.v:55]
+WARNING: [Synth 8-327] inferring latch for variable 'EN_TIMER_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/RA3_STATE.v:36]
 WARNING: [Synth 8-327] inferring latch for variable 'GA1_speed_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA1_STATE.v:53]
 WARNING: [Synth 8-327] inferring latch for variable 'GA1_motion_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA1_STATE.v:54]
 WARNING: [Synth 8-327] inferring latch for variable 'EN_TIMER_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA1_STATE.v:35]
+WARNING: [Synth 8-327] inferring latch for variable 'GA2_speed_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA2_STATE.v:57]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    WAIT |                              000 |                       0000000000
+                  DELAY1 |                              001 |                       0000000001
+                  DELAY2 |                              010 |                       0000000010
+                  DELAY3 |                              011 |                       0000000011
+                  DELAY4 |                              100 |                       0000000100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'CS_reg' using encoding 'sequential' in module 'GA2_STATE'
+WARNING: [Synth 8-327] inferring latch for variable 'GA2_motion_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA2_STATE.v:58]
+WARNING: [Synth 8-327] inferring latch for variable 'EN_TIMER_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA2_STATE.v:39]
+WARNING: [Synth 8-327] inferring latch for variable 'GA3_speed_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA3_STATE.v:53]
+WARNING: [Synth 8-327] inferring latch for variable 'GA3_motion_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA3_STATE.v:54]
+WARNING: [Synth 8-327] inferring latch for variable 'EN_TIMER_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/GA3_STATE.v:35]
 WARNING: [Synth 8-327] inferring latch for variable 'BA1_speed_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA1_STATE.v:96]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -357,11 +512,32 @@ WARNING: [Synth 8-327] inferring latch for variable 'BA1_speed_reg' [C:/Users/Ad
 INFO: [Synth 8-3354] encoded FSM with state register 'CS_reg' using encoding 'sequential' in module 'BA1_STATE'
 WARNING: [Synth 8-327] inferring latch for variable 'BA1_motion_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA1_STATE.v:97]
 WARNING: [Synth 8-327] inferring latch for variable 'EN_TIMER_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA1_STATE.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'BA2_speed_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA2_STATE.v:55]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    WAIT |                             0001 |                       0000000000
+                  DELAY1 |                             0010 |                       0000000001
+                  DELAY2 |                             0100 |                       0000000010
+                  DELAY3 |                             1000 |                       0000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'CS_reg' using encoding 'one-hot' in module 'BA2_STATE'
+WARNING: [Synth 8-327] inferring latch for variable 'BA2_motion_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA2_STATE.v:56]
+WARNING: [Synth 8-327] inferring latch for variable 'EN_TIMER_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA2_STATE.v:37]
+WARNING: [Synth 8-327] inferring latch for variable 'BA3_speed_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA3_STATE.v:53]
+WARNING: [Synth 8-327] inferring latch for variable 'BA3_motion_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA3_STATE.v:54]
+WARNING: [Synth 8-327] inferring latch for variable 'EN_TIMER_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/BA3_STATE.v:35]
 WARNING: [Synth 8-327] inferring latch for variable 'PA1_speed_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA1_STATE.v:54]
 WARNING: [Synth 8-327] inferring latch for variable 'PA1_motion_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA1_STATE.v:55]
 WARNING: [Synth 8-327] inferring latch for variable 'EN_TIMER_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA1_STATE.v:36]
-WARNING: [Synth 8-327] inferring latch for variable 'ADDRESS_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PRIORITY_MUX.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'COR_DATA_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PRIORITY_MUX.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'PA2_speed_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA2_STATE.v:53]
+WARNING: [Synth 8-327] inferring latch for variable 'PA2_motion_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA2_STATE.v:54]
+WARNING: [Synth 8-327] inferring latch for variable 'EN_TIMER_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA2_STATE.v:35]
+WARNING: [Synth 8-327] inferring latch for variable 'PA3_speed_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA3_STATE.v:53]
+WARNING: [Synth 8-327] inferring latch for variable 'PA3_motion_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA3_STATE.v:54]
+WARNING: [Synth 8-327] inferring latch for variable 'EN_TIMER_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PA3_STATE.v:35]
+WARNING: [Synth 8-327] inferring latch for variable 'ADDRESS_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PRIORITY_MUX.v:86]
+WARNING: [Synth 8-327] inferring latch for variable 'COR_DATA_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/PRIORITY_MUX.v:87]
 WARNING: [Synth 8-327] inferring latch for variable 'EN_EX_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/COLLSION_DETECT.v:86]
 WARNING: [Synth 8-327] inferring latch for variable 'EN_SPI_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/COLLSION_DETECT.v:85]
 WARNING: [Synth 8-327] inferring latch for variable 'EN_TIMER_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/COLLSION_DETECT.v:60]
@@ -376,70 +552,92 @@ WARNING: [Synth 8-327] inferring latch for variable 'EN_TIMER_reg' [C:/Users/Ado
                       RX |                              101 |                              101
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'mode_reg' using encoding 'sequential' in module 'SPI_INTERFACE'
+WARNING: [Synth 8-327] inferring latch for variable 'EN_EX_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/TEST_STATE.v:65]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                     INT |                               00 |                       0000000011
+                    WAIT |                               01 |                       0000000000
+               DISPLAYEX |                               10 |                       0000000001
+                 TURNOFF |                               11 |                       0000000100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'CS_reg' using encoding 'sequential' in module 'TEST_STATE'
+WARNING: [Synth 8-327] inferring latch for variable 'ENREDA1_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/TEST_STATE.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'EN_TIMER_reg' [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/TEST_STATE.v:42]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 768.949 ; gain = 472.906
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 774.645 ; gain = 477.586
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+----------------+------------+----------+
 |      |RTL Partition   |Replication |Instances |
 +------+----------------+------------+----------+
-|1     |SPACE_GAME__GB0 |           1|     19037|
-|2     |SPACE_GAME__GB1 |           1|      9778|
-|3     |SPACE_GAME__GB2 |           1|      8168|
-|4     |SPACE_GAME__GB3 |           1|     14180|
+|1     |SPACE_GAME__GB0 |           1|     22268|
+|2     |SPACE_GAME__GB1 |           1|     10413|
+|3     |SPACE_GAME__GB2 |           1|     12258|
+|4     |SPACE_GAME__GB3 |           1|     10974|
+|5     |SPACE_GAME__GB4 |           1|     16557|
 +------+----------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 5     
-	   3 Input     11 Bit       Adders := 48    
+	   2 Input     32 Bit       Adders := 15    
+	   3 Input     11 Bit       Adders := 52    
 	   2 Input     11 Bit       Adders := 1     
-	   3 Input     10 Bit       Adders := 96    
-	   2 Input     10 Bit       Adders := 51    
-	   2 Input      9 Bit       Adders := 24    
+	   3 Input     10 Bit       Adders := 104   
+	   2 Input     10 Bit       Adders := 55    
+	   2 Input      9 Bit       Adders := 26    
 	   2 Input      6 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
 	   2 Input      1 Bit       Adders := 1     
 +---Registers : 
 	               40 Bit    Registers := 1     
-	               32 Bit    Registers := 5     
+	               32 Bit    Registers := 15    
 	               16 Bit    Registers := 2     
 	               11 Bit    Registers := 1     
-	               10 Bit    Registers := 57    
+	               10 Bit    Registers := 67    
 	                8 Bit    Registers := 2     
 	                6 Bit    Registers := 1     
 	                3 Bit    Registers := 2     
-	                1 Bit    Registers := 15    
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 26    
 +---Muxes : 
 	   6 Input     40 Bit        Muxes := 2     
-	   2 Input     32 Bit        Muxes := 5     
+	   2 Input     32 Bit        Muxes := 15    
 	   5 Input     23 Bit        Muxes := 1     
 	   2 Input     11 Bit        Muxes := 1     
-	   2 Input     10 Bit        Muxes := 129   
-	  10 Input     10 Bit        Muxes := 73    
-	   4 Input     10 Bit        Muxes := 10    
+	   2 Input     10 Bit        Muxes := 145   
+	   4 Input     10 Bit        Muxes := 23    
+	  10 Input     10 Bit        Muxes := 79    
 	  17 Input     10 Bit        Muxes := 1     
+	   5 Input     10 Bit        Muxes := 2     
 	  11 Input     10 Bit        Muxes := 1     
 	   9 Input     10 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
 	   6 Input      6 Bit        Muxes := 1     
-	  11 Input      5 Bit        Muxes := 1     
 	  35 Input      5 Bit        Muxes := 1     
+	  11 Input      5 Bit        Muxes := 1     
+	  21 Input      4 Bit        Muxes := 1     
 	  10 Input      4 Bit        Muxes := 3     
-	  19 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	  11 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
 	   6 Input      3 Bit        Muxes := 1     
 	   9 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 7     
-	   2 Input      1 Bit        Muxes := 112   
-	   5 Input      1 Bit        Muxes := 2     
-	  10 Input      1 Bit        Muxes := 48    
-	  24 Input      1 Bit        Muxes := 2     
-	   4 Input      1 Bit        Muxes := 10    
+	   2 Input      2 Bit        Muxes := 20    
+	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 165   
+	   4 Input      1 Bit        Muxes := 28    
+	  10 Input      1 Bit        Muxes := 52    
 	  17 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 4     
+	  26 Input      1 Bit        Muxes := 2     
 	   6 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -447,22 +645,26 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module ONE_SEC_CLOCK 
+Module TIMER_25__1 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
 +---Registers : 
+	               32 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module COLLSION_DETECT 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
+	   4 Input     10 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 5     
-Module ONE_SEC_COUNT 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module GAME_CONTROLLER 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   5 Input     23 Bit        Muxes := 1     
-	  11 Input      5 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 4     
 Module OBJECT__1 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -505,6 +707,42 @@ Detailed RTL Component Info :
 	  10 Input     10 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 2     
 	  10 Input      1 Bit        Muxes := 2     
+Module LONG_TIMER__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module BA1_STATE 
+Detailed RTL Component Info : 
++---Muxes : 
+	  17 Input     10 Bit        Muxes := 1     
+	  35 Input      5 Bit        Muxes := 1     
+	  17 Input      1 Bit        Muxes := 3     
+Module LONG_TIMER__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module GA3_STATE 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     10 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 2     
 Module OBJECT__4 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -533,10 +771,6 @@ Detailed RTL Component Info :
 	  10 Input     10 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 2     
 	  10 Input      1 Bit        Muxes := 2     
-Module COLOR_DECODER 
-Detailed RTL Component Info : 
-+---Muxes : 
-	  10 Input      4 Bit        Muxes := 3     
 Module OBJECT__6 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -551,11 +785,102 @@ Detailed RTL Component Info :
 	  10 Input     10 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 2     
 	  10 Input      1 Bit        Muxes := 2     
-Module PRIORITY_MUX 
+Module TIMER_15 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module RA1_STATE 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     10 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 2     
+Module LONG_TIMER__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module RA2_STATE 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     10 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 2     
+Module LONG_TIMER__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module RA3_STATE 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     10 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 2     
+Module TIMER_15__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module GA1_STATE 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     10 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 2     
+Module LONG_TIMER__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module GA2_STATE 
 Detailed RTL Component Info : 
 +---Muxes : 
-	  19 Input      4 Bit        Muxes := 1     
-	  24 Input      1 Bit        Muxes := 2     
+	   5 Input     10 Bit        Muxes := 2     
+	  11 Input      3 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 2     
 Module OBJECT__7 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -612,6 +937,15 @@ Detailed RTL Component Info :
 	  10 Input     10 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 2     
 	  10 Input      1 Bit        Muxes := 2     
+Module PRIORITY_MUX 
+Detailed RTL Component Info : 
++---Muxes : 
+	  21 Input      4 Bit        Muxes := 1     
+	  26 Input      1 Bit        Muxes := 2     
+Module COLOR_DECODER 
+Detailed RTL Component Info : 
++---Muxes : 
+	  10 Input      4 Bit        Muxes := 3     
 Module OBJECT__11 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -640,26 +974,6 @@ Detailed RTL Component Info :
 	  10 Input     10 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 2     
 	  10 Input      1 Bit        Muxes := 2     
-Module TIMER_25 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module COLLSION_DETECT 
-Detailed RTL Component Info : 
-+---Registers : 
-	               10 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     10 Bit        Muxes := 1     
-	   4 Input     10 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 5     
-	   4 Input      1 Bit        Muxes := 4     
 Module OBJECT__13 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -674,6 +988,39 @@ Detailed RTL Component Info :
 	  10 Input     10 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 2     
 	  10 Input      1 Bit        Muxes := 2     
+Module SPACE_SHIP 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     11 Bit       Adders := 2     
+	   3 Input     10 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 5     
+	  10 Input     10 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+	  10 Input      1 Bit        Muxes := 2     
+Module SPI_INTERFACE 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	               40 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   6 Input     40 Bit        Muxes := 2     
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 10    
 Module OBJECT__14 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -716,6 +1063,16 @@ Detailed RTL Component Info :
 	  10 Input     10 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 2     
 	  10 Input      1 Bit        Muxes := 2     
+Module SPI_DATA_DECODER 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
++---Muxes : 
+	  11 Input     10 Bit        Muxes := 1     
+	  10 Input     10 Bit        Muxes := 1     
+	   9 Input     10 Bit        Muxes := 1     
 Module OBJECT__17 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -772,6 +1129,64 @@ Detailed RTL Component Info :
 	  10 Input     10 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 2     
 	  10 Input      1 Bit        Muxes := 2     
+Module TIMER_25 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module TEST_STATE 
+Detailed RTL Component Info : 
++---Muxes : 
+	   7 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module SEG_CLOCK 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module SELECT_COUNTER 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module DIGIT_SELECT 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+Module ANODE_MUX 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+Module ONE_SEC_COUNT 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module ONE_SEC_CLOCK 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 5     
+Module GAME_CONTROLLER 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input     23 Bit        Muxes := 1     
+	  11 Input      5 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 2     
 Module OBJECT__21 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -814,6 +1229,30 @@ Detailed RTL Component Info :
 	  10 Input     10 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 2     
 	  10 Input      1 Bit        Muxes := 2     
+Module OBJECT__24 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     11 Bit       Adders := 2     
+	   3 Input     10 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 5     
+	  10 Input     10 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+	  10 Input      1 Bit        Muxes := 2     
+Module SPI_CLK 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
 Module OBJECT 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -838,6 +1277,46 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 4     
+Module PA3_STATE 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     10 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 2     
+Module LONG_TIMER__9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module PA2_STATE 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     10 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 2     
+Module LONG_TIMER__8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 Module PA1_STATE 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -848,7 +1327,7 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 2     
-Module LONG_TIMER__1 
+Module LONG_TIMER__7 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
@@ -858,33 +1337,17 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 4     
-Module BA1_STATE 
-Detailed RTL Component Info : 
-+---Muxes : 
-	  17 Input     10 Bit        Muxes := 1     
-	  35 Input      5 Bit        Muxes := 1     
-	  17 Input      1 Bit        Muxes := 3     
-Module TIMER_15 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module GA1_STATE 
+Module BA3_STATE 
 Detailed RTL Component Info : 
 +---Registers : 
 	               10 Bit    Registers := 1     
 +---Muxes : 
-	   4 Input     10 Bit        Muxes := 3     
-	   2 Input     10 Bit        Muxes := 2     
+	   4 Input     10 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 2     
-Module TIMER_15__1 
+Module LONG_TIMER__6 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
@@ -894,15 +1357,11 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 4     
-Module RA1_STATE 
+Module BA2_STATE 
 Detailed RTL Component Info : 
-+---Registers : 
-	               10 Bit    Registers := 1     
 +---Muxes : 
-	   4 Input     10 Bit        Muxes := 3     
-	   2 Input     10 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 2     
+	   4 Input     10 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 2     
 Module SLOW_CLOCK 
 Detailed RTL Component Info : 
@@ -919,45 +1378,6 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     10 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 6     
-Module SPI_INTERFACE 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      6 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 2     
-+---Registers : 
-	               40 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
-	                6 Bit    Registers := 1     
-	                3 Bit    Registers := 2     
-	                1 Bit    Registers := 4     
-+---Muxes : 
-	   6 Input     40 Bit        Muxes := 2     
-	   6 Input      6 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-	   6 Input      3 Bit        Muxes := 1     
-	   9 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-	   6 Input      1 Bit        Muxes := 10    
-Module SPI_CLK 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     11 Bit       Adders := 1     
-+---Registers : 
-	               11 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     11 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 5     
-Module SPI_DATA_DECODER 
-Detailed RTL Component Info : 
-+---Registers : 
-	               16 Bit    Registers := 2     
-	               10 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
-+---Muxes : 
-	  11 Input     10 Bit        Muxes := 1     
-	  10 Input     10 Bit        Muxes := 1     
-	   9 Input     10 Bit        Muxes := 1     
 Module HOR_COUNTER 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -988,126 +1408,10 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5545] ROM "osc/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "osc/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element osc/COUNT_reg was removed.  [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_CLOCK.v:27]
-WARNING: [Synth 8-6014] Unused sequential element nolabel_line42/COUNT_reg was removed.  [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_COUNT.v:28]
-DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
-DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
-DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
-DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
-DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
-DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
-DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
-DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
-DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
-DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
-DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
-DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
-DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
-DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
-DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
-DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
-DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
-DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
-DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
-DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
-DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
-DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
-DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
-DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
-DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
-DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
-DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
-DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
-DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
-DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
-DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
-DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
-DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
-DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
-DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
-DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
-DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
-DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
-DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
-DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
-INFO: [Synth 8-5545] ROM "t/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "t/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "t/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "t/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
-DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
-DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
-DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
-DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
-DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
-DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
-DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
-DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
-DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
-DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
-DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
-DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
-DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
-DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
-DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
-DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
-INFO: [Synth 8-5545] ROM "tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "nolabel_line35/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "nolabel_line35/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "nolabel_line35/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "nolabel_line35/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "nolabel_line35/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "nolabel_line35/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "nolabel_line35/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "nolabel_line35/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element COUNT_reg was removed.  [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SLOW_CLOCK.v:27]
-INFO: [Synth 8-5546] ROM "VCNT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "EN" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element COUNT_reg was removed.  [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/HOR_COUNTER.v:30]
-INFO: [Synth 8-5545] ROM "BLUE_ALIEN_1/tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "BLUE_ALIEN_1/tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "BLUE_ALIEN_1/tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "BLUE_ALIEN_1/tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "spic/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "spic/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element spic/COUNT_reg was removed.  [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_CLK.v:28]
 WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port LED[7]
 WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port LED[6]
 WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port LED[5]
@@ -1118,134 +1422,225 @@ WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port LED[1]
 WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port LED[0]
 WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port PS2_CLK
 WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port PS2_DATA
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/EXPLOSION/\OB_X_MOVE_UPDATE_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_X_MOVE_UPDATE_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_X_MOVE_UPDATE_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_X_MOVE_UPDATE_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_X_MOVE_UPDATE_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_X_MOVE_UPDATE_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_X_MOVE_UPDATE_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_X_MOVE_UPDATE_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_X_MOVE_UPDATE_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_X_MOVE_UPDATE_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_X_MOVE_UPDATE_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_Y_MOVE_UPDATE_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_Y_MOVE_UPDATE_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_Y_MOVE_UPDATE_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_Y_MOVE_UPDATE_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_Y_MOVE_UPDATE_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_Y_MOVE_UPDATE_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_Y_MOVE_UPDATE_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_Y_MOVE_UPDATE_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_Y_MOVE_UPDATE_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/Y/\OB_Y_MOVE_UPDATE_reg[9] )
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_reg[22]' (LD) to 'i_0/GC/EN_reg[21]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/SPACE_SHIP/\OB_X_MOVE_UPDATE_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_X_MOVE_UPDATE_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_X_MOVE_UPDATE_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_X_MOVE_UPDATE_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_X_MOVE_UPDATE_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_X_MOVE_UPDATE_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_X_MOVE_UPDATE_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_X_MOVE_UPDATE_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_X_MOVE_UPDATE_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_X_MOVE_UPDATE_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_X_MOVE_UPDATE_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_Y_MOVE_UPDATE_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_Y_MOVE_UPDATE_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_Y_MOVE_UPDATE_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_Y_MOVE_UPDATE_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_Y_MOVE_UPDATE_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_Y_MOVE_UPDATE_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_Y_MOVE_UPDATE_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_Y_MOVE_UPDATE_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_Y_MOVE_UPDATE_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/G/\OB_Y_MOVE_UPDATE_reg[9] )
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_reg[17]' (LD) to 'i_0/GC/EN_reg[21]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_X_MOVE_UPDATE_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_X_MOVE_UPDATE_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_X_MOVE_UPDATE_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_X_MOVE_UPDATE_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_X_MOVE_UPDATE_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_X_MOVE_UPDATE_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_X_MOVE_UPDATE_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_X_MOVE_UPDATE_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_X_MOVE_UPDATE_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_X_MOVE_UPDATE_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_Y_MOVE_UPDATE_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_Y_MOVE_UPDATE_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_Y_MOVE_UPDATE_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_Y_MOVE_UPDATE_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_Y_MOVE_UPDATE_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_Y_MOVE_UPDATE_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_Y_MOVE_UPDATE_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_Y_MOVE_UPDATE_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_Y_MOVE_UPDATE_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A1/\OB_Y_MOVE_UPDATE_reg[9] )
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_reg[18]' (LD) to 'i_0/GC/EN_reg[21]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_X_MOVE_UPDATE_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_X_MOVE_UPDATE_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_X_MOVE_UPDATE_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_X_MOVE_UPDATE_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_X_MOVE_UPDATE_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_X_MOVE_UPDATE_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_X_MOVE_UPDATE_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_X_MOVE_UPDATE_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_X_MOVE_UPDATE_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_X_MOVE_UPDATE_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_Y_MOVE_UPDATE_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_Y_MOVE_UPDATE_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_Y_MOVE_UPDATE_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_Y_MOVE_UPDATE_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_Y_MOVE_UPDATE_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_Y_MOVE_UPDATE_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_Y_MOVE_UPDATE_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_Y_MOVE_UPDATE_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_Y_MOVE_UPDATE_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/L/\OB_Y_MOVE_UPDATE_reg[9] )
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_reg[19]' (LD) to 'i_0/GC/EN_reg[21]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A2/\OB_X_MOVE_UPDATE_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A2/\OB_X_MOVE_UPDATE_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A2/\OB_X_MOVE_UPDATE_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A2/\OB_X_MOVE_UPDATE_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A2/\OB_X_MOVE_UPDATE_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A2/\OB_X_MOVE_UPDATE_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A2/\OB_X_MOVE_UPDATE_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A2/\OB_X_MOVE_UPDATE_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A2/\OB_X_MOVE_UPDATE_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A2/\OB_X_MOVE_UPDATE_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A2/\OB_Y_MOVE_UPDATE_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A2/\OB_Y_MOVE_UPDATE_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A2/\OB_Y_MOVE_UPDATE_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A2/\OB_Y_MOVE_UPDATE_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A2/\OB_Y_MOVE_UPDATE_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A2/\OB_Y_MOVE_UPDATE_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A2/\OB_Y_MOVE_UPDATE_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/A2/\OB_Y_MOVE_UPDATE_reg[7] )
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_reg[20]' (LD) to 'i_0/GC/EN_reg[21]'
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_reg[14]' (LD) to 'i_0/GC/EN_reg[16]'
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_reg[12]' (LD) to 'i_0/GC/EN_reg[16]'
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_reg[1]' (LD) to 'i_0/GC/EN_reg[2]'
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_reg[2]' (LD) to 'i_0/GC/EN_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_reg[3]' (LD) to 'i_0/GC/EN_reg[4]'
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_reg[5]' (LD) to 'i_0/GC/EN_reg[6]'
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_reg[6]' (LD) to 'i_0/GC/EN_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_reg[7]' (LD) to 'i_0/GC/EN_reg[8]'
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_reg[9]' (LD) to 'i_0/GC/EN_reg[16]'
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_reg[10]' (LD) to 'i_0/GC/EN_reg[16]'
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_reg[11]' (LD) to 'i_0/GC/EN_reg[16]'
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_reg[13]' (LD) to 'i_0/GC/EN_reg[16]'
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_reg[15]' (LD) to 'i_0/GC/EN_reg[16]'
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[9]) is unused and will be removed from module OBJECT__1.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[8]) is unused and will be removed from module OBJECT__1.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[7]) is unused and will be removed from module OBJECT__1.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[6]) is unused and will be removed from module OBJECT__1.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[5]) is unused and will be removed from module OBJECT__1.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[4]) is unused and will be removed from module OBJECT__1.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[3]) is unused and will be removed from module OBJECT__1.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[2]) is unused and will be removed from module OBJECT__1.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[1]) is unused and will be removed from module OBJECT__1.
+WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port SW[4]
+WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port SW[3]
+WARNING: [Synth 8-3331] design SPACE_GAME has unconnected port SW[2]
+INFO: [Synth 8-5545] ROM "t/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "t/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "t/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "t/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+INFO: [Synth 8-5545] ROM "tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+INFO: [Synth 8-5545] ROM "nolabel_line35/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line35/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line35/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line35/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line35/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line35/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line35/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line35/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "BLUE_ALIEN_1/tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "BLUE_ALIEN_1/tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "BLUE_ALIEN_1/tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "BLUE_ALIEN_1/tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "GREEN_ALIEN_2/tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "GREEN_ALIEN_2/tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "GREEN_ALIEN_2/tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "GREEN_ALIEN_2/tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design OBJECT__6 has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design OBJECT__5 has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design OBJECT__4 has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design OBJECT__3 has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design OBJECT__2 has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design OBJECT__1 has unconnected port OB_ADDRESS_OFF_SET[9]
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_3/GA3_speed_reg[0]' (LD) to 'GREEN_ALIEN_3/GA3_motion_reg[9]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\GREEN_ALIEN_3/GA3_speed_reg[2] )
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_3/GA3_speed_reg[3]' (LD) to 'GREEN_ALIEN_3/GA3_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_3/GA3_speed_reg[4]' (LD) to 'GREEN_ALIEN_3/GA3_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_3/GA3_speed_reg[5]' (LD) to 'GREEN_ALIEN_3/GA3_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_3/GA3_speed_reg[6]' (LD) to 'GREEN_ALIEN_3/GA3_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_3/GA3_speed_reg[7]' (LD) to 'GREEN_ALIEN_3/GA3_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_3/GA3_speed_reg[8]' (LD) to 'GREEN_ALIEN_3/GA3_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_3/GA3_speed_reg[9]' (LD) to 'GREEN_ALIEN_3/GA3_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_3/GA3_motion_reg[9]' (LD) to 'GREEN_ALIEN_3/GA3_motion_reg[8]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_3/GA3_motion_reg[8]' (LD) to 'GREEN_ALIEN_3/GA3_motion_reg[7]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_3/GA3_motion_reg[7]' (LD) to 'GREEN_ALIEN_3/GA3_motion_reg[6]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_3/GA3_motion_reg[6]' (LD) to 'GREEN_ALIEN_3/GA3_motion_reg[5]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_3/GA3_motion_reg[4]' (LD) to 'GREEN_ALIEN_3/GA3_motion_reg[5]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_3/GA3_motion_reg[5]' (LD) to 'GREEN_ALIEN_3/GA3_motion_reg[3]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_3/GA3_motion_reg[2]' (LD) to 'GREEN_ALIEN_3/GA3_motion_reg[3]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_3/GA3_motion_reg[0]' (LD) to 'GREEN_ALIEN_3/GA3_motion_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\GREEN_ALIEN_3/GA3_motion_reg[3] )
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_2/GA2_speed_reg[0]' (LD) to 'GREEN_ALIEN_2/GA2_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_2/GA2_speed_reg[3]' (LD) to 'GREEN_ALIEN_2/GA2_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_2/GA2_speed_reg[4]' (LD) to 'GREEN_ALIEN_2/GA2_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_2/GA2_speed_reg[5]' (LD) to 'GREEN_ALIEN_2/GA2_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_2/GA2_speed_reg[6]' (LD) to 'GREEN_ALIEN_2/GA2_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_2/GA2_speed_reg[7]' (LD) to 'GREEN_ALIEN_2/GA2_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_2/GA2_speed_reg[8]' (LD) to 'GREEN_ALIEN_2/GA2_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_2/GA2_speed_reg[9]' (LD) to 'GREEN_ALIEN_2/GA2_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_2/GA2_motion_reg[9]' (LD) to 'GREEN_ALIEN_2/GA2_motion_reg[8]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_2/GA2_motion_reg[8]' (LD) to 'GREEN_ALIEN_2/GA2_motion_reg[7]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_2/GA2_motion_reg[7]' (LD) to 'GREEN_ALIEN_2/GA2_motion_reg[6]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_2/GA2_motion_reg[6]' (LD) to 'GREEN_ALIEN_2/GA2_motion_reg[5]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_2/GA2_motion_reg[4]' (LD) to 'GREEN_ALIEN_2/GA2_motion_reg[5]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_2/GA2_motion_reg[5]' (LD) to 'GREEN_ALIEN_2/GA2_motion_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\GREEN_ALIEN_2/GA2_motion_reg[3] )
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_1/GA1_speed_reg[0]' (LD) to 'GREEN_ALIEN_1/GA1_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_1/GA1_speed_reg[3]' (LD) to 'GREEN_ALIEN_1/GA1_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_1/GA1_speed_reg[4]' (LD) to 'GREEN_ALIEN_1/GA1_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_1/GA1_speed_reg[5]' (LD) to 'GREEN_ALIEN_1/GA1_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_1/GA1_speed_reg[6]' (LD) to 'GREEN_ALIEN_1/GA1_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_1/GA1_speed_reg[7]' (LD) to 'GREEN_ALIEN_1/GA1_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_1/GA1_speed_reg[8]' (LD) to 'GREEN_ALIEN_1/GA1_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_1/GA1_speed_reg[9]' (LD) to 'GREEN_ALIEN_1/GA1_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_1/GA1_motion_reg[9]' (LD) to 'GREEN_ALIEN_1/GA1_motion_reg[8]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_1/GA1_motion_reg[8]' (LD) to 'GREEN_ALIEN_1/GA1_motion_reg[7]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_1/GA1_motion_reg[7]' (LD) to 'GREEN_ALIEN_1/GA1_motion_reg[6]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_1/GA1_motion_reg[6]' (LD) to 'GREEN_ALIEN_1/GA1_motion_reg[5]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_1/GA1_motion_reg[4]' (LD) to 'GREEN_ALIEN_1/GA1_motion_reg[5]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_1/GA1_motion_reg[5]' (LD) to 'GREEN_ALIEN_1/GA1_motion_reg[3]'
+INFO: [Synth 8-3886] merging instance 'GREEN_ALIEN_1/GA1_motion_reg[2]' (LD) to 'GREEN_ALIEN_1/GA1_motion_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\GREEN_ALIEN_1/GA1_motion_reg[3] )
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_3/RA3_speed_reg[0]' (LD) to 'RED_ALIEN_3/RA3_motion_reg[9]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\RED_ALIEN_3/RA3_speed_reg[2] )
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_3/RA3_speed_reg[3]' (LD) to 'RED_ALIEN_3/RA3_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_3/RA3_speed_reg[4]' (LD) to 'RED_ALIEN_3/RA3_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_3/RA3_speed_reg[5]' (LD) to 'RED_ALIEN_3/RA3_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_3/RA3_speed_reg[6]' (LD) to 'RED_ALIEN_3/RA3_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_3/RA3_speed_reg[7]' (LD) to 'RED_ALIEN_3/RA3_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_3/RA3_speed_reg[8]' (LD) to 'RED_ALIEN_3/RA3_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_3/RA3_speed_reg[9]' (LD) to 'RED_ALIEN_3/RA3_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_3/RA3_motion_reg[9]' (LD) to 'RED_ALIEN_3/RA3_motion_reg[8]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_3/RA3_motion_reg[8]' (LD) to 'RED_ALIEN_3/RA3_motion_reg[7]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_3/RA3_motion_reg[7]' (LD) to 'RED_ALIEN_3/RA3_motion_reg[6]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_3/RA3_motion_reg[6]' (LD) to 'RED_ALIEN_3/RA3_motion_reg[5]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_3/RA3_motion_reg[4]' (LD) to 'RED_ALIEN_3/RA3_motion_reg[5]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_3/RA3_motion_reg[5]' (LD) to 'RED_ALIEN_3/RA3_motion_reg[3]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_3/RA3_motion_reg[2]' (LD) to 'RED_ALIEN_3/RA3_motion_reg[3]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_3/RA3_motion_reg[0]' (LD) to 'RED_ALIEN_3/RA3_motion_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RED_ALIEN_3/RA3_motion_reg[3] )
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_2/RA2_speed_reg[0]' (LD) to 'RED_ALIEN_2/RA2_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_2/RA2_speed_reg[3]' (LD) to 'RED_ALIEN_2/RA2_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_2/RA2_speed_reg[4]' (LD) to 'RED_ALIEN_2/RA2_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_2/RA2_speed_reg[5]' (LD) to 'RED_ALIEN_2/RA2_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_2/RA2_speed_reg[6]' (LD) to 'RED_ALIEN_2/RA2_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_2/RA2_speed_reg[7]' (LD) to 'RED_ALIEN_2/RA2_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_2/RA2_speed_reg[8]' (LD) to 'RED_ALIEN_2/RA2_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_2/RA2_speed_reg[9]' (LD) to 'RED_ALIEN_2/RA2_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_2/RA2_motion_reg[9]' (LD) to 'RED_ALIEN_2/RA2_motion_reg[8]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_2/RA2_motion_reg[8]' (LD) to 'RED_ALIEN_2/RA2_motion_reg[7]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_2/RA2_motion_reg[7]' (LD) to 'RED_ALIEN_2/RA2_motion_reg[6]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_2/RA2_motion_reg[6]' (LD) to 'RED_ALIEN_2/RA2_motion_reg[5]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_2/RA2_motion_reg[4]' (LD) to 'RED_ALIEN_2/RA2_motion_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RED_ALIEN_2/RA2_motion_reg[5] )
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_2/RA2_motion_reg[2]' (LD) to 'RED_ALIEN_2/RA2_motion_reg[0]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_2/RA2_motion_reg[0]' (LD) to 'RED_ALIEN_2/RA2_motion_reg[1]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_1/RA1_speed_reg[0]' (LD) to 'RED_ALIEN_1/RA1_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_1/RA1_speed_reg[3]' (LD) to 'RED_ALIEN_1/RA1_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_1/RA1_speed_reg[4]' (LD) to 'RED_ALIEN_1/RA1_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_1/RA1_speed_reg[5]' (LD) to 'RED_ALIEN_1/RA1_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_1/RA1_speed_reg[6]' (LD) to 'RED_ALIEN_1/RA1_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_1/RA1_speed_reg[7]' (LD) to 'RED_ALIEN_1/RA1_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_1/RA1_speed_reg[8]' (LD) to 'RED_ALIEN_1/RA1_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_1/RA1_speed_reg[9]' (LD) to 'RED_ALIEN_1/RA1_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_1/RA1_motion_reg[9]' (LD) to 'RED_ALIEN_1/RA1_motion_reg[8]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_1/RA1_motion_reg[8]' (LD) to 'RED_ALIEN_1/RA1_motion_reg[7]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_1/RA1_motion_reg[7]' (LD) to 'RED_ALIEN_1/RA1_motion_reg[6]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_1/RA1_motion_reg[6]' (LD) to 'RED_ALIEN_1/RA1_motion_reg[5]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_1/RA1_motion_reg[4]' (LD) to 'RED_ALIEN_1/RA1_motion_reg[5]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_1/RA1_motion_reg[5]' (LD) to 'RED_ALIEN_1/RA1_motion_reg[3]'
+INFO: [Synth 8-3886] merging instance 'RED_ALIEN_1/RA1_motion_reg[0]' (LD) to 'RED_ALIEN_1/RA1_motion_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RED_ALIEN_1/RA1_motion_reg[3] )
+INFO: [Synth 8-3886] merging instance 'ct/CS_reg[7]' (FDRE) to 'ct/CS_reg[9]'
+INFO: [Synth 8-3886] merging instance 'ct/CS_reg[6]' (FDRE) to 'ct/CS_reg[9]'
+INFO: [Synth 8-3886] merging instance 'ct/CS_reg[9]' (FDRE) to 'ct/CS_reg[8]'
+INFO: [Synth 8-3886] merging instance 'ct/CS_reg[8]' (FDRE) to 'ct/CS_reg[5]'
+INFO: [Synth 8-3886] merging instance 'ct/CS_reg[2]' (FDRE) to 'ct/CS_reg[5]'
+INFO: [Synth 8-3886] merging instance 'ct/CS_reg[3]' (FDRE) to 'ct/CS_reg[5]'
+INFO: [Synth 8-3886] merging instance 'ct/CS_reg[5]' (FDRE) to 'ct/CS_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ct/\CS_reg[4] )
+INFO: [Synth 8-3886] merging instance 'BLUE_ALIEN_1/BA1_motion_reg[4]' (LD) to 'BLUE_ALIEN_1/BA1_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'BLUE_ALIEN_1/BA1_motion_reg[5]' (LD) to 'BLUE_ALIEN_1/BA1_motion_reg[9]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\BLUE_ALIEN_1/BA1_motion_reg[9] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\BLUE_ALIEN_1/BA1_speed_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\BLUE_ALIEN_1/BA1_speed_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GA3/\OB_X_MOVE_UPDATE_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GA2/\OB_X_MOVE_UPDATE_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GA1/\OB_X_MOVE_UPDATE_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (RA3/\OB_X_MOVE_UPDATE_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (RA3/\OB_Y_MOVE_UPDATE_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (RA2/\OB_X_MOVE_UPDATE_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (RA2/\OB_Y_MOVE_UPDATE_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (RA1/\OB_X_MOVE_UPDATE_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GA3/\OB_Y_MOVE_UPDATE_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GA3/\OB_Y_MOVE_UPDATE_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GA3/\OB_Y_MOVE_UPDATE_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GA3/\OB_Y_MOVE_UPDATE_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GA3/\OB_Y_MOVE_UPDATE_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GA3/\OB_Y_MOVE_UPDATE_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GA3/\OB_Y_MOVE_UPDATE_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GA3/\OB_Y_MOVE_UPDATE_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GA3/\OB_Y_MOVE_UPDATE_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GA3/\OB_Y_MOVE_UPDATE_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (RA3/\OB_Y_MOVE_UPDATE_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (RA3/\OB_Y_MOVE_UPDATE_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (RA3/\OB_Y_MOVE_UPDATE_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (RA3/\OB_Y_MOVE_UPDATE_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (RA3/\OB_Y_MOVE_UPDATE_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (RA3/\OB_Y_MOVE_UPDATE_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (RA3/\OB_Y_MOVE_UPDATE_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (RA3/\OB_Y_MOVE_UPDATE_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (RA3/\OB_Y_MOVE_UPDATE_reg[9] )
+WARNING: [Synth 8-3332] Sequential element (CS_reg[4]) is unused and will be removed from module COLLSION_DETECT.
 WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__1.
 WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[9]) is unused and will be removed from module OBJECT__1.
 WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[8]) is unused and will be removed from module OBJECT__1.
@@ -1257,56 +1652,9 @@ WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[3]) is unused a
 WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[2]) is unused and will be removed from module OBJECT__1.
 WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[1]) is unused and will be removed from module OBJECT__1.
 WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__1.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[9]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[8]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[7]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[6]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[5]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[4]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[3]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[2]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[1]) is unused and will be removed from module OBJECT__2.
 WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[9]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[8]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[7]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[6]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[5]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[4]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[3]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[2]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[1]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__2.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[9]) is unused and will be removed from module OBJECT__3.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[8]) is unused and will be removed from module OBJECT__3.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[7]) is unused and will be removed from module OBJECT__3.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[6]) is unused and will be removed from module OBJECT__3.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[5]) is unused and will be removed from module OBJECT__3.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[4]) is unused and will be removed from module OBJECT__3.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[3]) is unused and will be removed from module OBJECT__3.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[2]) is unused and will be removed from module OBJECT__3.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[1]) is unused and will be removed from module OBJECT__3.
 WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__3.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[9]) is unused and will be removed from module OBJECT__3.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[8]) is unused and will be removed from module OBJECT__3.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[7]) is unused and will be removed from module OBJECT__3.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[6]) is unused and will be removed from module OBJECT__3.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[5]) is unused and will be removed from module OBJECT__3.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[4]) is unused and will be removed from module OBJECT__3.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[3]) is unused and will be removed from module OBJECT__3.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[2]) is unused and will be removed from module OBJECT__3.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[1]) is unused and will be removed from module OBJECT__3.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__3.
 WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__4.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[9]) is unused and will be removed from module OBJECT__5.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[8]) is unused and will be removed from module OBJECT__5.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[7]) is unused and will be removed from module OBJECT__5.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[6]) is unused and will be removed from module OBJECT__5.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[5]) is unused and will be removed from module OBJECT__5.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[4]) is unused and will be removed from module OBJECT__5.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[3]) is unused and will be removed from module OBJECT__5.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[2]) is unused and will be removed from module OBJECT__5.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[1]) is unused and will be removed from module OBJECT__5.
 WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__5.
 WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[9]) is unused and will be removed from module OBJECT__5.
 WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[8]) is unused and will be removed from module OBJECT__5.
@@ -1319,119 +1667,313 @@ WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[2]) is unused a
 WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[1]) is unused and will be removed from module OBJECT__5.
 WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__5.
 WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__6.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[9]) is unused and will be removed from module OBJECT__7.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[8]) is unused and will be removed from module OBJECT__7.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[7]) is unused and will be removed from module OBJECT__7.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[6]) is unused and will be removed from module OBJECT__7.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[5]) is unused and will be removed from module OBJECT__7.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[4]) is unused and will be removed from module OBJECT__7.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[3]) is unused and will be removed from module OBJECT__7.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[2]) is unused and will be removed from module OBJECT__7.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[1]) is unused and will be removed from module OBJECT__7.
-WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__7.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[9]) is unused and will be removed from module OBJECT__7.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[8]) is unused and will be removed from module OBJECT__7.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[7]) is unused and will be removed from module OBJECT__7.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[6]) is unused and will be removed from module OBJECT__7.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[5]) is unused and will be removed from module OBJECT__7.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[4]) is unused and will be removed from module OBJECT__7.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[3]) is unused and will be removed from module OBJECT__7.
-WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[2]) is unused and will be removed from module OBJECT__7.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__6.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GA2/\OB_Y_MOVE_UPDATE_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GA1/\OB_Y_MOVE_UPDATE_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__2.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__4.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+WARNING: [Synth 8-3331] design OBJECT__11 has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design OBJECT__10 has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design OBJECT__9 has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design OBJECT__8 has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design OBJECT__7 has unconnected port OB_ADDRESS_OFF_SET[9]
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+WARNING: [Synth 8-3331] design OBJECT__17 has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design OBJECT__16 has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design OBJECT__15 has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design OBJECT__14 has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design SPACE_SHIP has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design OBJECT__13 has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design OBJECT__12 has unconnected port OB_ADDRESS_OFF_SET[9]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (spiint/\command_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (nolabel_line477/\DIR_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_X_MOVE_UPDATE_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_X_MOVE_UPDATE_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_X_MOVE_UPDATE_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_X_MOVE_UPDATE_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_X_MOVE_UPDATE_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_X_MOVE_UPDATE_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_X_MOVE_UPDATE_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_X_MOVE_UPDATE_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_X_MOVE_UPDATE_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_X_MOVE_UPDATE_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_Y_MOVE_UPDATE_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_Y_MOVE_UPDATE_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_Y_MOVE_UPDATE_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_Y_MOVE_UPDATE_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_Y_MOVE_UPDATE_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_Y_MOVE_UPDATE_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_Y_MOVE_UPDATE_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_Y_MOVE_UPDATE_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_Y_MOVE_UPDATE_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Y/\OB_Y_MOVE_UPDATE_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_X_MOVE_UPDATE_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_X_MOVE_UPDATE_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_X_MOVE_UPDATE_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_X_MOVE_UPDATE_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_X_MOVE_UPDATE_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_X_MOVE_UPDATE_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_X_MOVE_UPDATE_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_X_MOVE_UPDATE_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_X_MOVE_UPDATE_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_X_MOVE_UPDATE_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_Y_MOVE_UPDATE_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_Y_MOVE_UPDATE_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_Y_MOVE_UPDATE_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_Y_MOVE_UPDATE_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_Y_MOVE_UPDATE_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_Y_MOVE_UPDATE_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_Y_MOVE_UPDATE_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_Y_MOVE_UPDATE_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_Y_MOVE_UPDATE_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (X/\OB_Y_MOVE_UPDATE_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (A2/\OB_X_MOVE_UPDATE_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (A2/\OB_X_MOVE_UPDATE_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (A2/\OB_X_MOVE_UPDATE_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (A2/\OB_X_MOVE_UPDATE_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (A2/\OB_X_MOVE_UPDATE_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (A2/\OB_X_MOVE_UPDATE_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (A2/\OB_X_MOVE_UPDATE_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (A2/\OB_X_MOVE_UPDATE_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (A2/\OB_X_MOVE_UPDATE_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (A2/\OB_X_MOVE_UPDATE_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (A2/\OB_Y_MOVE_UPDATE_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (A2/\OB_Y_MOVE_UPDATE_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (A2/\OB_Y_MOVE_UPDATE_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (A2/\OB_Y_MOVE_UPDATE_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (A2/\OB_Y_MOVE_UPDATE_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (A2/\OB_Y_MOVE_UPDATE_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (A2/\OB_Y_MOVE_UPDATE_reg[6] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__12.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[2]) is unused and will be removed from module OBJECT__13.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[1]) is unused and will be removed from module OBJECT__13.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__13.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[9]) is unused and will be removed from module OBJECT__13.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[8]) is unused and will be removed from module OBJECT__13.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[7]) is unused and will be removed from module OBJECT__13.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[6]) is unused and will be removed from module OBJECT__13.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[5]) is unused and will be removed from module OBJECT__13.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[4]) is unused and will be removed from module OBJECT__13.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[3]) is unused and will be removed from module OBJECT__13.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[2]) is unused and will be removed from module OBJECT__13.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[1]) is unused and will be removed from module OBJECT__13.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__13.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[0]) is unused and will be removed from module SPACE_SHIP.
+WARNING: [Synth 8-3332] Sequential element (x_y_reg[7]) is unused and will be removed from module SPI_INTERFACE.
+WARNING: [Synth 8-3332] Sequential element (x_y_reg[6]) is unused and will be removed from module SPI_INTERFACE.
+WARNING: [Synth 8-3332] Sequential element (x_y_reg[5]) is unused and will be removed from module SPI_INTERFACE.
+WARNING: [Synth 8-3332] Sequential element (x_y_reg[4]) is unused and will be removed from module SPI_INTERFACE.
+WARNING: [Synth 8-3332] Sequential element (x_y_reg[3]) is unused and will be removed from module SPI_INTERFACE.
+WARNING: [Synth 8-3332] Sequential element (x_y_reg[2]) is unused and will be removed from module SPI_INTERFACE.
+WARNING: [Synth 8-3332] Sequential element (x_y_reg[0]) is unused and will be removed from module SPI_INTERFACE.
+WARNING: [Synth 8-3332] Sequential element (command_reg[0]) is unused and will be removed from module SPI_INTERFACE.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[2]) is unused and will be removed from module OBJECT__14.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[1]) is unused and will be removed from module OBJECT__14.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__14.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[9]) is unused and will be removed from module OBJECT__14.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[8]) is unused and will be removed from module OBJECT__14.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[7]) is unused and will be removed from module OBJECT__14.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[6]) is unused and will be removed from module OBJECT__14.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[5]) is unused and will be removed from module OBJECT__14.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[4]) is unused and will be removed from module OBJECT__14.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[3]) is unused and will be removed from module OBJECT__14.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[2]) is unused and will be removed from module OBJECT__14.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[1]) is unused and will be removed from module OBJECT__14.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__14.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[9]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[8]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[7]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[6]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[5]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[4]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[3]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[2]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[1]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[9]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[8]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[7]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[6]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[5]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[4]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[3]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[2]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[1]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__15.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[9]) is unused and will be removed from module OBJECT__16.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[8]) is unused and will be removed from module OBJECT__16.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[7]) is unused and will be removed from module OBJECT__16.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[6]) is unused and will be removed from module OBJECT__16.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[5]) is unused and will be removed from module OBJECT__16.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[4]) is unused and will be removed from module OBJECT__16.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[3]) is unused and will be removed from module OBJECT__16.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[2]) is unused and will be removed from module OBJECT__16.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[1]) is unused and will be removed from module OBJECT__16.
+WARNING: [Synth 8-3332] Sequential element (OB_X_MOVE_UPDATE_reg[0]) is unused and will be removed from module OBJECT__16.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[9]) is unused and will be removed from module OBJECT__16.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[8]) is unused and will be removed from module OBJECT__16.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[7]) is unused and will be removed from module OBJECT__16.
+WARNING: [Synth 8-3332] Sequential element (OB_Y_MOVE_UPDATE_reg[6]) is unused and will be removed from module OBJECT__16.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'i_1/ct/CS_reg[7]' (FDRE) to 'i_1/ct/CS_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_1/ct/CS_reg[6]' (FDRE) to 'i_1/ct/CS_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_1/ct/CS_reg[9]' (FDRE) to 'i_1/ct/CS_reg[8]'
-INFO: [Synth 8-3886] merging instance 'i_1/ct/CS_reg[8]' (FDRE) to 'i_1/ct/CS_reg[5]'
-INFO: [Synth 8-3886] merging instance 'i_1/ct/CS_reg[2]' (FDRE) to 'i_1/ct/CS_reg[5]'
-INFO: [Synth 8-3886] merging instance 'i_1/ct/CS_reg[3]' (FDRE) to 'i_1/ct/CS_reg[5]'
-INFO: [Synth 8-3886] merging instance 'i_1/ct/CS_reg[5]' (FDRE) to 'i_1/ct/CS_reg[4]'
-INFO: [Synth 8-3886] merging instance 'i_3/spiint/command_reg[7]' (FDCE) to 'i_3/spiint/command_reg[2]'
-INFO: [Synth 8-3886] merging instance 'i_3/spiint/command_reg[6]' (FDCE) to 'i_3/spiint/command_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_3/spiint/command_reg[5]' (FDCE) to 'i_3/spiint/command_reg[2]'
-INFO: [Synth 8-3886] merging instance 'i_3/spiint/command_reg[4]' (FDCE) to 'i_3/spiint/command_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_3/spiint/command_reg[3]' (FDCE) to 'i_3/spiint/command_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_3/spiint/command_reg[1]' (FDCE) to 'i_3/spiint/command_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_3/RED_ALIEN_1/RA1_speed_reg[0]' (LD) to 'i_3/RED_ALIEN_1/RA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/RED_ALIEN_1/RA1_speed_reg[3]' (LD) to 'i_3/RED_ALIEN_1/RA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/RED_ALIEN_1/RA1_speed_reg[4]' (LD) to 'i_3/RED_ALIEN_1/RA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/RED_ALIEN_1/RA1_speed_reg[5]' (LD) to 'i_3/RED_ALIEN_1/RA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/RED_ALIEN_1/RA1_speed_reg[6]' (LD) to 'i_3/RED_ALIEN_1/RA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/RED_ALIEN_1/RA1_speed_reg[7]' (LD) to 'i_3/RED_ALIEN_1/RA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/RED_ALIEN_1/RA1_speed_reg[8]' (LD) to 'i_3/RED_ALIEN_1/RA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/RED_ALIEN_1/RA1_speed_reg[9]' (LD) to 'i_3/RED_ALIEN_1/RA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/RED_ALIEN_1/RA1_motion_reg[9]' (LD) to 'i_3/RED_ALIEN_1/RA1_motion_reg[8]'
-INFO: [Synth 8-3886] merging instance 'i_3/RED_ALIEN_1/RA1_motion_reg[8]' (LD) to 'i_3/RED_ALIEN_1/RA1_motion_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_3/RED_ALIEN_1/RA1_motion_reg[7]' (LD) to 'i_3/RED_ALIEN_1/RA1_motion_reg[6]'
-INFO: [Synth 8-3886] merging instance 'i_3/RED_ALIEN_1/RA1_motion_reg[6]' (LD) to 'i_3/RED_ALIEN_1/RA1_motion_reg[5]'
-INFO: [Synth 8-3886] merging instance 'i_3/RED_ALIEN_1/RA1_motion_reg[4]' (LD) to 'i_3/RED_ALIEN_1/RA1_motion_reg[5]'
-INFO: [Synth 8-3886] merging instance 'i_3/RED_ALIEN_1/RA1_motion_reg[5]' (LD) to 'i_3/RED_ALIEN_1/RA1_motion_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_3/RED_ALIEN_1/RA1_motion_reg[0]' (LD) to 'i_3/RED_ALIEN_1/RA1_motion_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_3/GREEN_ALIEN_1/GA1_speed_reg[0]' (LD) to 'i_3/GREEN_ALIEN_1/GA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/GREEN_ALIEN_1/GA1_speed_reg[3]' (LD) to 'i_3/GREEN_ALIEN_1/GA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/GREEN_ALIEN_1/GA1_speed_reg[4]' (LD) to 'i_3/GREEN_ALIEN_1/GA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/GREEN_ALIEN_1/GA1_speed_reg[5]' (LD) to 'i_3/GREEN_ALIEN_1/GA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/GREEN_ALIEN_1/GA1_speed_reg[6]' (LD) to 'i_3/GREEN_ALIEN_1/GA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/GREEN_ALIEN_1/GA1_speed_reg[7]' (LD) to 'i_3/GREEN_ALIEN_1/GA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/GREEN_ALIEN_1/GA1_speed_reg[8]' (LD) to 'i_3/GREEN_ALIEN_1/GA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/GREEN_ALIEN_1/GA1_speed_reg[9]' (LD) to 'i_3/GREEN_ALIEN_1/GA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/GREEN_ALIEN_1/GA1_motion_reg[9]' (LD) to 'i_3/GREEN_ALIEN_1/GA1_motion_reg[8]'
-INFO: [Synth 8-3886] merging instance 'i_3/GREEN_ALIEN_1/GA1_motion_reg[8]' (LD) to 'i_3/GREEN_ALIEN_1/GA1_motion_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_3/GREEN_ALIEN_1/GA1_motion_reg[7]' (LD) to 'i_3/GREEN_ALIEN_1/GA1_motion_reg[6]'
-INFO: [Synth 8-3886] merging instance 'i_3/GREEN_ALIEN_1/GA1_motion_reg[6]' (LD) to 'i_3/GREEN_ALIEN_1/GA1_motion_reg[5]'
-INFO: [Synth 8-3886] merging instance 'i_3/GREEN_ALIEN_1/GA1_motion_reg[4]' (LD) to 'i_3/GREEN_ALIEN_1/GA1_motion_reg[5]'
-INFO: [Synth 8-3886] merging instance 'i_3/GREEN_ALIEN_1/GA1_motion_reg[5]' (LD) to 'i_3/GREEN_ALIEN_1/GA1_motion_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_3/GREEN_ALIEN_1/GA1_motion_reg[2]' (LD) to 'i_3/GREEN_ALIEN_1/GA1_motion_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_3/BLUE_ALIEN_1/BA1_speed_reg[0]' (LD) to 'i_3/BLUE_ALIEN_1/BA1_speed_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/BLUE_ALIEN_1/BA1_speed_reg[1]' (LD) to 'i_3/BLUE_ALIEN_1/BA1_speed_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/BLUE_ALIEN_1/BA1_speed_reg[3]' (LD) to 'i_3/BLUE_ALIEN_1/BA1_speed_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/BLUE_ALIEN_1/BA1_speed_reg[4]' (LD) to 'i_3/BLUE_ALIEN_1/BA1_speed_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/BLUE_ALIEN_1/BA1_speed_reg[5]' (LD) to 'i_3/BLUE_ALIEN_1/BA1_speed_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/BLUE_ALIEN_1/BA1_speed_reg[6]' (LD) to 'i_3/BLUE_ALIEN_1/BA1_speed_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/BLUE_ALIEN_1/BA1_speed_reg[7]' (LD) to 'i_3/BLUE_ALIEN_1/BA1_speed_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/BLUE_ALIEN_1/BA1_speed_reg[8]' (LD) to 'i_3/BLUE_ALIEN_1/BA1_speed_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/BLUE_ALIEN_1/BA1_motion_reg[9]' (LD) to 'i_3/BLUE_ALIEN_1/BA1_motion_reg[8]'
-INFO: [Synth 8-3886] merging instance 'i_3/BLUE_ALIEN_1/BA1_motion_reg[8]' (LD) to 'i_3/BLUE_ALIEN_1/BA1_motion_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_3/BLUE_ALIEN_1/BA1_motion_reg[7]' (LD) to 'i_3/BLUE_ALIEN_1/BA1_motion_reg[6]'
-INFO: [Synth 8-3886] merging instance 'i_3/BLUE_ALIEN_1/BA1_motion_reg[6]' (LD) to 'i_3/BLUE_ALIEN_1/BA1_motion_reg[5]'
-INFO: [Synth 8-3886] merging instance 'i_3/BLUE_ALIEN_1/BA1_motion_reg[4]' (LD) to 'i_3/BLUE_ALIEN_1/BA1_motion_reg[5]'
-INFO: [Synth 8-3886] merging instance 'i_3/PURPLE_ALIEN_1/PA1_speed_reg[0]' (LD) to 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/PURPLE_ALIEN_1/PA1_speed_reg[3]' (LD) to 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/PURPLE_ALIEN_1/PA1_speed_reg[4]' (LD) to 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/PURPLE_ALIEN_1/PA1_speed_reg[5]' (LD) to 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/PURPLE_ALIEN_1/PA1_speed_reg[6]' (LD) to 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/PURPLE_ALIEN_1/PA1_speed_reg[7]' (LD) to 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/PURPLE_ALIEN_1/PA1_speed_reg[8]' (LD) to 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/PURPLE_ALIEN_1/PA1_speed_reg[9]' (LD) to 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[9]' (LD) to 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[8]'
-INFO: [Synth 8-3886] merging instance 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[8]' (LD) to 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[7]' (LD) to 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[6]'
-INFO: [Synth 8-3886] merging instance 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[6]' (LD) to 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[5]'
-INFO: [Synth 8-3886] merging instance 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[4]' (LD) to 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[5]'
-INFO: [Synth 8-3886] merging instance 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[5]' (LD) to 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[2]' (LD) to 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_3/nolabel_line393/DIR_reg[4]' (FDRE) to 'i_3/nolabel_line393/DIR_reg[5]'
-INFO: [Synth 8-3886] merging instance 'i_3/nolabel_line393/DIR_reg[5]' (FDRE) to 'i_3/nolabel_line393/DIR_reg[6]'
-INFO: [Synth 8-3886] merging instance 'i_3/nolabel_line393/DIR_reg[6]' (FDRE) to 'i_3/nolabel_line393/DIR_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_3/nolabel_line393/DIR_reg[7]' (FDRE) to 'i_3/nolabel_line393/DIR_reg[8]'
-INFO: [Synth 8-3886] merging instance 'i_3/nolabel_line393/DIR_reg[8]' (FDRE) to 'i_3/nolabel_line393/DIR_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_0/GC/EN_COUNT_reg' (LD) to 'i_0/GC/EN_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_3/RED_ALIEN_1/RA1_speed_reg[2]' (LD) to 'i_3/RED_ALIEN_1/RA1_motion_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_3/GREEN_ALIEN_1/GA1_speed_reg[2]' (LD) to 'i_3/GREEN_ALIEN_1/GA1_motion_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_3/PURPLE_ALIEN_1/PA1_speed_reg[2]' (LD) to 'i_3/PURPLE_ALIEN_1/PA1_motion_reg[1]'
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5545] ROM "COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element COUNT_reg was removed.  [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_CLOCK.v:27]
+INFO: [Synth 8-5545] ROM "ts/t/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ts/t/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ts/t/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ts/t/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "sgcl/count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "sgcl/T_CLK" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element nolabel_line164/COUNT_reg was removed.  [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/ONE_SEC_COUNT.v:28]
+WARNING: [Synth 8-3917] design SPACE_GAME__GB3 has port AN[7] driven by constant 1
+WARNING: [Synth 8-3917] design SPACE_GAME__GB3 has port AN[6] driven by constant 1
+WARNING: [Synth 8-3917] design SPACE_GAME__GB3 has port AN[5] driven by constant 1
+WARNING: [Synth 8-3917] design SPACE_GAME__GB3 has port AN[4] driven by constant 1
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+DSP Report: Generating DSP OB_EN2, operation Mode is: C+A*B.
+DSP Report: operator OB_EN2 is absorbed into DSP OB_EN2.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN2.
+DSP Report: Generating DSP OB_EN3, operation Mode is: C+A*B.
+DSP Report: operator OB_EN3 is absorbed into DSP OB_EN3.
+DSP Report: operator OB_EN4 is absorbed into DSP OB_EN3.
+INFO: [Synth 8-5545] ROM "tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element COUNT_reg was removed.  [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SLOW_CLOCK.v:27]
+INFO: [Synth 8-5546] ROM "VCNT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "EN" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element COUNT_reg was removed.  [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/HOR_COUNTER.v:30]
+INFO: [Synth 8-5545] ROM "spic/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "spic/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "BLUE_ALIEN_2/tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "BLUE_ALIEN_2/tecl/COUNT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "BLUE_ALIEN_2/tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "BLUE_ALIEN_2/tecl/SIGNAL" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element spic/COUNT_reg was removed.  [C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/new/SPI_CLK.v:28]
+WARNING: [Synth 8-3331] design OBJECT has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design OBJECT__24 has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design OBJECT__23 has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design OBJECT__22 has unconnected port OB_ADDRESS_OFF_SET[9]
+WARNING: [Synth 8-3331] design OBJECT__21 has unconnected port OB_ADDRESS_OFF_SET[9]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 768.949 ; gain = 472.906
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:01:59 . Memory (MB): peak = 774.645 ; gain = 477.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
-
-ROM:
-+------------+---------------+---------------+----------------+
-|Module Name | RTL Object    | Depth x Width | Implemented As | 
-+------------+---------------+---------------+----------------+
-|SPACE_GAME  | BLUE_ALIEN_1/ | 32x4          | LUT            | 
-+------------+---------------+---------------+----------------+
-
 
 DSP: Preliminary Mapping  Report (see note below)
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
@@ -1463,6 +2005,24 @@ DSP: Preliminary Mapping  Report (see note below)
 |OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|SPACE_SHIP  | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|SPACE_SHIP  | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |OBJECT      | C+A*B       | 10     | 10     | 10     | -      | 10     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
@@ -1476,38 +2036,40 @@ Report RTL Partitions:
 +------+----------------+------------+----------+
 |      |RTL Partition   |Replication |Instances |
 +------+----------------+------------+----------+
-|1     |SPACE_GAME__GB0 |           1|      4529|
-|2     |SPACE_GAME__GB1 |           1|       411|
-|3     |SPACE_GAME__GB2 |           1|       273|
-|4     |SPACE_GAME__GB3 |           1|      3023|
+|1     |SPACE_GAME__GB0 |           1|      3779|
+|2     |SPACE_GAME__GB1 |           1|      2682|
+|3     |SPACE_GAME__GB2 |           1|      3310|
+|4     |SPACE_GAME__GB3 |           1|      3510|
+|5     |SPACE_GAME__GB4 |           1|      3056|
 +------+----------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 802.465 ; gain = 506.422
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:02:32 . Memory (MB): peak = 812.957 ; gain = 515.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 849.680 ; gain = 553.637
+Finished Timing Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:02:40 . Memory (MB): peak = 900.504 ; gain = 603.445
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+----------------+------------+----------+
 |      |RTL Partition   |Replication |Instances |
 +------+----------------+------------+----------+
-|1     |SPACE_GAME__GB0 |           1|      4529|
-|2     |SPACE_GAME__GB1 |           1|       411|
-|3     |SPACE_GAME__GB2 |           1|       273|
-|4     |SPACE_GAME__GB3 |           1|      3009|
+|1     |SPACE_GAME__GB0 |           1|      3775|
+|2     |SPACE_GAME__GB1 |           1|      2255|
+|3     |SPACE_GAME__GB2 |           1|      3310|
+|4     |SPACE_GAME__GB3 |           1|      3417|
+|5     |SPACE_GAME__GB4 |           1|      2718|
 +------+----------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 849.680 ; gain = 553.637
+Finished Technology Mapping : Time (s): cpu = 00:01:04 ; elapsed = 00:02:46 . Memory (MB): peak = 900.504 ; gain = 603.445
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1531,7 +2093,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 849.680 ; gain = 553.637
+Finished IO Insertion : Time (s): cpu = 00:01:07 ; elapsed = 00:02:56 . Memory (MB): peak = 900.504 ; gain = 603.445
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1544,7 +2106,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 849.680 ; gain = 553.637
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:07 ; elapsed = 00:02:56 . Memory (MB): peak = 900.504 ; gain = 603.445
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1556,25 +2118,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 849.680 ; gain = 553.637
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:08 ; elapsed = 00:02:57 . Memory (MB): peak = 900.504 ; gain = 603.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 849.680 ; gain = 553.637
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:08 ; elapsed = 00:02:57 . Memory (MB): peak = 900.504 ; gain = 603.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 849.680 ; gain = 553.637
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:08 ; elapsed = 00:02:58 . Memory (MB): peak = 900.504 ; gain = 603.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 849.680 ; gain = 553.637
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:08 ; elapsed = 00:02:58 . Memory (MB): peak = 900.504 ; gain = 603.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1584,8 +2146,8 @@ Report BlackBoxes:
 +------+--------------+----------+
 |      |BlackBox name |Instances |
 +------+--------------+----------+
-|1     |Graphics      |         1|
-|2     |Text          |         1|
+|1     |Text          |         1|
+|2     |Graphics      |         1|
 +------+--------------+----------+
 
 Report Cell Usage: 
@@ -1595,21 +2157,21 @@ Report Cell Usage:
 |1     |Graphics |     1|
 |2     |Text     |     1|
 |3     |BUFG     |     6|
-|4     |CARRY4   |   916|
-|5     |DSP48E1  |    28|
-|6     |LUT1     |   473|
-|7     |LUT2     |  2109|
-|8     |LUT3     |   332|
-|9     |LUT4     |   224|
-|10    |LUT5     |   107|
-|11    |LUT6     |   312|
-|12    |FDCE     |   209|
+|4     |CARRY4   |  1341|
+|5     |DSP48E1  |    44|
+|6     |LUT1     |   511|
+|7     |LUT2     |  3099|
+|8     |LUT3     |   922|
+|9     |LUT4     |   569|
+|10    |LUT5     |   294|
+|11    |LUT6     |   432|
+|12    |FDCE     |   507|
 |13    |FDPE     |     8|
-|14    |FDRE     |   299|
-|15    |FDSE     |     1|
-|16    |LD       |    42|
+|14    |FDRE     |   480|
+|15    |FDSE     |     2|
+|16    |LD       |    76|
 |17    |IBUF     |     5|
-|18    |OBUF     |    17|
+|18    |OBUF     |    32|
 |19    |OBUFT    |     8|
 +------+---------+------+
 
@@ -1617,73 +2179,95 @@ Report Instance Areas:
 +------+-------------------+-----------------+------+
 |      |Instance           |Module           |Cells |
 +------+-------------------+-----------------+------+
-|1     |top                |                 |  5104|
-|2     |  G                |OBJECT_6         |     2|
-|3     |  A1               |OBJECT           |     2|
-|4     |  BA4              |OBJECT_4         |     2|
-|5     |  EXPLOSION        |OBJECT_5         |    44|
-|6     |  PA2              |OBJECT_13        |     2|
-|7     |  Y                |OBJECT_22        |     2|
-|8     |  X                |OBJECT_21        |     2|
-|9     |  A2               |OBJECT_0         |     2|
-|10    |  L                |OBJECT_11        |     2|
-|11    |  BA2              |OBJECT_2         |     9|
-|12    |  BA3              |OBJECT_3         |     6|
-|13    |  GA4              |OBJECT_10        |    10|
-|14    |  GA2              |OBJECT_8         |     8|
-|15    |  GA3              |OBJECT_9         |     8|
-|16    |  BA1              |OBJECT_1         |   201|
-|17    |  BLUE_ALIEN_1     |BA1_STATE        |   134|
-|18    |    tecl           |LONG_TIMER_24    |    89|
-|19    |  GA1              |OBJECT_7         |   204|
-|20    |  GC               |GAME_CONTROLLER  |   147|
-|21    |    nolabel_line42 |ONE_SEC_COUNT    |    59|
-|22    |    osc            |ONE_SEC_CLOCK    |    73|
-|23    |  GREEN_ALIEN_1    |GA1_STATE        |   119|
-|24    |    nolabel_line35 |TIMER_15_23      |    86|
-|25    |  PA1              |OBJECT_12        |   187|
-|26    |  PA3              |OBJECT_14        |     7|
-|27    |  PA4              |OBJECT_15        |     7|
-|28    |  PURPLE_ALIEN_1   |PA1_STATE        |   113|
-|29    |    tecl           |LONG_TIMER       |    86|
-|30    |  RA1              |OBJECT_16        |   204|
-|31    |  RA2              |OBJECT_17        |    14|
-|32    |  RA3              |OBJECT_18        |    26|
-|33    |  RA4              |OBJECT_19        |    10|
-|34    |  RED_ALIEN_1      |RA1_STATE        |   110|
-|35    |    nolabel_line35 |TIMER_15         |    86|
-|36    |  SPACE_SHIP       |OBJECT_20        |    44|
-|37    |  ct               |COLLSION_DETECT  |    95|
-|38    |    t              |TIMER_25         |    86|
-|39    |  hc               |HOR_COUNTER      |   739|
-|40    |  nolabel_line393  |SPI_DATA_DECODER |   138|
-|41    |  pc               |PIXEL_CLOCK      |     4|
-|42    |  pm               |PRIORITY_MUX     |  1116|
-|43    |  sc               |SLOW_CLOCK       |    58|
-|44    |  spic             |SPI_CLK          |    34|
-|45    |  spiint           |SPI_INTERFACE    |   144|
-|46    |  vc               |VER_COUNTER      |   812|
+|1     |top                |                 |  8344|
+|2     |  GA3              |OBJECT_10        |    23|
+|3     |  G                |OBJECT_7         |     2|
+|4     |  A1               |OBJECT           |     2|
+|5     |  L                |OBJECT_11        |     2|
+|6     |  BA1              |OBJECT_1         |    59|
+|7     |  EXPLOSION_SS     |OBJECT_6         |    44|
+|8     |  BULLET           |OBJECT_4         |    23|
+|9     |  EXPLOSION_B      |OBJECT_5         |    23|
+|10    |  A2               |OBJECT_0         |     2|
+|11    |  X                |OBJECT_18        |     2|
+|12    |  Y                |OBJECT_19        |     2|
+|13    |  nolabel_line495  |ANODE_MUX        |     3|
+|14    |  BA2              |OBJECT_2         |   217|
+|15    |  BA3              |OBJECT_3         |   158|
+|16    |  BLUE_ALIEN_1     |BA1_STATE        |   126|
+|17    |    tecl           |LONG_TIMER_30    |    89|
+|18    |  BLUE_ALIEN_2     |BA2_STATE        |   127|
+|19    |    tecl           |LONG_TIMER_29    |    85|
+|20    |  BLUE_ALIEN_3     |BA3_STATE        |   102|
+|21    |    tecl           |LONG_TIMER_28    |    86|
+|22    |  GA1              |OBJECT_8         |    44|
+|23    |  GA2              |OBJECT_9         |    45|
+|24    |  GC               |GAME_CONTROLLER  |    26|
+|25    |  GREEN_ALIEN_1    |GA1_STATE        |   126|
+|26    |    nolabel_line35 |TIMER_15_27      |    86|
+|27    |  GREEN_ALIEN_2    |GA2_STATE        |   135|
+|28    |    tecl           |LONG_TIMER_26    |    86|
+|29    |  GREEN_ALIEN_3    |GA3_STATE        |   105|
+|30    |    tecl           |LONG_TIMER_25    |    86|
+|31    |  PA1              |OBJECT_12        |   214|
+|32    |  PA2              |OBJECT_13        |   196|
+|33    |  PA3              |OBJECT_14        |   171|
+|34    |  PURPLE_ALIEN_1   |PA1_STATE        |   114|
+|35    |    tecl           |LONG_TIMER_24    |    86|
+|36    |  PURPLE_ALIEN_2   |PA2_STATE        |   123|
+|37    |    tecl           |LONG_TIMER_23    |    86|
+|38    |  PURPLE_ALIEN_3   |PA3_STATE        |   102|
+|39    |    tecl           |LONG_TIMER_22    |    86|
+|40    |  RA1              |OBJECT_15        |    47|
+|41    |  RA2              |OBJECT_16        |    47|
+|42    |  RA3              |OBJECT_17        |    23|
+|43    |  RED_ALIEN_1      |RA1_STATE        |   123|
+|44    |    nolabel_line35 |TIMER_15         |    86|
+|45    |  RED_ALIEN_2      |RA2_STATE        |   113|
+|46    |    tecl           |LONG_TIMER_21    |    86|
+|47    |  RED_ALIEN_3      |RA3_STATE        |   105|
+|48    |    tecl           |LONG_TIMER       |    86|
+|49    |  ct               |COLLSION_DETECT  |    95|
+|50    |    t              |TIMER_25_20      |    86|
+|51    |  hc               |HOR_COUNTER      |   886|
+|52    |  nolabel_line164  |ONE_SEC_COUNT    |   508|
+|53    |  nolabel_line477  |SPI_DATA_DECODER |   139|
+|54    |  nolabel_line492  |DIGIT_SELECT     |     6|
+|55    |  nolabel_line498  |SCORE_DECODER    |   311|
+|56    |  nolabel_line501  |SEG_DISPLAY      |    69|
+|57    |  osc              |ONE_SEC_CLOCK    |    73|
+|58    |  pc               |PIXEL_CLOCK      |     4|
+|59    |  pm               |PRIORITY_MUX     |  1744|
+|60    |  sc               |SLOW_CLOCK       |    58|
+|61    |  sgcl             |SEG_CLOCK        |    54|
+|62    |  spic             |SPI_CLK          |    33|
+|63    |  spiint           |SPI_INTERFACE    |   147|
+|64    |  ss               |SPACE_SHIP       |    44|
+|65    |  ssgc             |SELECT_COUNTER   |     5|
+|66    |  ts               |TEST_STATE       |    87|
+|67    |    t              |TIMER_25         |    84|
+|68    |  vc               |VER_COUNTER      |   760|
 +------+-------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 849.680 ; gain = 553.637
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:08 ; elapsed = 00:02:58 . Memory (MB): peak = 900.504 ; gain = 603.445
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 203 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 849.680 ; gain = 220.352
-Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 849.680 ; gain = 553.637
+Synthesis finished with 0 errors, 0 critical warnings and 226 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:54 ; elapsed = 00:03:19 . Memory (MB): peak = 900.504 ; gain = 269.113
+Synthesis Optimization Complete : Time (s): cpu = 00:01:09 ; elapsed = 00:03:30 . Memory (MB): peak = 900.504 ; gain = 603.445
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 991 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 1466 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 42 instances were transformed.
-  LD => LDCE: 42 instances
+  A total of 76 instances were transformed.
+  LD => LDCE: 76 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-370 Infos, 153 Warnings, 0 Critical Warnings and 0 Errors encountered.
+495 Infos, 223 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 849.680 ; gain = 561.910
+synth_design: Time (s): cpu = 00:01:14 ; elapsed = 00:03:53 . Memory (MB): peak = 900.504 ; gain = 611.656
 INFO: [Common 17-1381] The checkpoint 'C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/SPACE_GAME.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file SPACE_GAME_utilization_synth.rpt -pb SPACE_GAME_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 849.680 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Dec  1 14:08:14 2017...
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.909 . Memory (MB): peak = 900.504 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  6 10:59:13 2017...

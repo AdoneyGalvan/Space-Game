@@ -39,7 +39,9 @@
      input PA2_EN,
      input PA3_EN,
      input PA4_EN,
-     input EX_EN,
+     input EX_SS_EN,
+     input EX_B_EN,
+     input B_EN,
      input G_EN,
      input A1_EN,
      input L_EN,
@@ -63,7 +65,9 @@
      input [12:0] PA2_ADDRESS,
      input [12:0] PA3_ADDRESS,
      input [12:0] PA4_ADDRESS,
-     input [12:0] EX_ADDRESS,
+     input [12:0] EX_SS_ADDRESS,
+     input [12:0] EX_B_ADDRESS,
+     input [12:0] B_ADDRESS,
      input [12:0] G_ADDRESS,
      input [12:0] A1_ADDRESS,
      input [12:0] L_ADDRESS,
@@ -76,12 +80,18 @@
     always @(*)
         begin
         COLOR_DECODER_EN <= 0;
-        if(EX_EN)
+        if(EX_SS_EN)
             begin
             COLOR_DECODER_EN <= 1;
-            ADDRESS <= EX_ADDRESS;
+            ADDRESS <= EX_SS_ADDRESS;
             COR_DATA <= DATA1;
             end
+        else if(EX_B_EN)
+            begin
+            COLOR_DECODER_EN <= 1;
+            ADDRESS <= EX_B_ADDRESS;
+            COR_DATA <= DATA1;
+            end    
         else if(SS_EN)
             begin
             COLOR_DECODER_EN <= 1;
@@ -183,7 +193,13 @@
            COLOR_DECODER_EN <= 1;
            ADDRESS <= PA4_ADDRESS;
            COR_DATA <= DATA1;
-           end                     
+           end 
+     else if(B_EN)//Bullet
+           begin
+           COLOR_DECODER_EN <= 1;
+           ADDRESS <= B_ADDRESS;
+           COR_DATA <= DATA1;
+           end                                
       else if(G_EN)
             begin
             COLOR_DECODER_EN <= 1;

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Fri Dec  1 14:09:06 2017
+| Date         : Wed Dec  6 11:01:51 2017
 | Host         : Adoney running 64-bit major release  (build 9200)
 | Command      : report_control_sets -file SPACE_GAME_control_sets_placed.rpt
 | Design       : SPACE_GAME
@@ -21,7 +21,7 @@ Table of Contents
 +-------------------------------+-------+
 |             Status            | Count |
 +-------------------------------+-------+
-| Number of unique control sets |    44 |
+| Number of unique control sets |    75 |
 +-------------------------------+-------+
 
 
@@ -31,12 +31,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              56 |           26 |
-| No           | No                    | Yes                    |              44 |           27 |
-| No           | Yes                   | No                     |              40 |           12 |
-| Yes          | No                    | No                     |             193 |           59 |
-| Yes          | No                    | Yes                    |             173 |           44 |
-| Yes          | Yes                   | No                     |              53 |           20 |
+| No           | No                    | No                     |             110 |           55 |
+| No           | No                    | Yes                    |              54 |           36 |
+| No           | Yes                   | No                     |              88 |           29 |
+| Yes          | No                    | No                     |             300 |          105 |
+| Yes          | No                    | Yes                    |             461 |          110 |
+| Yes          | Yes                   | No                     |              60 |           23 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 

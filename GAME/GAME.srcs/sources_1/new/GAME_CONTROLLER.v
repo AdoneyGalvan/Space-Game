@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module GAME_CONTROLLER(input CLK, input RESET, input SWITCH, output reg [22:0] EN);
+module GAME_CONTROLLER(input CLK, input RESET, input SWITCH, input [31:0] COUNT,  output reg [22:0] EN, output reg EN_COUNT);
 
 reg [9:0] CS;
 reg [9:0] NS;
@@ -31,15 +31,7 @@ parameter LEVEL2 = 2;
 parameter LEVEL3 = 3;
 parameter WIN = 4;
 
-wire ONE_SEC;
-wire [31:0] COUNT;
 
-reg EN_COUNT;
-
-//module ONE_SEC_CLOCK(output reg SIGNAL, input CLK, input RESET);
-ONE_SEC_CLOCK osc(ONE_SEC, CLK, RESET);
-//module ONE_SEC_COUNT(output reg [31:0] COUNT, input CLK, input RESET);
-ONE_SEC_COUNT(COUNT[31:0], ONE_SEC, RESET, EN_COUNT);
 
 always @ (posedge CLK) begin
 
@@ -70,9 +62,9 @@ always @ (*) begin
         end
         
         LEVEL1:begin
-            EN <= 131071;
+            EN <= 33323;
             EN_COUNT <= 1;
-            if(COUNT == 120)begin
+            if(COUNT == 60)begin
                 NS <= LEVEL2;
             end
             else begin
@@ -81,9 +73,9 @@ always @ (*) begin
         
         end
         LEVEL2:begin
-            EN <= 511;
+            EN <= 58031;
             EN_COUNT <= 1;
-            if(COUNT == 240)begin
+            if(COUNT == 120)begin
             NS <= LEVEL3;
             end
             else begin
@@ -91,9 +83,9 @@ always @ (*) begin
             end
         end
         LEVEL3:begin
-            EN <= 31;
+            EN <= 61167;
             EN_COUNT <= 1;
-            if(COUNT == 680)begin
+            if(COUNT == 180)begin
             NS <= WIN;
             end
             else begin
@@ -103,7 +95,7 @@ always @ (*) begin
         WIN:begin
             EN <= 1;
             EN_COUNT <= 1;
-            if(COUNT == 1000)
+            if(COUNT == 240)
                 begin
                 NS <= WAIT;
                 end
@@ -117,6 +109,7 @@ always @ (*) begin
 
 
 end
+
 
 
 
