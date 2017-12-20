@@ -73,12 +73,7 @@ module COLOR_DECODER(output reg [3:0] VGA_R, output reg [3:0] VGA_G, output reg 
             VGA_R <= 4'hA;
             VGA_G <= 4'h8;
             VGA_B <= 4'h0;
-            end
-            default:begin
-            VGA_R <= 4'h0;
-            VGA_G <= 4'h0;
-            VGA_B <= 4'h0;            
-            end            
+            end           
             endcase
             end
         else

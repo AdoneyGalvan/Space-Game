@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Thu Dec  7 00:34:32 2017
+# Process ID: 9420
+# Current directory: C:/Users/AdoneyGalvan/Desktop/Space-Game/GAME
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6928 C:\Users\AdoneyGalvan\Desktop\Space-Game\GAME\GAME.xpr
+# Log file: C:/Users/AdoneyGalvan/Desktop/Space-Game/GAME/vivado.log
+# Journal file: C:/Users/AdoneyGalvan/Desktop/Space-Game/GAME\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/AdoneyGalvan/Desktop/Space-Game/GAME/GAME.xpr
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/AdoneyGalvan/Desktop/Space-Game/GAME/GAME.runs/impl_1/SPACE_GAME.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/AdoneyGalvan/Desktop/Space-Game/GAME/GAME.runs/impl_1/SPACE_GAME.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+open_project {C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.xpr}
+current_project GAME
+close_project
+update_compile_order -fileset sources_1

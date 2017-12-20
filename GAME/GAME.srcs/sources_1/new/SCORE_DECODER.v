@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module SCORE_DECODER(output reg [3:0] DIGIT4, output reg [3:0] DIGIT3, output reg [3:0] DIGIT2, output reg [3:0] DIGIT1, input [31:0] COUNT);
+module SCORE_DECODER(output reg [3:0] DIGIT1, output reg [3:0] DIGIT2, output reg [3:0] DIGIT3, output reg [3:0] DIGIT4, input [31:0] COUNT);
     reg [31:0] TEMP;
     always @(COUNT)
         begin
@@ -32,4 +32,5 @@ module SCORE_DECODER(output reg [3:0] DIGIT4, output reg [3:0] DIGIT3, output re
         TEMP = (TEMP % 10);
         DIGIT1 = (TEMP/ 1);
         end
+                 
 endmodule

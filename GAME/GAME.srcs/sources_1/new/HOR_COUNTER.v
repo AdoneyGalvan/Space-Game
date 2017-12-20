@@ -22,7 +22,7 @@
 
 module HOR_COUNTER(output reg [9:0] HCNT, output reg EN, input CLK, input RESET);
     reg [9:0] COUNT;
-    always @ (posedge CLK)
+    always @ (posedge CLK, posedge RESET)
         begin
         if (RESET == 1)
             begin
@@ -30,17 +30,17 @@ module HOR_COUNTER(output reg [9:0] HCNT, output reg EN, input CLK, input RESET)
             COUNT <= 0;
             EN <= 0;
             end
-        if(COUNT <= 798)
-            begin
-            HCNT <= COUNT + 1;
-            COUNT <= COUNT + 1;
-            EN <= 0;
-            end
         else if(COUNT == 799)
             begin
             HCNT <= 0;
             COUNT <= 0;
             EN <= 1;
+            end            
+        else
+            begin
+            HCNT <= COUNT + 1;
+            COUNT <= COUNT + 1;
+            EN <= 0;
             end
         end 
 

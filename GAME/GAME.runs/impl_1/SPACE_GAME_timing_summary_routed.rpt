@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Wed Dec  6 11:02:44 2017
+| Date         : Tue Dec 19 15:51:35 2017
 | Host         : Adoney running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -file SPACE_GAME_timing_summary_routed.rpt -warn_on_violation -rpx SPACE_GAME_timing_summary_routed.rpx
 | Design       : SPACE_GAME
@@ -54,89 +54,81 @@ Table of Contents
 --------------------
  There are 17 register/latch pins with no clock driven by root clock pin: RESET (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN2/P[0] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN2/P[1] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_X_MOVE_UPDATE_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN2/P[2] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_X_MOVE_UPDATE_reg[3]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN2/P[3] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_X_MOVE_UPDATE_reg[4]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN2/P[4] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_X_MOVE_UPDATE_reg[5]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN2/P[5] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_X_MOVE_UPDATE_reg[6]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN2/P[6] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_X_MOVE_UPDATE_reg[7]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN2/P[7] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_X_MOVE_UPDATE_reg[8]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN2/P[8] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN2/P[9] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_Y_MOVE_UPDATE_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN3/P[0] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_Y_MOVE_UPDATE_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN3/P[1] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_Y_MOVE_UPDATE_reg[3]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN3/P[2] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_Y_MOVE_UPDATE_reg[4]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN3/P[3] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_Y_MOVE_UPDATE_reg[5]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN3/P[4] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_Y_MOVE_UPDATE_reg[6]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN3/P[5] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_Y_MOVE_UPDATE_reg[7]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN3/P[6] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_Y_MOVE_UPDATE_reg[8]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN3/P[7] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_Y_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN3/P[8] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_X_MOVE_UPDATE_reg[0]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A1/OB_EN3/P[9] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN2/P[0] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_X_MOVE_UPDATE_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN2/P[1] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_X_MOVE_UPDATE_reg[3]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN2/P[2] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_X_MOVE_UPDATE_reg[4]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN2/P[3] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_X_MOVE_UPDATE_reg[5]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN2/P[4] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_X_MOVE_UPDATE_reg[6]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN2/P[5] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_X_MOVE_UPDATE_reg[7]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN2/P[6] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_X_MOVE_UPDATE_reg[8]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN2/P[7] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN2/P[8] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_Y_MOVE_UPDATE_reg[0]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN2/P[9] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_Y_MOVE_UPDATE_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN3/P[0] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_Y_MOVE_UPDATE_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN3/P[1] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_Y_MOVE_UPDATE_reg[3]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN3/P[2] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_Y_MOVE_UPDATE_reg[4]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN3/P[3] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_Y_MOVE_UPDATE_reg[5]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN3/P[4] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_Y_MOVE_UPDATE_reg[6]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN3/P[5] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_Y_MOVE_UPDATE_reg[7]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN3/P[6] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_Y_MOVE_UPDATE_reg[8]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN3/P[7] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN3/P[8] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_EN3/P[9] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: BA1/OB_X_MOVE_UPDATE_reg[0]/Q (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: BA1/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: A2/OB_Y_MOVE_UPDATE_reg[9]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: BA1/OB_X_MOVE_UPDATE_reg[2]/Q (HIGH)
 
@@ -153,10 +145,6 @@ Table of Contents
  There are 17 register/latch pins with no clock driven by root clock pin: BA1/OB_X_MOVE_UPDATE_reg[8]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: BA1/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: BA1/OB_Y_MOVE_UPDATE_reg[0]/Q (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: BA1/OB_Y_MOVE_UPDATE_reg[1]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: BA1/OB_Y_MOVE_UPDATE_reg[2]/Q (HIGH)
 
@@ -192,8 +180,6 @@ Table of Contents
 
  There are 17 register/latch pins with no clock driven by root clock pin: BA2/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: BA2/OB_Y_MOVE_UPDATE_reg[0]/Q (HIGH)
-
  There are 17 register/latch pins with no clock driven by root clock pin: BA2/OB_Y_MOVE_UPDATE_reg[1]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: BA2/OB_Y_MOVE_UPDATE_reg[2]/Q (HIGH)
@@ -211,26 +197,6 @@ Table of Contents
  There are 17 register/latch pins with no clock driven by root clock pin: BA2/OB_Y_MOVE_UPDATE_reg[8]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: BA2/OB_Y_MOVE_UPDATE_reg[9]/Q (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: BA3/OB_EN2/P[0] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: BA3/OB_EN2/P[1] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: BA3/OB_EN2/P[2] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: BA3/OB_EN2/P[3] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: BA3/OB_EN2/P[4] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: BA3/OB_EN2/P[5] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: BA3/OB_EN2/P[6] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: BA3/OB_EN2/P[7] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: BA3/OB_EN2/P[8] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: BA3/OB_EN2/P[9] (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: BA3/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
@@ -250,6 +216,74 @@ Table of Contents
 
  There are 17 register/latch pins with no clock driven by root clock pin: BA3/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
 
+ There are 17 register/latch pins with no clock driven by root clock pin: BA4/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BA4/OB_X_MOVE_UPDATE_reg[2]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BA4/OB_X_MOVE_UPDATE_reg[3]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BA4/OB_X_MOVE_UPDATE_reg[4]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BA4/OB_X_MOVE_UPDATE_reg[5]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BA4/OB_X_MOVE_UPDATE_reg[6]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BA4/OB_X_MOVE_UPDATE_reg[7]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BA4/OB_X_MOVE_UPDATE_reg[8]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BA4/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BA4/OB_Y_MOVE_UPDATE_reg[1]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BA4/OB_Y_MOVE_UPDATE_reg[2]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BA4/OB_Y_MOVE_UPDATE_reg[3]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BA4/OB_Y_MOVE_UPDATE_reg[4]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BA4/OB_Y_MOVE_UPDATE_reg[5]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BA4/OB_Y_MOVE_UPDATE_reg[6]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BA4/OB_Y_MOVE_UPDATE_reg[7]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BA4/OB_Y_MOVE_UPDATE_reg[8]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BA4/OB_Y_MOVE_UPDATE_reg[9]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BC/BA1/CS_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BC/BA2/CS_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BC/BA3/CS_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BC/BA4/CS_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BC/GA1/CS_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BC/GA2/CS_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BC/GA3/CS_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BC/GA4/CS_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BC/PA1/CS_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BC/PA2/CS_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BC/PA3/CS_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BC/PA4/CS_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BC/RA1/CS_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BC/RA2/CS_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BC/RA3/CS_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BC/RA4/CS_reg[0]/Q (HIGH)
+
  There are 5 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_1/FSM_sequential_CS_reg[0]/Q (HIGH)
 
  There are 5 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_1/FSM_sequential_CS_reg[1]/Q (HIGH)
@@ -260,19 +294,69 @@ Table of Contents
 
  There are 5 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_1/FSM_sequential_CS_reg[4]/Q (HIGH)
 
- There are 6 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_2/FSM_onehot_CS_reg[0]/Q (HIGH)
+ There are 5 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_1/FSM_sequential_CS_reg[5]/Q (HIGH)
 
- There are 6 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_2/FSM_onehot_CS_reg[1]/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_2/FSM_sequential_CS_reg[0]/Q (HIGH)
 
- There are 6 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_2/FSM_onehot_CS_reg[2]/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_2/FSM_sequential_CS_reg[1]/Q (HIGH)
 
- There are 6 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_2/FSM_onehot_CS_reg[3]/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_2/FSM_sequential_CS_reg[2]/Q (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_3/CS_reg[0]/Q (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_3/FSM_sequential_CS_reg[0]/Q (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_3/CS_reg[1]/Q (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_3/FSM_sequential_CS_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: BULLET/OB_X_MOVE_UPDATE_reg[3]/Q (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_3/FSM_sequential_CS_reg[2]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_4/FSM_sequential_CS_reg[0]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_4/FSM_sequential_CS_reg[1]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: BLUE_ALIEN_4/FSM_sequential_CS_reg[2]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_EN_reg/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_X_POS_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_X_POS_reg[1]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_X_POS_reg[2]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_X_POS_reg[3]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_X_POS_reg[4]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_X_POS_reg[5]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_X_POS_reg[6]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_X_POS_reg[7]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_X_POS_reg[8]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_X_POS_reg[9]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_Y_POS_reg[2]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_Y_POS_reg[3]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_Y_POS_reg[4]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_Y_POS_reg[5]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_Y_POS_reg[6]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_Y_POS_reg[7]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_Y_POS_reg[8]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/B_Y_POS_reg[9]/Q (HIGH)
+
+ There are 22 register/latch pins with no clock driven by root clock pin: BS/CS_reg[0]/Q (HIGH)
+
+ There are 22 register/latch pins with no clock driven by root clock pin: BS/CS_reg[1]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: BS/EN_TIMER_reg/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: BULLET/OB_X_MOVE_UPDATE_reg[4]/Q (HIGH)
 
@@ -286,8 +370,6 @@ Table of Contents
 
  There are 17 register/latch pins with no clock driven by root clock pin: BULLET/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: EXPLOSION_B/OB_X_MOVE_UPDATE_reg[3]/Q (HIGH)
-
  There are 17 register/latch pins with no clock driven by root clock pin: EXPLOSION_B/OB_X_MOVE_UPDATE_reg[4]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: EXPLOSION_B/OB_X_MOVE_UPDATE_reg[5]/Q (HIGH)
@@ -299,6 +381,8 @@ Table of Contents
  There are 17 register/latch pins with no clock driven by root clock pin: EXPLOSION_B/OB_X_MOVE_UPDATE_reg[8]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: EXPLOSION_B/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: EXPLOSION_SS/OB_X_MOVE_UPDATE_reg[0]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: EXPLOSION_SS/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
@@ -318,8 +402,6 @@ Table of Contents
 
  There are 17 register/latch pins with no clock driven by root clock pin: EXPLOSION_SS/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: EXPLOSION_SS/OB_Y_MOVE_UPDATE_reg[1]/Q (HIGH)
-
  There are 17 register/latch pins with no clock driven by root clock pin: EXPLOSION_SS/OB_Y_MOVE_UPDATE_reg[2]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: EXPLOSION_SS/OB_Y_MOVE_UPDATE_reg[3]/Q (HIGH)
@@ -336,45 +418,41 @@ Table of Contents
 
  There are 17 register/latch pins with no clock driven by root clock pin: EXPLOSION_SS/OB_Y_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN2/P[0] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: G/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN2/P[1] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: G/OB_X_MOVE_UPDATE_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN2/P[2] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: G/OB_X_MOVE_UPDATE_reg[3]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN2/P[3] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: G/OB_X_MOVE_UPDATE_reg[4]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN2/P[4] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: G/OB_X_MOVE_UPDATE_reg[5]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN2/P[5] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: G/OB_X_MOVE_UPDATE_reg[6]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN2/P[6] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: G/OB_X_MOVE_UPDATE_reg[7]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN2/P[7] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: G/OB_X_MOVE_UPDATE_reg[8]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN2/P[8] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: G/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN2/P[9] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: G/OB_Y_MOVE_UPDATE_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN3/P[0] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: G/OB_Y_MOVE_UPDATE_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN3/P[1] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: G/OB_Y_MOVE_UPDATE_reg[3]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN3/P[2] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: G/OB_Y_MOVE_UPDATE_reg[4]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN3/P[3] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: G/OB_Y_MOVE_UPDATE_reg[5]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN3/P[4] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: G/OB_Y_MOVE_UPDATE_reg[6]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN3/P[5] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: G/OB_Y_MOVE_UPDATE_reg[7]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN3/P[6] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: G/OB_Y_MOVE_UPDATE_reg[8]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN3/P[7] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN3/P[8] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: G/OB_EN3/P[9] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: G/OB_Y_MOVE_UPDATE_reg[9]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: GA1/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
@@ -448,26 +526,6 @@ Table of Contents
 
  There are 17 register/latch pins with no clock driven by root clock pin: GA2/OB_Y_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: GA3/OB_EN2/P[0] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: GA3/OB_EN2/P[1] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: GA3/OB_EN2/P[2] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: GA3/OB_EN2/P[3] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: GA3/OB_EN2/P[4] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: GA3/OB_EN2/P[5] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: GA3/OB_EN2/P[6] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: GA3/OB_EN2/P[7] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: GA3/OB_EN2/P[8] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: GA3/OB_EN2/P[9] (HIGH)
-
  There are 17 register/latch pins with no clock driven by root clock pin: GA3/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: GA3/OB_X_MOVE_UPDATE_reg[2]/Q (HIGH)
@@ -486,29 +544,91 @@ Table of Contents
 
  There are 17 register/latch pins with no clock driven by root clock pin: GA3/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: GC/EN_reg[0]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: GA4/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: GC/EN_reg[11]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: GA4/OB_X_MOVE_UPDATE_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: GC/EN_reg[14]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: GA4/OB_X_MOVE_UPDATE_reg[3]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: GC/EN_reg[15]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: GA4/OB_X_MOVE_UPDATE_reg[4]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: GC/EN_reg[22]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: GA4/OB_X_MOVE_UPDATE_reg[5]/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: GC/FSM_onehot_CS_reg[0]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: GA4/OB_X_MOVE_UPDATE_reg[6]/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: GC/FSM_onehot_CS_reg[1]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: GA4/OB_X_MOVE_UPDATE_reg[7]/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: GC/FSM_onehot_CS_reg[2]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: GA4/OB_X_MOVE_UPDATE_reg[8]/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: GC/FSM_onehot_CS_reg[3]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: GA4/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: GC/FSM_onehot_CS_reg[4]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: GA4/OB_Y_MOVE_UPDATE_reg[1]/Q (HIGH)
 
- There are 4 register/latch pins with no clock driven by root clock pin: GREEN_ALIEN_1/CS_reg[0]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: GA4/OB_Y_MOVE_UPDATE_reg[2]/Q (HIGH)
 
- There are 4 register/latch pins with no clock driven by root clock pin: GREEN_ALIEN_1/CS_reg[1]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: GA4/OB_Y_MOVE_UPDATE_reg[3]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GA4/OB_Y_MOVE_UPDATE_reg[4]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GA4/OB_Y_MOVE_UPDATE_reg[5]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GA4/OB_Y_MOVE_UPDATE_reg[6]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GA4/OB_Y_MOVE_UPDATE_reg[7]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GA4/OB_Y_MOVE_UPDATE_reg[8]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GA4/OB_Y_MOVE_UPDATE_reg[9]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: GC/FSM_onehot_CS_reg[0]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: GC/FSM_onehot_CS_reg[10]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: GC/FSM_onehot_CS_reg[1]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: GC/FSM_onehot_CS_reg[2]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: GC/FSM_onehot_CS_reg[3]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: GC/FSM_onehot_CS_reg[4]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: GC/FSM_onehot_CS_reg[5]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: GC/FSM_onehot_CS_reg[6]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: GC/FSM_onehot_CS_reg[7]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: GC/FSM_onehot_CS_reg[8]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: GC/FSM_onehot_CS_reg[9]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GC/M_EN_LOSE_reg/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GC/M_EN_WIN_reg/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GC/M_GALAXY_EN_reg/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GC/M_GREEN_EN_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GC/M_GREEN_EN_reg[1]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GC/M_GREEN_EN_reg[2]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GC/M_PURPLE_EN_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GC/M_PURPLE_EN_reg[1]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GC/M_PURPLE_EN_reg[2]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GC/M_PURPLE_EN_reg[3]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GC/M_RED_EN_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GC/M_RED_EN_reg[1]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GC/M_RED_EN_reg[2]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: GC/M_RED_EN_reg[3]/Q (HIGH)
 
  There are 6 register/latch pins with no clock driven by root clock pin: GREEN_ALIEN_2/FSM_sequential_CS_reg[0]/Q (HIGH)
 
@@ -516,49 +636,71 @@ Table of Contents
 
  There are 6 register/latch pins with no clock driven by root clock pin: GREEN_ALIEN_2/FSM_sequential_CS_reg[2]/Q (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: GREEN_ALIEN_3/CS_reg[0]/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: GREEN_ALIEN_2/FSM_sequential_CS_reg[3]/Q (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: GREEN_ALIEN_3/CS_reg[1]/Q (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: GREEN_ALIEN_3/FSM_sequential_CS_reg[0]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN2/P[0] (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: GREEN_ALIEN_3/FSM_sequential_CS_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN2/P[1] (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: GREEN_ALIEN_3/FSM_sequential_CS_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN2/P[2] (HIGH)
+ There are 3 register/latch pins with no clock driven by root clock pin: GREEN_ALIEN_4/FSM_sequential_CS_reg[0]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN2/P[3] (HIGH)
+ There are 3 register/latch pins with no clock driven by root clock pin: GREEN_ALIEN_4/FSM_sequential_CS_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN2/P[4] (HIGH)
+ There are 3 register/latch pins with no clock driven by root clock pin: GREEN_ALIEN_4/FSM_sequential_CS_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN2/P[5] (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: GSS/FSM_sequential_CS_reg[0]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN2/P[6] (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: GSS/FSM_sequential_CS_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN2/P[7] (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: GSS/FSM_sequential_CS_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN2/P[8] (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: GSS/FSM_sequential_CS_reg[3]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN2/P[9] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: L/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN3/P[0] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: L/OB_X_MOVE_UPDATE_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN3/P[1] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: L/OB_X_MOVE_UPDATE_reg[3]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN3/P[2] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: L/OB_X_MOVE_UPDATE_reg[4]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN3/P[3] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: L/OB_X_MOVE_UPDATE_reg[5]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN3/P[4] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: L/OB_X_MOVE_UPDATE_reg[6]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN3/P[5] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: L/OB_X_MOVE_UPDATE_reg[7]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN3/P[6] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: L/OB_X_MOVE_UPDATE_reg[8]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN3/P[7] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: L/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN3/P[8] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: L/OB_Y_MOVE_UPDATE_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: L/OB_EN3/P[9] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: L/OB_Y_MOVE_UPDATE_reg[2]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: L/OB_Y_MOVE_UPDATE_reg[3]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: L/OB_Y_MOVE_UPDATE_reg[4]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: L/OB_Y_MOVE_UPDATE_reg[5]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: L/OB_Y_MOVE_UPDATE_reg[6]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: L/OB_Y_MOVE_UPDATE_reg[7]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: L/OB_Y_MOVE_UPDATE_reg[8]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: L/OB_Y_MOVE_UPDATE_reg[9]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: LSA/EN_LIVES_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: LSA/EN_LIVES_reg[1]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: LSA/EN_LIVES_reg[2]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: LSA/EN_LIVES_reg[3]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: PA1/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
@@ -614,8 +756,6 @@ Table of Contents
 
  There are 17 register/latch pins with no clock driven by root clock pin: PA2/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: PA2/OB_Y_MOVE_UPDATE_reg[0]/Q (HIGH)
-
  There are 17 register/latch pins with no clock driven by root clock pin: PA2/OB_Y_MOVE_UPDATE_reg[1]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: PA2/OB_Y_MOVE_UPDATE_reg[2]/Q (HIGH)
@@ -633,26 +773,6 @@ Table of Contents
  There are 17 register/latch pins with no clock driven by root clock pin: PA2/OB_Y_MOVE_UPDATE_reg[8]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: PA2/OB_Y_MOVE_UPDATE_reg[9]/Q (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: PA3/OB_EN2/P[0] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: PA3/OB_EN2/P[1] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: PA3/OB_EN2/P[2] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: PA3/OB_EN2/P[3] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: PA3/OB_EN2/P[4] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: PA3/OB_EN2/P[5] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: PA3/OB_EN2/P[6] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: PA3/OB_EN2/P[7] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: PA3/OB_EN2/P[8] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: PA3/OB_EN2/P[9] (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: PA3/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
@@ -672,17 +792,65 @@ Table of Contents
 
  There are 17 register/latch pins with no clock driven by root clock pin: PA3/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 4 register/latch pins with no clock driven by root clock pin: PURPLE_ALIEN_1/CS_reg[0]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: PA4/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
- There are 4 register/latch pins with no clock driven by root clock pin: PURPLE_ALIEN_1/CS_reg[1]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: PA4/OB_X_MOVE_UPDATE_reg[2]/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: PURPLE_ALIEN_2/CS_reg[0]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: PA4/OB_X_MOVE_UPDATE_reg[3]/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: PURPLE_ALIEN_2/CS_reg[1]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: PA4/OB_X_MOVE_UPDATE_reg[4]/Q (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: PURPLE_ALIEN_3/CS_reg[0]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: PA4/OB_X_MOVE_UPDATE_reg[5]/Q (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: PURPLE_ALIEN_3/CS_reg[1]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: PA4/OB_X_MOVE_UPDATE_reg[6]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: PA4/OB_X_MOVE_UPDATE_reg[7]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: PA4/OB_X_MOVE_UPDATE_reg[8]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: PA4/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: PA4/OB_Y_MOVE_UPDATE_reg[1]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: PA4/OB_Y_MOVE_UPDATE_reg[2]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: PA4/OB_Y_MOVE_UPDATE_reg[3]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: PA4/OB_Y_MOVE_UPDATE_reg[4]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: PA4/OB_Y_MOVE_UPDATE_reg[5]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: PA4/OB_Y_MOVE_UPDATE_reg[6]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: PA4/OB_Y_MOVE_UPDATE_reg[7]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: PA4/OB_Y_MOVE_UPDATE_reg[8]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: PA4/OB_Y_MOVE_UPDATE_reg[9]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: PURPLE_ALIEN_1/FSM_sequential_CS_reg[0]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: PURPLE_ALIEN_1/FSM_sequential_CS_reg[1]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: PURPLE_ALIEN_1/FSM_sequential_CS_reg[2]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: PURPLE_ALIEN_2/FSM_sequential_CS_reg[0]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: PURPLE_ALIEN_2/FSM_sequential_CS_reg[1]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: PURPLE_ALIEN_2/FSM_sequential_CS_reg[2]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: PURPLE_ALIEN_3/FSM_sequential_CS_reg[0]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: PURPLE_ALIEN_3/FSM_sequential_CS_reg[1]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: PURPLE_ALIEN_3/FSM_sequential_CS_reg[2]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: PURPLE_ALIEN_4/FSM_sequential_CS_reg[0]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: PURPLE_ALIEN_4/FSM_sequential_CS_reg[1]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: PURPLE_ALIEN_4/FSM_sequential_CS_reg[2]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: RA1/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
@@ -758,26 +926,6 @@ Table of Contents
 
  There are 17 register/latch pins with no clock driven by root clock pin: RA2/OB_Y_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: RA3/OB_EN2/P[0] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: RA3/OB_EN2/P[1] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: RA3/OB_EN2/P[2] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: RA3/OB_EN2/P[3] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: RA3/OB_EN2/P[4] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: RA3/OB_EN2/P[5] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: RA3/OB_EN2/P[6] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: RA3/OB_EN2/P[7] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: RA3/OB_EN2/P[8] (HIGH)
-
- There are 17 register/latch pins with no clock driven by root clock pin: RA3/OB_EN2/P[9] (HIGH)
-
  There are 17 register/latch pins with no clock driven by root clock pin: RA3/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: RA3/OB_X_MOVE_UPDATE_reg[2]/Q (HIGH)
@@ -796,137 +944,185 @@ Table of Contents
 
  There are 17 register/latch pins with no clock driven by root clock pin: RA3/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 4 register/latch pins with no clock driven by root clock pin: RED_ALIEN_1/CS_reg[0]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
- There are 4 register/latch pins with no clock driven by root clock pin: RED_ALIEN_1/CS_reg[1]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_X_MOVE_UPDATE_reg[2]/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: RED_ALIEN_2/CS_reg[0]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_X_MOVE_UPDATE_reg[3]/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: RED_ALIEN_2/CS_reg[1]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_X_MOVE_UPDATE_reg[4]/Q (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: RED_ALIEN_3/CS_reg[0]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_X_MOVE_UPDATE_reg[5]/Q (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: RED_ALIEN_3/CS_reg[1]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_X_MOVE_UPDATE_reg[6]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN2/P[0] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_X_MOVE_UPDATE_reg[7]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN2/P[1] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_X_MOVE_UPDATE_reg[8]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN2/P[2] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN2/P[3] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_Y_MOVE_UPDATE_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN2/P[4] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_Y_MOVE_UPDATE_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN2/P[5] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_Y_MOVE_UPDATE_reg[3]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN2/P[6] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_Y_MOVE_UPDATE_reg[4]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN2/P[7] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_Y_MOVE_UPDATE_reg[5]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN2/P[8] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_Y_MOVE_UPDATE_reg[6]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN2/P[9] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_Y_MOVE_UPDATE_reg[7]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN3/P[0] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_Y_MOVE_UPDATE_reg[8]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN3/P[1] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: RA4/OB_Y_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN3/P[2] (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: RED_ALIEN_1/FSM_sequential_CS_reg[0]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN3/P[3] (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: RED_ALIEN_1/FSM_sequential_CS_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN3/P[4] (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: RED_ALIEN_1/FSM_sequential_CS_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN3/P[5] (HIGH)
+ There are 5 register/latch pins with no clock driven by root clock pin: RED_ALIEN_2/FSM_sequential_CS_reg[0]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN3/P[6] (HIGH)
+ There are 5 register/latch pins with no clock driven by root clock pin: RED_ALIEN_2/FSM_sequential_CS_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN3/P[7] (HIGH)
+ There are 5 register/latch pins with no clock driven by root clock pin: RED_ALIEN_2/FSM_sequential_CS_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN3/P[8] (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: RED_ALIEN_3/FSM_sequential_CS_reg[0]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: X/OB_EN3/P[9] (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: RED_ALIEN_3/FSM_sequential_CS_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN2/P[0] (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: RED_ALIEN_3/FSM_sequential_CS_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN2/P[1] (HIGH)
+ There are 3 register/latch pins with no clock driven by root clock pin: RED_ALIEN_4/CS_reg[0]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN2/P[2] (HIGH)
+ There are 3 register/latch pins with no clock driven by root clock pin: RED_ALIEN_4/CS_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN2/P[3] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: X/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN2/P[4] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: X/OB_X_MOVE_UPDATE_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN2/P[5] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: X/OB_X_MOVE_UPDATE_reg[3]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN2/P[6] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: X/OB_X_MOVE_UPDATE_reg[4]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN2/P[7] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: X/OB_X_MOVE_UPDATE_reg[5]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN2/P[8] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: X/OB_X_MOVE_UPDATE_reg[6]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN2/P[9] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: X/OB_X_MOVE_UPDATE_reg[7]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN3/P[0] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: X/OB_X_MOVE_UPDATE_reg[8]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN3/P[1] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: X/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN3/P[2] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: X/OB_Y_MOVE_UPDATE_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN3/P[3] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: X/OB_Y_MOVE_UPDATE_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN3/P[4] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: X/OB_Y_MOVE_UPDATE_reg[3]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN3/P[5] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: X/OB_Y_MOVE_UPDATE_reg[4]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN3/P[6] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: X/OB_Y_MOVE_UPDATE_reg[5]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN3/P[7] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: X/OB_Y_MOVE_UPDATE_reg[6]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN3/P[8] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: X/OB_Y_MOVE_UPDATE_reg[7]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_EN3/P[9] (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: X/OB_Y_MOVE_UPDATE_reg[8]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: X/OB_Y_MOVE_UPDATE_reg[9]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_X_MOVE_UPDATE_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_X_MOVE_UPDATE_reg[2]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_X_MOVE_UPDATE_reg[3]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_X_MOVE_UPDATE_reg[4]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_X_MOVE_UPDATE_reg[5]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_X_MOVE_UPDATE_reg[6]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_X_MOVE_UPDATE_reg[7]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_X_MOVE_UPDATE_reg[8]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_Y_MOVE_UPDATE_reg[0]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_Y_MOVE_UPDATE_reg[1]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_Y_MOVE_UPDATE_reg[2]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_Y_MOVE_UPDATE_reg[3]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_Y_MOVE_UPDATE_reg[4]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_Y_MOVE_UPDATE_reg[5]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_Y_MOVE_UPDATE_reg[6]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_Y_MOVE_UPDATE_reg[7]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_Y_MOVE_UPDATE_reg[8]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: Y/OB_Y_MOVE_UPDATE_reg[9]/Q (HIGH)
 
  There are 3 register/latch pins with no clock driven by root clock pin: ct/CS_reg[0]/Q (HIGH)
 
  There are 3 register/latch pins with no clock driven by root clock pin: ct/CS_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: ct/EN_EX_reg/Q (HIGH)
+ There are 49 register/latch pins with no clock driven by root clock pin: ct/EN_EX_reg/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: hc/HCNT_reg[0]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: hc/COUNT_reg[0]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: hc/HCNT_reg[1]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: hc/COUNT_reg[0]_rep/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: hc/HCNT_reg[2]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: hc/COUNT_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: hc/HCNT_reg[3]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: hc/COUNT_reg[1]_rep/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: hc/HCNT_reg[4]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: hc/COUNT_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: hc/HCNT_reg[5]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: hc/COUNT_reg[3]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: hc/HCNT_reg[6]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: hc/COUNT_reg[4]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: hc/HCNT_reg[7]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: hc/COUNT_reg[4]_rep/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: hc/HCNT_reg[8]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: hc/COUNT_reg[5]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: hc/HCNT_reg[9]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: hc/COUNT_reg[6]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: nolabel_line477/BUTTONS_reg[1]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: hc/COUNT_reg[7]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: hc/COUNT_reg[8]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: hc/COUNT_reg[9]/Q (HIGH)
 
  There are 32 register/latch pins with no clock driven by root clock pin: osc/SIGNAL_reg/Q (HIGH)
 
- There are 41 register/latch pins with no clock driven by root clock pin: pc/SIGNAL_reg/Q (HIGH)
+ There are 27 register/latch pins with no clock driven by root clock pin: pc/SIGNAL_reg/Q (HIGH)
 
- There are 235 register/latch pins with no clock driven by root clock pin: sc/SIGNAL_reg/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: pm/COR_DATA_reg[3]/Q (HIGH)
 
- There are 2 register/latch pins with no clock driven by root clock pin: sgcl/SIGNAL_reg/Q (HIGH)
+ There are 419 register/latch pins with no clock driven by root clock pin: sc/SIGNAL_reg/Q (HIGH)
 
  There are 53 register/latch pins with no clock driven by root clock pin: spic/SIGNAL_reg/Q (HIGH)
 
  There are 37 register/latch pins with no clock driven by root clock pin: spiint/readMe_reg/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: ss/OB_X_MOVE_UPDATE_reg[0]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: ss/OB_X_MOVE_UPDATE_reg[1]/Q (HIGH)
 
@@ -946,8 +1142,6 @@ Table of Contents
 
  There are 17 register/latch pins with no clock driven by root clock pin: ss/OB_X_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: ss/OB_Y_MOVE_UPDATE_reg[1]/Q (HIGH)
-
  There are 17 register/latch pins with no clock driven by root clock pin: ss/OB_Y_MOVE_UPDATE_reg[2]/Q (HIGH)
 
  There are 17 register/latch pins with no clock driven by root clock pin: ss/OB_Y_MOVE_UPDATE_reg[3]/Q (HIGH)
@@ -964,29 +1158,31 @@ Table of Contents
 
  There are 17 register/latch pins with no clock driven by root clock pin: ss/OB_Y_MOVE_UPDATE_reg[9]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: ts/FSM_sequential_CS_reg[0]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: vc/COUNT_reg[0]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: ts/FSM_sequential_CS_reg[1]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: vc/COUNT_reg[1]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: vc/VCNT_reg[0]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: vc/COUNT_reg[2]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: vc/VCNT_reg[1]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: vc/COUNT_reg[3]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: vc/VCNT_reg[2]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: vc/COUNT_reg[4]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: vc/VCNT_reg[3]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: vc/COUNT_reg[5]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: vc/VCNT_reg[4]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: vc/COUNT_reg[6]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: vc/VCNT_reg[5]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: vc/COUNT_reg[6]_rep/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: vc/VCNT_reg[6]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: vc/COUNT_reg[7]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: vc/VCNT_reg[7]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: vc/COUNT_reg[7]_rep/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: vc/VCNT_reg[8]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: vc/COUNT_reg[8]/Q (HIGH)
 
- There are 17 register/latch pins with no clock driven by root clock pin: vc/VCNT_reg[9]/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: vc/COUNT_reg[8]_rep/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: vc/COUNT_reg[9]/Q (HIGH)
 
 
 2. checking constant_clock
@@ -1001,7 +1197,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 900 pins that are not constrained for maximum delay. (HIGH)
+ There are 1807 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -1015,7 +1211,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 28 ports with no output delay specified. (HIGH)
+ There are 23 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -1060,7 +1256,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      4.513        0.000                      0                 1156        0.093        0.000                      0                 1156        4.500        0.000                       0                   602  
+      3.989        0.000                      0                 1617        0.056        0.000                      0                 1617        4.500        0.000                       0                   891  
 
 
 All user specified timing constraints are met.
@@ -1083,7 +1279,7 @@ sys_clk_pin  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-sys_clk_pin         4.513        0.000                      0                 1156        0.093        0.000                      0                 1156        4.500        0.000                       0                   602  
+sys_clk_pin         3.989        0.000                      0                 1617        0.056        0.000                      0                 1617        4.500        0.000                       0                   891  
 
 
 ------------------------------------------------------------------------------------------------
@@ -1114,28 +1310,28 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  sys_clk_pin
   To Clock:  sys_clk_pin
 
-Setup :            0  Failing Endpoints,  Worst Slack        4.513ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.093ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        3.989ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.056ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             4.513ns  (required time - arrival time)
-  Source:                 PURPLE_ALIEN_1/tecl/COUNT_reg[14]/C
+Slack (MET) :             3.989ns  (required time - arrival time)
+  Source:                 BC/GA3/CS_reg[0]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            PURPLE_ALIEN_1/tecl/COUNT_reg[0]/CE
+  Destination:            ct/CS_reg[0]/D
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        5.255ns  (logic 1.138ns (21.655%)  route 4.117ns (78.345%))
-  Logic Levels:           5  (LUT3=1 LUT4=1 LUT5=1 LUT6=2)
-  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.929ns = ( 14.929 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.232ns
-    Clock Pessimism Removal (CPR):    0.276ns
+  Data Path Delay:        5.927ns  (logic 1.076ns (18.156%)  route 4.851ns (81.844%))
+  Logic Levels:           5  (LUT2=1 LUT6=4)
+  Clock Path Skew:        -0.126ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.928ns = ( 14.928 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.234ns
+    Clock Pessimism Removal (CPR):    0.180ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -1151,22 +1347,22 @@ Slack (MET) :             4.513ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  CLK_IBUF_inst/O
                          net (fo=1, routed)           2.025     3.506    CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  CLK_IBUF_BUFG_inst/O
-                         net (fo=601, routed)         1.629     5.232    PURPLE_ALIEN_1/tecl/CLK_IBUF_BUFG
-    SLICE_X60Y92         FDCE                                         r  PURPLE_ALIEN_1/tecl/COUNT_reg[14]/C
+                         net (fo=890, routed)         1.631     5.234    BC/GA3/CLK
+    SLICE_X61Y97         FDCE                                         r  BC/GA3/CS_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X60Y92         FDCE (Prop_fdce_C_Q)         0.518     5.750 r  PURPLE_ALIEN_1/tecl/COUNT_reg[14]/Q
-                         net (fo=2, routed)           0.821     6.571    PURPLE_ALIEN_1/tecl/COUNT[14]
-    SLICE_X60Y92         LUT4 (Prop_lut4_I1_O)        0.124     6.695 f  PURPLE_ALIEN_1/tecl/COUNT[31]_i_10__10/O
-                         net (fo=1, routed)           0.648     7.343    PURPLE_ALIEN_1/tecl/COUNT[31]_i_10__10_n_0
-    SLICE_X62Y90         LUT5 (Prop_lut5_I4_O)        0.124     7.467 f  PURPLE_ALIEN_1/tecl/COUNT[31]_i_8__10/O
-                         net (fo=1, routed)           0.526     7.993    PURPLE_ALIEN_1/tecl/COUNT[31]_i_8__10_n_0
-    SLICE_X60Y89         LUT6 (Prop_lut6_I5_O)        0.124     8.117 f  PURPLE_ALIEN_1/tecl/COUNT[31]_i_4__10/O
-                         net (fo=1, routed)           0.448     8.565    PURPLE_ALIEN_1/tecl/COUNT[31]_i_4__10_n_0
-    SLICE_X60Y93         LUT6 (Prop_lut6_I0_O)        0.124     8.689 f  PURPLE_ALIEN_1/tecl/COUNT[31]_i_3__10/O
-                         net (fo=34, routed)          0.757     9.446    PURPLE_ALIEN_1/tecl/COUNT[31]_i_3__10_n_0
-    SLICE_X64Y92         LUT3 (Prop_lut3_I0_O)        0.124     9.570 r  PURPLE_ALIEN_1/tecl/COUNT[31]_i_1__10/O
-                         net (fo=32, routed)          0.917    10.487    PURPLE_ALIEN_1/tecl/COUNT_0
-    SLICE_X60Y88         FDCE                                         r  PURPLE_ALIEN_1/tecl/COUNT_reg[0]/CE
+    SLICE_X61Y97         FDCE (Prop_fdce_C_Q)         0.456     5.690 f  BC/GA3/CS_reg[0]/Q
+                         net (fo=3, routed)           0.473     6.163    GC/CS_4[0]
+    SLICE_X61Y97         LUT2 (Prop_lut2_I1_O)        0.124     6.287 r  GC/CS[1]_i_36/O
+                         net (fo=1, routed)           0.670     6.957    vc/CS_reg[0]_45
+    SLICE_X61Y97         LUT6 (Prop_lut6_I1_O)        0.124     7.081 r  vc/CS[1]_i_25/O
+                         net (fo=2, routed)           0.869     7.950    vc/CS[1]_i_25_n_0
+    SLICE_X58Y104        LUT6 (Prop_lut6_I5_O)        0.124     8.074 r  vc/CS[0]_i_7__0/O
+                         net (fo=1, routed)           0.978     9.052    hc/COUNT_reg[9]_14
+    SLICE_X53Y104        LUT6 (Prop_lut6_I0_O)        0.124     9.176 r  hc/CS[0]_i_3__12/O
+                         net (fo=1, routed)           1.860    11.036    ct/t/COUNT_reg[9]_0
+    SLICE_X14Y109        LUT6 (Prop_lut6_I2_O)        0.124    11.160 r  ct/t/CS[0]_i_1__13/O
+                         net (fo=1, routed)           0.000    11.160    ct/t_n_1
+    SLICE_X14Y109        FDCE                                         r  ct/CS_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1176,16 +1372,16 @@ Slack (MET) :             4.513ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  CLK_IBUF_inst/O
                          net (fo=1, routed)           1.920    13.331    CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  CLK_IBUF_BUFG_inst/O
-                         net (fo=601, routed)         1.506    14.929    PURPLE_ALIEN_1/tecl/CLK_IBUF_BUFG
-    SLICE_X60Y88         FDCE                                         r  PURPLE_ALIEN_1/tecl/COUNT_reg[0]/C
-                         clock pessimism              0.276    15.205    
-                         clock uncertainty           -0.035    15.169    
-    SLICE_X60Y88         FDCE (Setup_fdce_C_CE)      -0.169    15.000    PURPLE_ALIEN_1/tecl/COUNT_reg[0]
+                         net (fo=890, routed)         1.506    14.928    ct/CLK
+    SLICE_X14Y109        FDCE                                         r  ct/CS_reg[0]/C
+                         clock pessimism              0.180    15.108    
+                         clock uncertainty           -0.035    15.073    
+    SLICE_X14Y109        FDCE (Setup_fdce_C_D)        0.077    15.150    ct/CS_reg[0]
   -------------------------------------------------------------------
-                         required time                         15.000    
-                         arrival time                         -10.487    
+                         required time                         15.150    
+                         arrival time                         -11.160    
   -------------------------------------------------------------------
-                         slack                                  4.513    
+                         slack                                  3.989    
 
 
 
@@ -1193,20 +1389,20 @@ Slack (MET) :             4.513ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.093ns  (arrival time - required time)
+Slack (MET) :             0.056ns  (arrival time - required time)
   Source:                 PURPLE_ALIEN_2/tecl/SIGNAL_reg/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            PURPLE_ALIEN_2/CS_reg[1]/D
-                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            PURPLE_ALIEN_2/FSM_sequential_CS_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.478ns  (logic 0.209ns (43.759%)  route 0.269ns (56.241%))
-  Logic Levels:           1  (LUT3=1)
-  Clock Path Skew:        0.278ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.006ns
-    Source Clock Delay      (SCD):    1.482ns
-    Clock Pessimism Removal (CPR):    0.245ns
+  Data Path Delay:        0.443ns  (logic 0.186ns (41.959%)  route 0.257ns (58.041%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.266ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.000ns
+    Source Clock Delay      (SCD):    1.483ns
+    Clock Pessimism Removal (CPR):    0.250ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1217,14 +1413,14 @@ Slack (MET) :             0.093ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  CLK_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  CLK_IBUF_BUFG_inst/O
-                         net (fo=601, routed)         0.563     1.482    PURPLE_ALIEN_2/tecl/CLK_IBUF_BUFG
-    SLICE_X66Y100        FDCE                                         r  PURPLE_ALIEN_2/tecl/SIGNAL_reg/C
+                         net (fo=890, routed)         0.564     1.483    PURPLE_ALIEN_2/tecl/CLK
+    SLICE_X51Y90         FDCE                                         r  PURPLE_ALIEN_2/tecl/SIGNAL_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X66Y100        FDCE (Prop_fdce_C_Q)         0.164     1.646 r  PURPLE_ALIEN_2/tecl/SIGNAL_reg/Q
-                         net (fo=3, routed)           0.269     1.915    PURPLE_ALIEN_2/tecl/SIGNAL
-    SLICE_X67Y99         LUT3 (Prop_lut3_I0_O)        0.045     1.960 r  PURPLE_ALIEN_2/tecl/CS[1]_i_1__6/O
-                         net (fo=1, routed)           0.000     1.960    PURPLE_ALIEN_2/tecl_n_1
-    SLICE_X67Y99         FDRE                                         r  PURPLE_ALIEN_2/CS_reg[1]/D
+    SLICE_X51Y90         FDCE (Prop_fdce_C_Q)         0.141     1.624 r  PURPLE_ALIEN_2/tecl/SIGNAL_reg/Q
+                         net (fo=3, routed)           0.257     1.882    PURPLE_ALIEN_2/tecl/COUNTUP
+    SLICE_X58Y89         LUT4 (Prop_lut4_I0_O)        0.045     1.927 r  PURPLE_ALIEN_2/tecl/FSM_sequential_CS[2]_i_1__0/O
+                         net (fo=1, routed)           0.000     1.927    PURPLE_ALIEN_2/tecl_n_0
+    SLICE_X58Y89         FDCE                                         r  PURPLE_ALIEN_2/FSM_sequential_CS_reg[2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1234,15 +1430,15 @@ Slack (MET) :             0.093ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  CLK_IBUF_inst/O
                          net (fo=1, routed)           0.699     1.136    CLK_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  CLK_IBUF_BUFG_inst/O
-                         net (fo=601, routed)         0.841     2.006    PURPLE_ALIEN_2/CLK_IBUF_BUFG
-    SLICE_X67Y99         FDRE                                         r  PURPLE_ALIEN_2/CS_reg[1]/C
-                         clock pessimism             -0.245     1.760    
-    SLICE_X67Y99         FDRE (Hold_fdre_C_D)         0.107     1.867    PURPLE_ALIEN_2/CS_reg[1]
+                         net (fo=890, routed)         0.835     2.000    PURPLE_ALIEN_2/CLK
+    SLICE_X58Y89         FDCE                                         r  PURPLE_ALIEN_2/FSM_sequential_CS_reg[2]/C
+                         clock pessimism             -0.250     1.749    
+    SLICE_X58Y89         FDCE (Hold_fdce_C_D)         0.121     1.870    PURPLE_ALIEN_2/FSM_sequential_CS_reg[2]
   -------------------------------------------------------------------
-                         required time                         -1.867    
-                         arrival time                           1.960    
+                         required time                         -1.870    
+                         arrival time                           1.927    
   -------------------------------------------------------------------
-                         slack                                  0.093    
+                         slack                                  0.056    
 
 
 
@@ -1255,10 +1451,10 @@ Waveform(ns):       { 0.000 5.000 }
 Period(ns):         10.000
 Sources:            { CLK }
 
-Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X0Y19  g/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
-Low Pulse Width   Slow    FDCE/C              n/a            0.500         5.000       4.500      SLICE_X60Y88  PURPLE_ALIEN_1/tecl/COUNT_reg[0]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X40Y88  ct/CS_reg[0]/C
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X0Y20   g/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         5.000       4.500      SLICE_X52Y114  BLUE_ALIEN_4/FSM_sequential_CS_reg[0]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         5.000       4.500      SLICE_X55Y121  sc/COUNT_reg[13]/C
 
 
 

@@ -28,12 +28,14 @@ module RA1_STATE( input CLK, input RESET, input EN, output reg [9:0] RA1_speed, 
     parameter WAIT =  0;
     parameter DELAY1 = 1;
     parameter DELAY2 = 2;
+    parameter RESET1 = 3;
+    parameter RESET2 = 4;
     
     wire COUNTUP;
     reg EN_TIMER;
     //module TIMER_15(output reg SIGNAL, input CLK, input RESET, input EN);
     TIMER_15(COUNTUP, CLK, RESET, EN_TIMER);
-    always @ (posedge CLK) begin
+    always @ (posedge CLK, posedge RESET) begin
 
         if(RESET)begin
             CS <= WAIT;
@@ -62,34 +64,49 @@ module RA1_STATE( input CLK, input RESET, input EN, output reg [9:0] RA1_speed, 
             NS <= WAIT;
             end            
         end
+        
         DELAY1:begin
         EN_TIMER <= 1;
         RA1_speed <= 4;
         RA1_motion <= 2;
         if(COUNTUP)
             begin
-            EN_TIMER <= 0;
-            NS <= DELAY2;
+            NS <= RESET1;
             end
         else
             begin
             NS <= DELAY1;
             end    
         end
+        
+        RESET1:begin
+        EN_TIMER <= 0;
+        RA1_speed <= 4;
+        RA1_motion <= 2;
+        NS <= DELAY2;
+        end
+        
         DELAY2:begin
         EN_TIMER <= 1;
         RA1_speed <= 4;
         RA1_motion <= 6;
         if(COUNTUP)
             begin
-            EN_TIMER <= 0;
-            NS <= WAIT;
+            NS <= RESET2;
             end
         else
             begin
             NS <= DELAY2;
             end 
         end
+        
+        RESET2:begin
+        EN_TIMER <= 0;
+        RA1_speed <= 4;
+        RA1_motion <= 6;
+        NS <= WAIT;
+        end
+        
         endcase
         
     end

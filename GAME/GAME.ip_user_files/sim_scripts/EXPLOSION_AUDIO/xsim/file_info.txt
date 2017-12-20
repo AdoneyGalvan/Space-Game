@@ -1,0 +1,2 @@
+EXPLOSION_AUDIO.v,verilog,xil_defaultlib,../../../../GAME.srcs/sources_1/ip/EXPLOSION_AUDIO/sim/EXPLOSION_AUDIO.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

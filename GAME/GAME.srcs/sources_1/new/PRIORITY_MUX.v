@@ -22,32 +22,19 @@
      output reg [12:0] ADDRESS, 
      output reg COLOR_DECODER_EN, 
      output reg [3:0] COR_DATA,
-     input SS_EN, 
-     input RA1_EN, 
-     input RA2_EN,
-     input RA3_EN,
-     input RA4_EN, 
-     input GA1_EN,
-     input GA2_EN,
-     input GA3_EN,
-     input GA4_EN,
-     input BA1_EN,
-     input BA2_EN,
-     input BA3_EN,
-     input BA4_EN,
-     input PA1_EN,
-     input PA2_EN,
-     input PA3_EN,
-     input PA4_EN,
+     input [3:0] OB_RED_EN,
+     input [3:0] OB_GREEN_EN,
+     input [3:0] OB_BLUE_EN,
+     input [3:0] OB_PURPLE_EN, 
+     input [5:0] OB_GALAXY_EN,
+     input [3:0] OB_DIGIT_EN,
+     input [3:0] OB_SS_LIVES_EN,
+     input [2:0] OB_WIN_EN,
+     input [3:0] OB_LOSE_EN,
      input EX_SS_EN,
      input EX_B_EN,
+     input SS_EN,
      input B_EN,
-     input G_EN,
-     input A1_EN,
-     input L_EN,
-     input A2_EN,
-     input X_EN,
-     input Y_EN,
      input [12:0] SS_ADDRESS, 
      input [12:0] RA1_ADDRESS, 
      input [12:0] RA2_ADDRESS,
@@ -74,8 +61,24 @@
      input [12:0] A2_ADDRESS,
      input [12:0] X_ADDRESS,
      input [12:0] Y_ADDRESS,
+     input [12:0] D1_ADDRESS,
+     input [12:0] D2_ADDRESS,
+     input [12:0] D3_ADDRESS,
+     input [12:0] D4_ADDRESS,
+     input [12:0] SS_LIVE1_ADDRESS,
+     input [12:0] SS_LIVE2_ADDRESS,
+     input [12:0] SS_LIVE3_ADDRESS,
+     input [12:0] SS_LIVE4_ADDRESS,
+     input [12:0] W_C_ADDRESS,
+     input [12:0] I_ADDRESS,
+     input [12:0] N_ADDRESS,
+     input [12:0] L2_ADDRESS,
+     input [12:0] O_ADDRESS,
+     input [12:0] S_C_ADDRESS,
+     input [12:0] E_ADDRESS,
      input [3:0] DATA1,
-     input [3:0] DATA2); 
+     input [3:0] DATA2,
+     input [3:0] DATA3); 
 
     always @(*)
         begin
@@ -98,97 +101,97 @@
             ADDRESS <= SS_ADDRESS;
             COR_DATA <= DATA1;
             end    
-        else if(RA1_EN)//Red Aliens
+        else if(OB_RED_EN[0])//Red Aliens
             begin
             COLOR_DECODER_EN <= 1;
             ADDRESS <= RA1_ADDRESS;
             COR_DATA <= DATA1;
             end 
-        else if(RA2_EN)
+        else if(OB_RED_EN[1])
             begin
             COLOR_DECODER_EN <= 1;
             ADDRESS <= RA2_ADDRESS;
             COR_DATA <= DATA1;
             end     
-         else if(RA3_EN)
+         else if(OB_RED_EN[2])
             begin
             COLOR_DECODER_EN <= 1;
             ADDRESS <= RA3_ADDRESS;
             COR_DATA <= DATA1;
             end 
-        else if(RA4_EN)//Red Aliens
+        else if(OB_RED_EN[3])//Red Aliens
             begin
             COLOR_DECODER_EN <= 1;
             ADDRESS <= RA4_ADDRESS;
             COR_DATA <= DATA1;
             end 
-        else if(GA1_EN)//Green Aliens
+        else if(OB_GREEN_EN[0])//Green Aliens
             begin
             COLOR_DECODER_EN <= 1;
             ADDRESS <= GA1_ADDRESS;
             COR_DATA <= DATA1;
             end 
-      else if(GA2_EN)
+      else if(OB_GREEN_EN[1])
             begin
             COLOR_DECODER_EN <= 1;
             ADDRESS <= GA2_ADDRESS;
             COR_DATA <= DATA1;
             end  
-      else if(GA3_EN)
+      else if(OB_GREEN_EN[2])
             begin
             COLOR_DECODER_EN <= 1;
             ADDRESS <= GA3_ADDRESS;
             COR_DATA <= DATA1;
             end
-      else if(GA4_EN)//Green Aliens
+      else if(OB_GREEN_EN[3])//Green Aliens
             begin
             COLOR_DECODER_EN <= 1;
             ADDRESS <= GA4_ADDRESS;
             COR_DATA <= DATA1;
             end 
-     else if(BA1_EN)//Blue Aliens
+     else if(OB_BLUE_EN[0])//Blue Aliens
             begin
             COLOR_DECODER_EN <= 1;
             ADDRESS <= BA1_ADDRESS;
             COR_DATA <= DATA1;
             end 
-      else if(BA2_EN)
+      else if(OB_BLUE_EN[1])
             begin
             COLOR_DECODER_EN <= 1;
             ADDRESS <= BA2_ADDRESS;
             COR_DATA <= DATA1;
             end  
-      else if(BA3_EN)
+      else if(OB_BLUE_EN[2])
             begin
             COLOR_DECODER_EN <= 1;
             ADDRESS <= BA3_ADDRESS;
             COR_DATA <= DATA1;
             end
-      else if(BA4_EN)//Blue Aliens
+      else if(OB_BLUE_EN[3])//Blue Aliens
             begin
             COLOR_DECODER_EN <= 1;
             ADDRESS <= BA4_ADDRESS;
             COR_DATA <= DATA1;
             end     
-     else if(PA1_EN)//Purple Aliens
+     else if(OB_PURPLE_EN[0])//Purple Aliens
            begin
            COLOR_DECODER_EN <= 1;
            ADDRESS <= PA1_ADDRESS;
            COR_DATA <= DATA1;
            end 
-     else if(PA2_EN)
+     else if(OB_PURPLE_EN[1])
            begin
            COLOR_DECODER_EN <= 1;
            ADDRESS <= PA2_ADDRESS;
            COR_DATA <= DATA1;
            end  
-     else if(PA3_EN)
+     else if(OB_PURPLE_EN[2])
            begin
            COLOR_DECODER_EN <= 1;
            ADDRESS <= PA3_ADDRESS;
            COR_DATA <= DATA1;
            end
-     else if(PA4_EN)//Blue Aliens
+     else if(OB_PURPLE_EN[3])//Blue Aliens
            begin
            COLOR_DECODER_EN <= 1;
            ADDRESS <= PA4_ADDRESS;
@@ -200,41 +203,131 @@
            ADDRESS <= B_ADDRESS;
            COR_DATA <= DATA1;
            end                                
-      else if(G_EN)
+      else if(OB_GALAXY_EN[0])
             begin
             COLOR_DECODER_EN <= 1;
             ADDRESS <= G_ADDRESS;
             COR_DATA <= DATA2;
             end 
-      else if(A1_EN)
+      else if(OB_GALAXY_EN[1])
             begin
             COLOR_DECODER_EN <= 1;
             ADDRESS <= A1_ADDRESS;
             COR_DATA <= DATA2;
             end 
-      else if(L_EN)
+      else if(OB_GALAXY_EN[2])
             begin
             COLOR_DECODER_EN <= 1;
             ADDRESS <= L_ADDRESS;
             COR_DATA <= DATA2;
             end 
-      else if(A2_EN)
+      else if(OB_GALAXY_EN[3])
             begin
             COLOR_DECODER_EN <= 1;
             ADDRESS <= A2_ADDRESS;
             COR_DATA <= DATA2;
             end     
-      else if(X_EN)
+      else if(OB_GALAXY_EN[4])
            begin
            COLOR_DECODER_EN <= 1;
            ADDRESS <= X_ADDRESS;
            COR_DATA <= DATA2;
            end      
-      else if(Y_EN)
+      else if(OB_GALAXY_EN[5])
            begin
            COLOR_DECODER_EN <= 1;
            ADDRESS <= Y_ADDRESS;
            COR_DATA <= DATA2;
-           end                           
-        end
+           end   
+      else if(OB_DIGIT_EN[0])
+           begin
+           COLOR_DECODER_EN <= 1;
+           ADDRESS <= D1_ADDRESS;
+           COR_DATA <= DATA2;
+           end  
+      else if(OB_DIGIT_EN[1])
+           begin
+           COLOR_DECODER_EN <= 1;
+           ADDRESS <= D2_ADDRESS;
+           COR_DATA <= DATA2;
+           end          
+      else if(OB_DIGIT_EN[2])
+           begin
+           COLOR_DECODER_EN <= 1;
+           ADDRESS <= D3_ADDRESS;
+           COR_DATA <= DATA2;
+           end 
+      else if(OB_DIGIT_EN[3])
+           begin
+           COLOR_DECODER_EN <= 1;
+           ADDRESS <= D4_ADDRESS;
+           COR_DATA <= DATA2;
+           end
+      else if(OB_SS_LIVES_EN[0])
+           begin
+           COLOR_DECODER_EN <= 1;
+           ADDRESS <= SS_LIVE1_ADDRESS;
+           COR_DATA <= DATA1;
+           end    
+      else if(OB_SS_LIVES_EN[1])
+           begin
+           COLOR_DECODER_EN <= 1;
+           ADDRESS <= SS_LIVE2_ADDRESS;
+           COR_DATA <= DATA1;
+           end 
+      else if(OB_SS_LIVES_EN[2])
+           begin
+           COLOR_DECODER_EN <= 1;
+           ADDRESS <= SS_LIVE3_ADDRESS;
+           COR_DATA <= DATA1;
+           end 
+      else if(OB_SS_LIVES_EN[3])
+           begin
+           COLOR_DECODER_EN <= 1;
+           ADDRESS <= SS_LIVE4_ADDRESS;
+           COR_DATA <= DATA1;
+           end
+     else if(OB_WIN_EN[0])
+           begin
+           COLOR_DECODER_EN <= 1;
+           ADDRESS <= W_C_ADDRESS;
+           COR_DATA <= DATA3;
+           end 
+     else if(OB_WIN_EN[1])
+           begin
+           COLOR_DECODER_EN <= 1;
+           ADDRESS <= I_ADDRESS;
+           COR_DATA <= DATA3;
+            end 
+     else if(OB_WIN_EN[2])
+            begin
+            COLOR_DECODER_EN <= 1;
+            ADDRESS <= N_ADDRESS;
+            COR_DATA <= DATA3;
+            end  
+       else if(OB_LOSE_EN[0])
+          begin
+          COLOR_DECODER_EN <= 1;
+          ADDRESS <= L2_ADDRESS;
+          COR_DATA <= DATA3;
+          end 
+        else if(OB_LOSE_EN[1])
+            begin
+            COLOR_DECODER_EN <= 1;
+            ADDRESS <= O_ADDRESS;
+            COR_DATA <= DATA3;
+            end 
+       else if(OB_LOSE_EN[2])
+              begin
+              COLOR_DECODER_EN <= 1;
+              ADDRESS <= S_C_ADDRESS;
+              COR_DATA <= DATA3;
+              end 
+        else if(OB_LOSE_EN[3])
+            begin
+            COLOR_DECODER_EN <= 1;
+            ADDRESS <= E_ADDRESS;
+            COR_DATA <= DATA3;
+            end                                                                                                                                                                                                                                                                       
+         end        
 endmodule

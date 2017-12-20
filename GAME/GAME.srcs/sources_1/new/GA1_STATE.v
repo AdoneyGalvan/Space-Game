@@ -28,12 +28,14 @@ module GA1_STATE( input CLK, input RESET, input EN, output reg [9:0] GA1_speed, 
     parameter WAIT =  0;
     parameter DELAY1 = 1;
     parameter DELAY2 = 2;
+    parameter RESET1 = 3;
+    parameter RESET2 = 4;
     
     wire COUNTUP;
     reg EN_TIMER;
     //module TIMER_15(output reg SIGNAL, input CLK, input RESET, input EN);
     TIMER_15(COUNTUP, CLK, RESET, EN_TIMER);
-    always @ (posedge CLK) begin
+    always @ (posedge CLK, posedge RESET) begin
 
         if(RESET)begin
             CS <= WAIT;
@@ -56,19 +58,18 @@ module GA1_STATE( input CLK, input RESET, input EN, output reg [9:0] GA1_speed, 
             begin
             NS <= DELAY1;
             end
-            
         else
             begin
             NS <= WAIT;
             end            
         end
+        
         DELAY1:begin
         EN_TIMER <= 1;
         GA1_speed <= 4;
         GA1_motion <= 2;
         if(COUNTUP)
             begin
-            EN_TIMER <= 0;
             NS <= DELAY2;
             end
         else
@@ -76,20 +77,36 @@ module GA1_STATE( input CLK, input RESET, input EN, output reg [9:0] GA1_speed, 
             NS <= DELAY1;
             end    
         end
+        
+        RESET1:begin
+        EN_TIMER <= 0;
+        GA1_speed <= 4;
+        GA1_motion <= 2;
+        NS <= DELAY2;
+        end
+        
         DELAY2:begin
         EN_TIMER <= 1;
         GA1_speed <= 4;
         GA1_motion <= 7;
         if(COUNTUP)
             begin
-            EN_TIMER <= 0;
-            NS <= WAIT;
+            NS <= RESET2;
             end
         else
             begin
             NS <= DELAY2;
             end 
         end
+        
+        RESET2:begin
+        EN_TIMER <= 0;
+        GA1_speed <= 4;
+        GA1_motion <= 7;
+        NS <= WAIT;
+        end
+        
+
         endcase
         
     end

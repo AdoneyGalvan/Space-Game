@@ -22,14 +22,14 @@
 
 module VER_COUNTER(output reg [9:0] VCNT, input EN, input CLK, input RESET);
     reg [9:0] COUNT;
-    always @ (posedge CLK)
+    always @ (posedge CLK, posedge RESET)
         begin
         if (RESET == 1)
             begin
             COUNT <= 0;
             VCNT <= 0;
             end
-        if(EN == 1)
+        else if(EN == 1)
             begin
             if(COUNT <= 523)
                 begin

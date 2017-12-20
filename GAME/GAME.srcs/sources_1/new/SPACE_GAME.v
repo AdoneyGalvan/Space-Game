@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module SPACE_GAME(output VGA_VS, output VGA_HS, output [3:0] VGA_R, output [3:0] VGA_B, output [3:0] VGA_G, output [7:0] LED, output MOSI, output CS, output SCLK, output [7:0] AN, output [6:0] SEG, input CLK, input RESET, input PS2_CLK, input PS2_DATA, input [4:0] SW, input MISO);
+module SPACE_GAME(output VGA_VS, output VGA_HS, output [3:0] VGA_R, output [3:0] VGA_B, output [3:0] VGA_G, output MOSI, output CS, output SCLK, output AUD_PWM, output AUD_SD, output [4:0] LED, input CLK, input RESET, input [4:0] SW, input MISO);
 
     //Animate Clock
     wire UPDATE_SIGNAL;
@@ -33,9 +33,6 @@ module SPACE_GAME(output VGA_VS, output VGA_HS, output [3:0] VGA_R, output [3:0]
 
     //Space Ship Object Direction
     wire [9:0] SS_DIR;
-    
-    //Game object enable flags
-    wire [22:0] EN_SIGNALS;
      
      //Objects and priority mux wires
      //Graphics
@@ -64,23 +61,43 @@ module SPACE_GAME(output VGA_VS, output VGA_HS, output [3:0] VGA_R, output [3:0]
      wire [12:0] EX_B_ADDRESS;
      wire [12:0] B_ADDRESS;
      
+     wire [9:0] RA1_CUR_X_POS;
+     wire [9:0] RA1_CUR_Y_POS;
+     wire [9:0] RA2_CUR_X_POS;
+     wire [9:0] RA2_CUR_Y_POS;
+     wire [9:0] RA3_CUR_X_POS;
+     wire [9:0] RA3_CUR_Y_POS; 
+     wire [9:0] RA4_CUR_X_POS;
+     wire [9:0] RA4_CUR_Y_POS;
+     
+     wire [9:0] GA1_CUR_X_POS;
+     wire [9:0] GA1_CUR_Y_POS;
+     wire [9:0] GA2_CUR_X_POS;
+     wire [9:0] GA2_CUR_Y_POS;
+     wire [9:0] GA3_CUR_X_POS;
+     wire [9:0] GA3_CUR_Y_POS; 
+     wire [9:0] GA4_CUR_X_POS;
+     wire [9:0] GA4_CUR_Y_POS;
+     
+     wire [9:0] BA1_CUR_X_POS;
+     wire [9:0] BA1_CUR_Y_POS;
+     wire [9:0] BA2_CUR_X_POS;
+     wire [9:0] BA2_CUR_Y_POS;
+     wire [9:0] BA3_CUR_X_POS;
+     wire [9:0] BA3_CUR_Y_POS; 
+     wire [9:0] BA4_CUR_X_POS;
+     wire [9:0] BA4_CUR_Y_POS;
+     
+     wire [9:0] PA1_CUR_X_POS;
+     wire [9:0] PA1_CUR_Y_POS;
+     wire [9:0] PA2_CUR_X_POS;
+     wire [9:0] PA2_CUR_Y_POS;
+     wire [9:0] PA3_CUR_X_POS;
+     wire [9:0] PA3_CUR_Y_POS; 
+     wire [9:0] PA4_CUR_X_POS;
+     wire [9:0] PA4_CUR_Y_POS;
+              
      wire SS_EN;
-     wire RA1_EN;
-     wire RA2_EN;
-     wire RA3_EN;
-     wire RA4_EN;
-     wire GA1_EN;
-     wire GA2_EN;
-     wire GA3_EN;
-     wire GA4_EN;
-     wire BA1_EN;
-     wire BA2_EN;
-     wire BA3_EN;
-     wire BA4_EN;
-     wire PA1_EN;
-     wire PA2_EN;
-     wire PA3_EN;
-     wire PA4_EN;
      wire EX_SS_EN;
      wire EX_B_EN;
      wire B_EN;
@@ -95,6 +112,7 @@ module SPACE_GAME(output VGA_VS, output VGA_HS, output [3:0] VGA_R, output [3:0]
       parameter PURPLE_ALIEN_ADDRESS = 64;
       parameter EXPLOSION_ADDRESS = 80;
       parameter BULLET_ADDRESS = 96;
+
      
      //Text
      wire [12:0] G_ADDRESS;
@@ -103,15 +121,26 @@ module SPACE_GAME(output VGA_VS, output VGA_HS, output [3:0] VGA_R, output [3:0]
      wire [12:0] A2_ADDRESS;
      wire [12:0] X_ADDRESS;
      wire [12:0] Y_ADDRESS;
+     wire [12:0] L2_ADDRESS;
+     wire [12:0] W_ADDRESS;
 
-     wire G_EN;
-     wire A1_EN;
-     wire L_EN;
-     wire A2_EN;
-     wire X_EN;
-     wire Y_EN;     
+     
+     wire [9:0] G_CUR_X_POS;
+     wire [9:0] G_CUR_Y_POS;
+     wire [9:0] A1_CUR_X_POS;
+     wire [9:0] A1_CUR_Y_POS;
+     wire [9:0] L_CUR_X_POS;
+     wire [9:0] L_CUR_Y_POS;
+     wire [9:0] A2_CUR_X_POS;
+     wire [9:0] A2_CUR_Y_POS;
+     wire [9:0] X_CUR_X_POS;
+     wire [9:0] X_CUR_Y_POS;
+     wire [9:0] Y_CUR_X_POS;
+     wire [9:0] Y_CUR_Y_POS;
      
      wire [3:0] TEXT_DATA;
+     
+     wire [3:0] WIN_LOSE_DATA;
      
      //ROM address off sets for text 
      parameter G_ADDRESS_OFF = 0;
@@ -119,7 +148,18 @@ module SPACE_GAME(output VGA_VS, output VGA_HS, output [3:0] VGA_R, output [3:0]
      parameter L_ADDRESS_OFF = 32;
      parameter X_ADDRESS_OFF = 48;
      parameter Y_ADDRESS_OFF = 64;
-     
+     parameter ADDRESS_OFF_0 = 80;
+     parameter ADDRESS_OFF_1 = 96;
+     parameter ADDRESS_OFF_2 = 112;
+     parameter ADDRESS_OFF_3 = 128;
+     parameter ADDRESS_OFF_4 = 144;
+     parameter ADDRESS_OFF_5 = 160;
+     parameter ADDRESS_OFF_6 = 176;
+     parameter ADDRESS_OFF_7 = 192;
+     parameter ADDRESS_OFF_8 = 208;
+     parameter ADDRESS_OFF_9 = 224;
+     parameter L2_ADDRESS_OFF = 240;
+     parameter W_ADDRESS_OFF = 256;
      //Space Ship Collsion Detection Wires   
      wire EN_SS_COL;    
      wire EN_SPI;
@@ -135,33 +175,39 @@ module SPACE_GAME(output VGA_VS, output VGA_HS, output [3:0] VGA_R, output [3:0]
      //Bullet Wires
      wire [9:0] B_DIR;
      
-     //Score Wires
-     wire [3:0] HEX1;
-     wire [3:0] HEX2;
-     wire [3:0] HEX3;
-     wire [3:0] HEX4;
-     
-     wire SEG_REFRESH;
-     
-     wire [3:0] DIGIT;
-     
-     wire [1:0] SEG_COUNT;
-     
      //Level Counter Wires
      wire ONE_SEC;
-     wire EN_COUNT;
      wire [31:0] SCORE;
-     
-     wire ENREADA1;
-//Main Level State Machine Controller------------------------     
-    //module GAME_CONTROLLER(input CLK, input RESET, input SWITCH, input [31:0] COUNT,  output reg [22:0] EN, output reg EN_COUNT);
-    GAME_CONTROLLER GC(CLK, RESET, SW[1], SCORE[31:0], EN_SIGNALS[22:0], EN_COUNT);
+
+    //Lievs Wires
+    wire [3:0] SS_LIVES_EN;   
+
+//Main Level State Machine Controller------------------------  
     
+    wire [3:0] M_RED_EN;
+    wire [3:0] M_GREEN_EN;
+    wire [3:0] M_BLUE_EN;
+    wire [3:0] M_PURPLE_EN;
+    wire  M_SS_EN;
+    wire M_GALAXY_EN;
+    wire M_SCORE_EN;
+    wire M_EN_COUNT;
+    wire M_LV_RESET;
+    wire M_GC_RESET;
+    wire M_LIVES_EN;
+    wire M_EN_WIN;
+    wire M_EN_LOSE;
+    
+    wire DIED;
+    //module GAME_CONTROLLER(input CLK, input RESET, input SWITCH, input [31:0] COUNT, output reg [3:0] M_RED_EN,  output reg [3:0] M_GREEN_EN, output reg [3:0] M_BLUE_EN, output reg [3:0] M_PURPLE_EN, output reg M_SCORE_EN, output reg M_GALAXY_EN, output reg M_SS_EN, output reg M_EN_COUNT, output reg M_LIVES_EN, output reg M_EN_WIN, output reg M_EN_LOSE,  output reg M_LV_RESET, output reg M_GC_RESET);
+    GAME_CONTROLLER GC(CLK, RESET, SW[1], SCORE[31:0], DIED, M_RED_EN[3:0], M_GREEN_EN[3:0], M_BLUE_EN[3:0], M_PURPLE_EN[3:0], M_SCORE_EN, M_GALAXY_EN, M_SS_EN, M_EN_COUNT, M_LIVES_EN, M_EN_WIN,M_EN_LOSE,  M_LV_RESET, M_GC_RESET);
     //module ONE_SEC_CLOCK(output reg SIGNAL, input CLK, input RESET);
     ONE_SEC_CLOCK osc(ONE_SEC, CLK, RESET);
     
+    wire COUNTRESET;
+    assign COUNTRESET = M_GC_RESET || RESET;
     //module ONE_SEC_COUNT(output reg [31:0] COUNT, input CLK, input RESET);
-    ONE_SEC_COUNT(SCORE[31:0], ONE_SEC, RESET, EN_COUNT);
+    ONE_SEC_COUNT(SCORE[31:0], ONE_SEC,  COUNTRESET, M_EN_COUNT);
 //Main Level State Machine Controller------------------------  
     
 //VGA --------------------------------------------------------    
@@ -186,219 +232,292 @@ module SPACE_GAME(output VGA_VS, output VGA_HS, output [3:0] VGA_R, output [3:0]
      SLOW_CLOCK sc(UPDATE_SIGNAL, CLK, RESET); 
 //60HZ Clock-----------------------------------------------------
 
-//module OBJECT(
-//    output [12:0] ADDRESS, 
-//    output OB_EN,
-//    input [9:0] OB_ADDRESS_OFF_SET, 
-//    input [9:0] OB_INT_X_POS, 
-//    input [9:0] OB_INT_Y_POS, 
-//    input [9:0] OB_HEIGHT, 
-//    input [9:0] OB_WIDTH, 
-//    input [9:0] OB_SCALE, 
-//    input [9:0] OB_X_MOVE_RATE, 
-//    input [9:0] OB_Y_MOVE_RATE,
-//    input [9:0] DIR, 
-//    input [9:0] HCNT, 
-//    input [9:0] VCNT,
-//    input CLK,
-//    input EN,
-//    input RESET);
 //Space Ship-----------------------------
     wire [9:0] SS_CUR_X_POS;
     wire [9:0] SS_CUR_Y_POS;
-    SPACE_SHIP ss(SS_ADDRESS[12:0], SS_EN, SS_CUR_X_POS[9:0], SS_CUR_Y_POS[9:0], SPACE_SHIP_ADDRESS, 150, 211, 16, 16, 2, 4, 4, SS_DIR[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[0], RESET);
+    SPACE_SHIP ss(SS_ADDRESS[12:0], SS_EN, SS_CUR_X_POS[9:0], SS_CUR_Y_POS[9:0], SPACE_SHIP_ADDRESS, 150, 211, 16, 16, 1, 4, 4, SS_DIR[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, M_SS_EN, RESET);
+    
+    wire [9:0] EX_SS_CUR_X_POS;
+    wire [9:0] EX_SS_CUR_Y_POS;
+    wire [9:0] EX_B_CUR_X_POS;
+    wire [9:0] EX_B_CUR_Y_POS;
+    SPACE_SHIP EXPLOSION_SS(EX_SS_ADDRESS[12:0], EX_SS_EN, EX_SS_CUR_X_POS[9:0], EX_SS_CUR_Y_POS[9:0], EXPLOSION_ADDRESS, 150, 211, 16, 16, 1, 4, 4, SS_DIR[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SS_COL, RESET);
+    
+    wire [12:0] SS_LIVE1_ADDRESS;
+    wire [12:0] SS_LIVE2_ADDRESS;
+    wire [12:0] SS_LIVE3_ADDRESS;
+    wire [12:0] SS_LIVE4_ADDRESS;
+    
+    wire [3:0] OB_SS_LIVES_EN;
+    
+    wire [9:0] SS_LIVE1_CUR_X_POS;
+    wire [9:0] SS_LIVE1_CUR_Y_POS;
+    wire [9:0] SS_LIVE2_CUR_X_POS;
+    wire [9:0] SS_LIVE2_CUR_Y_POS;
+    wire [9:0] SS_LIVE3_CUR_X_POS;
+    wire [9:0] SS_LIVE3_CUR_Y_POS;
+    wire [9:0] SS_LIVE4_CUR_X_POS;
+    wire [9:0] SS_LIVE4_CUR_Y_POS;
+    
+    OBJECT SS_LIVE1(SS_LIVE1_ADDRESS[12:0], OB_SS_LIVES_EN[0], SS_LIVE1_CUR_X_POS[9:0], SS_LIVE1_CUR_Y_POS[9:0], SPACE_SHIP_ADDRESS, 170, 45, 16, 16, 0, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, SS_LIVES_EN[0], RESET);
+    OBJECT SS_LIVE2(SS_LIVE2_ADDRESS[12:0], OB_SS_LIVES_EN[1], SS_LIVE2_CUR_X_POS[9:0], SS_LIVE2_CUR_Y_POS[9:0], SPACE_SHIP_ADDRESS, 191, 45, 16, 16, 0, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, SS_LIVES_EN[1], RESET);
+    OBJECT SS_LIVE3(SS_LIVE3_ADDRESS[12:0], OB_SS_LIVES_EN[2], SS_LIVE3_CUR_X_POS[9:0], SS_LIVE3_CUR_Y_POS[9:0], SPACE_SHIP_ADDRESS, 212, 45, 16, 16, 0, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, SS_LIVES_EN[2], RESET);
+    OBJECT SS_LIVE4(SS_LIVE4_ADDRESS[12:0], OB_SS_LIVES_EN[3], SS_LIVE4_CUR_X_POS[9:0], SS_LIVE4_CUR_Y_POS[9:0], SPACE_SHIP_ADDRESS, 233, 45, 16, 16, 0, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, SS_LIVES_EN[3], RESET);
+
+    //module LIVES_STATE(output reg [3:0] EN_LIVES, input COLLSION, input RESET, input CLK, input GRESET, input START);
+    LIVES_STATE LSA(SS_LIVES_EN[3:0], DIED, EN_SS_COL, RESET, UPDATE_SIGNAL, M_GC_RESET, M_LIVES_EN);
 //Space Ship-----------------------------      
 
 //Bullet---------------------------------
-    OBJECT BULLET(B_ADDRESS[12:0], B_EN, BULLET_ADDRESS, SS_CUR_X_POS[9:0], SS_CUR_Y_POS[9:0], 16, 16, 2, 8, 8, 1, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, SS_BUTTONS[1], RESET);
+    wire [9:0] B_X_POS;
+    wire [9:0] B_Y_POS;
+    wire [9:0] B_CUR_X_POS;
+    wire [9:0] B_CUR_Y_POS;
+    wire EN_BULLET;
+    wire EN_B_EX;
+    wire COUNTUP;
+    wire EN_TIMER;
+    wire B_COLLSION;
+    wire [9:0] B_MOTION;
+    
+    wire [3:0] OB_RED_EN;
+    wire [3:0] OB_GREEN_EN;
+    wire [3:0] OB_BLUE_EN;
+    wire [3:0] OB_PURPLE_EN;
+    wire EN_RESET;
+    
+    OBJECT BULLET(B_ADDRESS[12:0], B_EN, B_CUR_X_POS[9:0], B_CUR_Y_POS[9:0], BULLET_ADDRESS, B_X_POS[9:0], B_Y_POS[9:0], 16, 16, 1, 16, 16, B_MOTION[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_BULLET, EN_RESET);
+    
+    OBJECT EXPLOSION_B(EX_B_ADDRESS[12:0], EX_B_EN, EX_B_CUR_X_POS[9:0], EX_B_CUR_Y_POS[9:0], EXPLOSION_ADDRESS, B_X_POS[9:0], B_Y_POS[9:0], 16, 16, 1, 16, 16, B_MOTION[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_B_EX, EN_RESET);
+        
+    //module BULLET_STATE(output reg [9:0] B_X_POS, output reg [9:0] B_Y_POS, output reg B_EN, output reg [9:0] B_MOTION, output reg EN_EX, output reg EN_RESET, input CLK, input RESET, input [9:0] X_POS, input [9:0] Y_POS, input EN_B, input [9:0] B_CUR_X_POS, input [9:0] B_CUR_Y_POS, input COLLSION);
+    BULLET_STATE BS(B_X_POS[9:0], B_Y_POS[9:0], EN_BULLET, B_MOTION[9:0], EN_B_EX, EN_RESET, CLK, RESET, SS_CUR_X_POS[9:0], SS_CUR_Y_POS[9:0], SS_BUTTONS[1], B_CUR_X_POS[9:0], B_CUR_Y_POS[9:0], B_COLLSION);
+    
+    wire [3:0] C_RED_EN;
+    wire [3:0] C_GREEN_EN;
+    wire [3:0] C_BLUE_EN;
+    wire [3:0] C_PURPLE_EN;
+    BULLET_COLLSION BC(
+    B_COLLSION,
+    C_RED_EN[3:0],
+    C_GREEN_EN[3:0],
+    C_BLUE_EN[3:0],
+    C_PURPLE_EN[3:0], 
+    CLK, 
+    RESET, 
+    M_LV_RESET, 
+    M_RED_EN[3:0],
+    M_GREEN_EN[3:0],
+    M_BLUE_EN[3:0],
+    M_PURPLE_EN[3:0], 
+    OB_RED_EN[3:0],
+    OB_GREEN_EN[3:0],
+    OB_BLUE_EN[3:0],
+    OB_PURPLE_EN[3:0],
+    B_EN);
 //Bullet---------------------------------
-wire [9:0] RA1_speed;
-wire [9:0] RA1_motion;
-wire [9:0] GA1_speed;
-wire [9:0] GA1_motion;
-wire [9:0] BA1_speed;
-wire [9:0] BA1_motion;
-wire [9:0] PA1_speed;
-wire [9:0] PA1_motion;
 
-wire [9:0] RA2_speed;
-wire [9:0] RA2_motion;
-wire [9:0] GA2_speed;
-wire [9:0] GA2_motion;
-wire [9:0] BA2_speed;
-wire [9:0] BA2_motion;
-wire [9:0] PA2_speed;
-wire [9:0] PA2_motion;
-
-wire [9:0] RA3_speed;
-wire [9:0] RA3_motion;
-wire [9:0] GA3_speed;
-wire [9:0] GA3_motion;
-wire [9:0] BA3_speed;
-wire [9:0] BA3_motion;
-wire [9:0] PA3_speed;
-wire [9:0] PA3_motion;
-//module RA1_STATE( input CLK, input RESET, input EN, output reg [9:0] RA1_speed, output reg [9:0] RA1_motion);
-RA1_STATE RED_ALIEN_1(CLK, RESET, EN_SIGNALS[1], RA1_speed[9:0], RA1_motion[9:0]);
-//module RA2_STATE(input CLK, input RESET, input EN, output reg [9:0] RA2_speed, output reg [9:0] RA2_motion);
-RA2_STATE RED_ALIEN_2(CLK, RESET, EN_SIGNALS[2], RA2_speed[9:0], RA2_motion[9:0]);
-//module RA3_STATE(input CLK, input RESET, input EN, output reg [9:0] RA3_speed, output reg [9:0] RA3_motion);
-RA3_STATE RED_ALIEN_3(CLK, RESET, EN_SIGNALS[3], RA3_speed[9:0], RA3_motion[9:0]);
-//module GA1_STATE( input CLK, input RESET, input EN, output reg [9:0] GA1_speed, output reg [9:0] GA1_motion);
-GA1_STATE GREEN_ALIEN_1(CLK, RESET, EN_SIGNALS[5], GA1_speed[9:0], GA1_motion[9:0]);
-//module GA2_STATE(input CLK, input RESET, input EN, output reg [9:0] GA2_speed, output reg [9:0] GA2_motion);
-GA2_STATE GREEN_ALIEN_2(CLK, RESET, EN_SIGNALS[6], GA2_speed[9:0], GA2_motion[9:0]);
-//module GA3_STATE(input CLK, input RESET, input EN, output reg [9:0] GA3_speed, output reg [9:0] GA3_motion);
-GA3_STATE GREEN_ALIEN_3(CLK, RESET, EN_SIGNALS[7], GA3_speed[9:0], GA3_motion[9:0]);
-//module BA1_STATE(input CLK, input RESET, input EN, output reg [9:0] BA1_speed, output reg [9:0] BA1_motion);4
-BA1_STATE BLUE_ALIEN_1(CLK, RESET, EN_SIGNALS[9], BA1_speed[9:0], BA1_motion[9:0]);
-//module BA2_STATE(input CLK, input RESET, input EN, output reg [9:0] BA2_speed, output reg [9:0] BA2_motion);
-BA2_STATE BLUE_ALIEN_2(CLK, RESET, EN_SIGNALS[10], BA2_speed[9:0], BA2_motion[9:0]);
-//module BA3_STATE(input CLK, input RESET, input EN, output reg [9:0] BA3_speed, output reg [9:0] BA3_motion);
-BA3_STATE BLUE_ALIEN_3(CLK, RESET, EN_SIGNALS[11], BA3_speed[9:0], BA3_motion[9:0]);
-//module PA1_STATE(input CLK, input RESET, input EN, output reg [9:0] PA1_speed, output reg [9:0] PA1_motion);
-PA1_STATE PURPLE_ALIEN_1(CLK, RESET, EN_SIGNALS[13], PA1_speed[9:0], PA1_motion[9:0]);
-//module PA2_STATE(input CLK, input RESET, input EN, output reg [9:0] PA2_speed, output reg [9:0] PA2_motion);
-PA2_STATE PURPLE_ALIEN_2(CLK, RESET, EN_SIGNALS[14], PA2_speed[9:0], PA2_motion[9:0]);
-//module PA3_STATE(input CLK, input RESET, input EN, output reg [9:0] PA3_speed, output reg [9:0] PA3_motion);
-PA3_STATE PURPLE_ALIEN_3(CLK, RESET, EN_SIGNALS[15], PA3_speed[9:0], PA3_motion[9:0]);
-
+    wire [9:0] RA1_speed;
+    wire [9:0] RA1_motion;
+    wire [9:0] GA1_speed;
+    wire [9:0] GA1_motion;
+    wire [9:0] BA1_speed;
+    wire [9:0] BA1_motion;
+    wire [9:0] PA1_speed;
+    wire [9:0] PA1_motion;
+    
+    wire [9:0] RA2_speed;
+    wire [9:0] RA2_motion;
+    wire [9:0] GA2_speed;
+    wire [9:0] GA2_motion;
+    wire [9:0] BA2_speed;
+    wire [9:0] BA2_motion;
+    wire [9:0] PA2_speed;
+    wire [9:0] PA2_motion;
+    
+    wire [9:0] RA3_speed;
+    wire [9:0] RA3_motion;
+    wire [9:0] GA3_speed;
+    wire [9:0] GA3_motion;
+    wire [9:0] BA3_speed;
+    wire [9:0] BA3_motion;
+    wire [9:0] PA3_speed;
+    wire [9:0] PA3_motion;
+    
+    wire [9:0] RA4_speed;
+    wire [9:0] RA4_motion;
+    wire [9:0] GA4_speed;
+    wire [9:0] GA4_motion;
+    wire [9:0] BA4_speed;
+    wire [9:0] BA4_motion;
+    wire [9:0] PA4_speed;
+    wire [9:0] PA4_motion;
+    wire [9:0] GALAXY_motion;
+    wire [9:0] GALAXY_speed;
+    
+    //module RA1_STATE( input CLK, input RESET, input EN, output reg [9:0] RA1_speed, output reg [9:0] RA1_motion);
+    RA1_STATE RED_ALIEN_1(CLK, RESET, M_RED_EN[0], RA1_speed[9:0], RA1_motion[9:0]);
+    //module RA2_STATE(input CLK, input RESET, input EN, output reg [9:0] RA2_speed, output reg [9:0] RA2_motion);
+    RA2_STATE RED_ALIEN_2(CLK, RESET, M_RED_EN[1], RA2_speed[9:0], RA2_motion[9:0]);
+    //module RA3_STATE(input CLK, input RESET, input EN, output reg [9:0] RA3_speed, output reg [9:0] RA3_motion);
+    RA3_STATE RED_ALIEN_3(CLK, RESET, M_RED_EN[2], RA3_speed[9:0], RA3_motion[9:0]);
+    //module RA4_STATE(input CLK, input RESET, input EN, output reg [9:0] RA4_speed, output reg [9:0] RA4_motion);
+    RA4_STATE RED_ALIEN_4(CLK, RESET, M_RED_EN[3], RA4_speed[9:0], RA4_motion[9:0]);
+    
+    //module GA1_STATE( input CLK, input RESET, input EN, output reg [9:0] GA1_speed, output reg [9:0] GA1_motion);
+    GA1_STATE GREEN_ALIEN_1(CLK, RESET, M_GREEN_EN[0], GA1_speed[9:0], GA1_motion[9:0]);
+    //module GA2_STATE(input CLK, input RESET, input EN, output reg [9:0] GA2_speed, output reg [9:0] GA2_motion);
+    GA2_STATE GREEN_ALIEN_2(CLK, RESET, M_GREEN_EN[1], GA2_speed[9:0], GA2_motion[9:0]);
+    //module GA3_STATE(input CLK, input RESET, input EN, output reg [9:0] GA3_speed, output reg [9:0] GA3_motion);
+    GA3_STATE GREEN_ALIEN_3(CLK, RESET, M_GREEN_EN[2], GA3_speed[9:0], GA3_motion[9:0]);
+    //module GA4_STATE(input CLK, input RESET, input EN, output reg [9:0] GA4_speed, output reg [9:0] GA4_motion);
+    GA4_STATE GREEN_ALIEN_4(CLK, RESET, M_GREEN_EN[3], GA4_speed[9:0], GA4_motion[9:0]);
+     
+    //module BA1_STATE(input CLK, input RESET, input EN, output reg [9:0] BA1_speed, output reg [9:0] BA1_motion);4
+    BA1_STATE BLUE_ALIEN_1(CLK, RESET, M_BLUE_EN[0], BA1_speed[9:0], BA1_motion[9:0]);
+    //module BA2_STATE(input CLK, input RESET, input EN, output reg [9:0] BA2_speed, output reg [9:0] BA2_motion);
+    BA2_STATE BLUE_ALIEN_2(CLK, RESET, M_BLUE_EN[1], BA2_speed[9:0], BA2_motion[9:0]);
+    //module BA3_STATE(input CLK, input RESET, input EN, output reg [9:0] BA3_speed, output reg [9:0] BA3_motion);
+    BA3_STATE BLUE_ALIEN_3(CLK, RESET, M_BLUE_EN[2], BA3_speed[9:0], BA3_motion[9:0]);
+    //module BA4_STATE(input CLK, input RESET, input EN, output reg [9:0] BA4_speed, output reg [9:0] BA4_motion);
+    BA4_STATE BLUE_ALIEN_4(CLK, RESET, M_BLUE_EN[3], BA4_speed[9:0], BA4_motion[9:0]);    
+    
+    //module PA1_STATE(input CLK, input RESET, input EN, output reg [9:0] PA1_speed, output reg [9:0] PA1_motion);
+    PA1_STATE PURPLE_ALIEN_1(CLK, RESET, M_PURPLE_EN[0], PA1_speed[9:0], PA1_motion[9:0]);
+    //module PA2_STATE(input CLK, input RESET, input EN, output reg [9:0] PA2_speed, output reg [9:0] PA2_motion);
+    PA2_STATE PURPLE_ALIEN_2(CLK, RESET, M_PURPLE_EN[1], PA2_speed[9:0], PA2_motion[9:0]);
+    //module PA3_STATE(input CLK, input RESET, input EN, output reg [9:0] PA3_speed, output reg [9:0] PA3_motion);
+    PA3_STATE PURPLE_ALIEN_3(CLK, RESET, M_PURPLE_EN[2], PA3_speed[9:0], PA3_motion[9:0]);
+    //module PA4_STATE(input CLK, input RESET, input EN, output reg [9:0] PA4_speed, output reg [9:0] PA4_motion);
+    PA4_STATE PURPLE_ALIEN_4(CLK, RESET, M_PURPLE_EN[3], PA4_speed[9:0], PA4_motion[9:0]);
+    
+    GALAXY_STATE GSS(CLK, RESET, M_GALAXY_EN, GALAXY_speed[9:0], GALAXY_motion[9:0]);
 //Red Aliens Ship-----------------------------    
-      OBJECT RA1(RA1_ADDRESS[12:0], RA1_EN, RED_ALIEN_ADDRESS, 150, 50, 16, 16, 2, RA1_speed[9:0], RA1_speed[9:0], RA1_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[1], RESET);
-      OBJECT RA2(RA2_ADDRESS[12:0], RA2_EN, RED_ALIEN_ADDRESS, 560, 50, 16, 16, 2, RA2_speed[9:0], RA2_speed[9:0], RA2_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[2], RESET);
-      OBJECT RA3(RA3_ADDRESS[12:0], RA3_EN, RED_ALIEN_ADDRESS, 700, 50, 16, 16, 2, RA3_speed[9:0], RA3_speed[9:0], RA3_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[3], RESET);
-      OBJECT RA4(RA4_ADDRESS[12:0], RA4_EN, RED_ALIEN_ADDRESS, 210, 50, 16, 16, 1, 2, 2, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[4], RESET);
+      OBJECT RA1(RA1_ADDRESS[12:0], OB_RED_EN[0], RA1_CUR_X_POS[9:0], RA1_CUR_Y_POS[9:0], RED_ALIEN_ADDRESS, 150, 50, 16, 16, 1, RA1_speed[9:0], RA1_speed[9:0], RA1_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, C_RED_EN[0], RESET);
+      OBJECT RA2(RA2_ADDRESS[12:0], OB_RED_EN[1], RA2_CUR_X_POS[9:0], RA2_CUR_Y_POS[9:0], RED_ALIEN_ADDRESS, 560, 50, 16, 16, 1, RA2_speed[9:0], RA2_speed[9:0], RA2_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, C_RED_EN[1], RESET);
+      OBJECT RA3(RA3_ADDRESS[12:0], OB_RED_EN[2], RA3_CUR_X_POS[9:0], RA3_CUR_Y_POS[9:0], RED_ALIEN_ADDRESS, 700, 50, 16, 16, 1, RA3_speed[9:0], RA3_speed[9:0], RA3_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, C_RED_EN[2], RESET);
+      OBJECT RA4(RA4_ADDRESS[12:0], OB_RED_EN[3], RA4_CUR_X_POS[9:0], RA4_CUR_Y_POS[9:0], RED_ALIEN_ADDRESS, 700, 275, 16, 16, 1, RA4_speed[9:0], RA4_speed[9:0], RA4_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, C_RED_EN[3], RESET);
 //Red Aliens Ship-----------------------------             
 
 //Green Aliens Ship-----------------------------    
-      OBJECT GA1(GA1_ADDRESS[12:0], GA1_EN, GREEN_ALIEN_ADDRESS, 700, 50, 16, 16, 2, GA1_speed[9:0], GA1_speed[9:0], GA1_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[5], RESET);
-      OBJECT GA2(GA2_ADDRESS[12:0], GA2_EN, GREEN_ALIEN_ADDRESS, 464, 70, 16, 16, 2, GA2_speed[9:0], GA2_speed[9:0], GA2_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[6], RESET);
-      OBJECT GA3(GA3_ADDRESS[12:0], GA3_EN, GREEN_ALIEN_ADDRESS, 700,155, 16, 16, 2, GA3_speed[9:0], GA3_speed[9:0], GA3_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[7], RESET);
-      OBJECT GA4(GA4_ADDRESS[12:0], GA4_EN, GREEN_ALIEN_ADDRESS, 210, 70, 16, 16, 1, 2, 2, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[8], RESET);
+      OBJECT GA1(GA1_ADDRESS[12:0], OB_GREEN_EN[0], GA1_CUR_X_POS[9:0], GA1_CUR_Y_POS[9:0], GREEN_ALIEN_ADDRESS, 700, 50, 16, 16, 1, GA1_speed[9:0], GA1_speed[9:0], GA1_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, C_GREEN_EN[0], RESET);
+      OBJECT GA2(GA2_ADDRESS[12:0], OB_GREEN_EN[1], GA2_CUR_X_POS[9:0], GA2_CUR_Y_POS[9:0], GREEN_ALIEN_ADDRESS, 464, 70, 16, 16, 1, GA2_speed[9:0], GA2_speed[9:0], GA2_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, C_GREEN_EN[1], RESET);
+      OBJECT GA3(GA3_ADDRESS[12:0], OB_GREEN_EN[2], GA3_CUR_X_POS[9:0], GA3_CUR_Y_POS[9:0], GREEN_ALIEN_ADDRESS, 700, 155, 16,16, 1, GA3_speed[9:0], GA3_speed[9:0], GA3_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, C_GREEN_EN[2], RESET);
+      OBJECT GA4(GA4_ADDRESS[12:0], OB_GREEN_EN[3], GA4_CUR_X_POS[9:0], GA4_CUR_Y_POS[9:0], GREEN_ALIEN_ADDRESS, 210, 70, 16, 16, 1, GA4_speed[9:0], GA4_speed[9:0], GA4_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, C_GREEN_EN[3], RESET);
 //Green Aliens Ship-----------------------------    
  
 //Blue Aliens Ship-----------------------------    
-      OBJECT BA1(BA1_ADDRESS[12:0], BA1_EN, BLUE_ALIEN_ADDRESS, 464, 275, 16, 16, 2, BA1_speed[9:0], BA1_speed[9:0], BA1_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[9], RESET);
-      OBJECT BA2(BA2_ADDRESS[12:0], BA2_EN, BLUE_ALIEN_ADDRESS, 464, 275, 16, 16, 2, BA2_speed[9:0], BA2_speed[9:0], BA2_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[10], RESET);
-      OBJECT BA3(BA3_ADDRESS[12:0], BA3_EN, BLUE_ALIEN_ADDRESS, 700, 395, 16, 16, 2, BA3_speed[9:0], BA3_speed[9:0], BA3_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[11], RESET);
-      OBJECT BA4(BA4_ADDRESS[12:0], BA4_EN, BLUE_ALIEN_ADDRESS, 210, 90, 16, 16, 1, 2, 2, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[12], RESET);
+      OBJECT BA1(BA1_ADDRESS[12:0], OB_BLUE_EN[0], BA1_CUR_X_POS[9:0], BA1_CUR_Y_POS[9:0], BLUE_ALIEN_ADDRESS, 464, 275, 16, 16, 1, BA1_speed[9:0], BA1_speed[9:0], BA1_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, C_BLUE_EN[0], RESET);
+      OBJECT BA2(BA2_ADDRESS[12:0], OB_BLUE_EN[1], BA2_CUR_X_POS[9:0], BA2_CUR_Y_POS[9:0], BLUE_ALIEN_ADDRESS, 464, 275, 16, 16, 1, BA2_speed[9:0], BA2_speed[9:0], BA2_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, C_BLUE_EN[1], RESET);
+      OBJECT BA3(BA3_ADDRESS[12:0], OB_BLUE_EN[2], BA3_CUR_X_POS[9:0], BA3_CUR_Y_POS[9:0], BLUE_ALIEN_ADDRESS, 700, 395, 16, 16, 1, BA3_speed[9:0], BA3_speed[9:0], BA3_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, C_BLUE_EN[2], RESET);
+      OBJECT BA4(BA4_ADDRESS[12:0], OB_BLUE_EN[3], BA4_CUR_X_POS[9:0], BA4_CUR_Y_POS[9:0], BLUE_ALIEN_ADDRESS, 210, 90, 16, 16, 1, BA4_speed[9:0], BA4_speed[9:0], BA4_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, C_BLUE_EN[3], RESET);
 //Blue Aliens Ship-----------------------------  
 
 //Purple Aliens Ship-----------------------------    
-      OBJECT PA1(PA1_ADDRESS[12:0], PA1_EN, PURPLE_ALIEN_ADDRESS, 150, 275, 16, 16, 2, PA1_speed[9:0], PA1_speed[9:0], PA1_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[13], RESET);
-      OBJECT PA2(PA2_ADDRESS[12:0], PA2_EN, PURPLE_ALIEN_ADDRESS, 400,  50, 16, 16, 2, PA2_speed[9:0], PA2_speed[9:0], PA2_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[14], RESET);
-      OBJECT PA3(PA3_ADDRESS[12:0], PA3_EN, PURPLE_ALIEN_ADDRESS, 700, 495, 16, 16, 2, PA3_speed[9:0], PA3_speed[9:0], PA3_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[15], RESET);
-      OBJECT PA4(PA4_ADDRESS[12:0], PA4_EN, PURPLE_ALIEN_ADDRESS, 210, 110, 16, 16, 1, 2, 2, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[16], RESET);
+      OBJECT PA1(PA1_ADDRESS[12:0], OB_PURPLE_EN[0], PA1_CUR_X_POS[9:0], PA1_CUR_Y_POS[9:0], PURPLE_ALIEN_ADDRESS, 150, 275, 16, 16, 1, PA1_speed[9:0], PA1_speed[9:0], PA1_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, C_PURPLE_EN[0], RESET);
+      OBJECT PA2(PA2_ADDRESS[12:0], OB_PURPLE_EN[1], PA2_CUR_X_POS[9:0], PA2_CUR_Y_POS[9:0], PURPLE_ALIEN_ADDRESS, 400,  50, 16, 16, 1, PA2_speed[9:0], PA2_speed[9:0], PA2_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, C_PURPLE_EN[1], RESET);
+      OBJECT PA3(PA3_ADDRESS[12:0], OB_PURPLE_EN[2], PA3_CUR_X_POS[9:0], PA3_CUR_Y_POS[9:0], PURPLE_ALIEN_ADDRESS, 700, 495, 16, 16, 1, PA3_speed[9:0], PA3_speed[9:0], PA3_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, C_PURPLE_EN[2], RESET);
+      OBJECT PA4(PA4_ADDRESS[12:0], OB_PURPLE_EN[3], PA4_CUR_X_POS[9:0], PA4_CUR_Y_POS[9:0], PURPLE_ALIEN_ADDRESS, 210, 110, 16, 16, 1, PA4_speed[9:0], PA4_speed[9:0], PA4_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, C_PURPLE_EN[3], RESET);
 //Purple Aliens Ship-----------------------------  
-// OBJECT BULLET(B_ADDRESS[12:0], B_EN, BULLET_ADDRESS, SS_CUR_X_POS[9:0], SS_CUR_Y_POS[9:0], 16, 16, 2, 8, 8, 1, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, SS_BUTTONS[1], RESET);
-//Explosion -----------------------------
-      OBJECT EXPLOSION_SS(EX_SS_ADDRESS[12:0], EX_SS_EN, EXPLOSION_ADDRESS, 150, 211, 16, 16, 2, 4, 4, SS_DIR[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SS_COL, RESET);
-      OBJECT EXPLOSION_B(EX_B_ADDRESS[12:0], EX_B_EN, EXPLOSION_ADDRESS, SS_CUR_X_POS[9:0], SS_CUR_Y_POS[9:0], 16, 16, 2, 8, 8, 1, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_B_COL, RESET);
       
-//Explosion -----------------------------      
-         
-//Galaxy Text-----------------------------     
-      OBJECT G(G_ADDRESS[12:0], G_EN, G_ADDRESS_OFF, 160, 235, 16, 16 , 6, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[17], RESET);
-      OBJECT A1(A1_ADDRESS[12:0], A1_EN, A_ADDRESS_OFF, 261, 235, 16, 16 , 6, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[18], RESET);
-      OBJECT L(L_ADDRESS[12:0], L_EN, L_ADDRESS_OFF, 362, 235, 16, 16 , 6, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[19], RESET);
-      OBJECT A2(A2_ADDRESS[12:0], A2_EN, A_ADDRESS_OFF, 463, 235, 16, 16, 6, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[20], RESET);
-      OBJECT X(X_ADDRESS[12:0],X_EN, X_ADDRESS_OFF, 564, 235, 16, 16 , 6, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[21], RESET);
-      OBJECT Y(Y_ADDRESS[12:0],Y_EN, Y_ADDRESS_OFF, 665, 235, 16, 16 , 6, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, EN_SIGNALS[22], RESET);
-//Galaxy Text-----------------------------    
+//Score---------------------------------- 
+    wire [12:0] D1_ADDRESS;
+    wire [12:0] D2_ADDRESS;
+    wire [12:0] D3_ADDRESS;
+    wire [12:0] D4_ADDRESS;
+    
+    wire [12:0] ADDRESS_D1;
+    wire [12:0] ADDRESS_D2;
+    wire [12:0] ADDRESS_D3;
+    wire [12:0] ADDRESS_D4;
+    
+    wire [9:0] D1_CUR_X_POS;
+    wire [9:0] D1_CUR_Y_POS; 
+    wire [9:0] D2_CUR_X_POS;
+    wire [9:0] D2_CUR_Y_POS; 
+    wire [9:0] D3_CUR_X_POS;
+    wire [9:0] D3_CUR_Y_POS; 
+    wire [9:0] D4_CUR_X_POS;
+    wire [9:0] D4_CUR_Y_POS; 
+    
+    wire [3:0] OB_DIGIT_EN;
  
-//Priotity Mux--------------------------------------------------
+    OBJECT DIGIT1(D1_ADDRESS[12:0], OB_DIGIT_EN[0], D1_CUR_X_POS[9:0], D1_CUR_Y_POS[9:0], ADDRESS_D1[12:0], 739, 40, 16, 16, 0, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, M_SCORE_EN, RESET);
+    OBJECT DIGIT2(D2_ADDRESS[12:0], OB_DIGIT_EN[1], D2_CUR_X_POS[9:0], D2_CUR_Y_POS[9:0], ADDRESS_D2[12:0], 723, 40, 16, 16, 0, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, M_SCORE_EN, RESET);
+    OBJECT DIGIT3(D3_ADDRESS[12:0], OB_DIGIT_EN[2], D3_CUR_X_POS[9:0], D3_CUR_Y_POS[9:0], ADDRESS_D3[12:0], 707, 40, 16, 16, 0, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, M_SCORE_EN, RESET);
+    OBJECT DIGIT4(D4_ADDRESS[12:0], OB_DIGIT_EN[3], D4_CUR_X_POS[9:0], D4_CUR_Y_POS[9:0], ADDRESS_D4[12:0], 691, 40, 16, 16, 0, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, M_SCORE_EN, RESET);  
+//Score----------------------------------   
+     
+//Galaxy Text-----------------------------
+
+    wire [5:0] OB_GALAXY_EN;     
+    OBJECT G(G_ADDRESS[12:0], OB_GALAXY_EN[0], G_CUR_X_POS[9:0], G_CUR_Y_POS[9:0], G_ADDRESS_OFF, 176, 100, 16, 16 , 2, GALAXY_speed[9:0], GALAXY_speed[9:0], GALAXY_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, M_GALAXY_EN, RESET);
+    OBJECT A1(A1_ADDRESS[12:0], OB_GALAXY_EN[1], A1_CUR_X_POS[9:0], A1_CUR_Y_POS[9:0], A_ADDRESS_OFF, 240, 100, 16, 16 , 2, GALAXY_speed[9:0], GALAXY_speed[9:0], GALAXY_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, M_GALAXY_EN, RESET);
+    OBJECT L(L_ADDRESS[12:0], OB_GALAXY_EN[2], L_CUR_X_POS[9:0], L_CUR_Y_POS[9:0], L_ADDRESS_OFF, 304, 100, 16, 16 , 2, GALAXY_speed[9:0], GALAXY_speed[9:0], GALAXY_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, M_GALAXY_EN, RESET);
+    OBJECT A2(A2_ADDRESS[12:0], OB_GALAXY_EN[3], A2_CUR_X_POS[9:0], A2_CUR_Y_POS[9:0], A_ADDRESS_OFF, 368, 100, 16, 16, 2, GALAXY_speed[9:0], GALAXY_speed[9:0], GALAXY_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, M_GALAXY_EN, RESET);
+    OBJECT X(X_ADDRESS[12:0], OB_GALAXY_EN[4], X_CUR_X_POS[9:0], X_CUR_Y_POS[9:0], X_ADDRESS_OFF, 432, 100, 16, 16 , 2, GALAXY_speed[9:0], GALAXY_speed[9:0], GALAXY_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, M_GALAXY_EN, RESET);
+    OBJECT Y(Y_ADDRESS[12:0], OB_GALAXY_EN[5], Y_CUR_X_POS[9:0], Y_CUR_Y_POS[9:0], Y_ADDRESS_OFF, 496, 100, 16, 16 , 2, GALAXY_speed[9:0], GALAXY_speed[9:0], GALAXY_motion[9:0], HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, M_GALAXY_EN, RESET);
+    
+//Galaxy Text-----------------------------    
+//WIN/LOSETEXT
+     wire [12:0] W_C_ADDRESS;
+     wire [12:0] I_ADDRESS;
+     wire [12:0] N_ADDRESS;
+     
+     wire [12:0] O_ADDRESS;
+     wire [12:0] S_C_ADDRESS;
+     wire [12:0] E_ADDRESS;
+     wire [3:0] OB_LOSE_EN;
+     wire [2:0] OB_WIN_EN;
+
+     wire [12:0] W_CUR_X_POS;
+     wire [12:0] W_CUR_Y_POS;
+     wire [12:0] I_CUR_X_POS;
+     wire [12:0] I_CUR_Y_POS;
+     wire [12:0] N_CUR_X_POS;
+     wire [12:0] N_CUR_Y_POS;
+     
+     
+     wire [12:0] L2_CUR_X_POS;
+     wire [12:0] L2_CUR_Y_POS;
+     wire [12:0] O_CUR_X_POS;
+     wire [12:0] O_CUR_Y_POS;
+     wire [12:0] S_CUR_X_POS;
+     wire [12:0] S_CUR_Y_POS;
+     wire [12:0] E_CUR_X_POS;
+     wire [12:0] E_CUR_Y_POS;
+
+    OBJECT W_C(W_C_ADDRESS[12:0], OB_WIN_EN[0], W_CUR_X_POS[12:0], W_CUR_Y_POS[12:0], 0, 400, 240, 16, 16, 2, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, M_EN_WIN, RESET); 
+    OBJECT I(I_ADDRESS[12:0], OB_WIN_EN[1], I_CUR_X_POS[12:0], I_CUR_Y_POS[12:0], 16, 464, 240, 16, 16, 2, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, M_EN_WIN, RESET);
+    OBJECT N(N_ADDRESS[12:0], OB_WIN_EN[2], N_CUR_X_POS[12:0], N_CUR_Y_POS[12:0], 32, 528, 240, 16, 16, 2, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, M_EN_WIN, RESET);
+    
+    OBJECT L2(L2_ADDRESS[12:0], OB_LOSE_EN[0], L2_CUR_X_POS[12:0], L2_CUR_Y_POS[12:0], 48, 336, 240, 16, 16 , 2, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, M_EN_LOSE, RESET);
+    OBJECT O(O_ADDRESS[12:0], OB_LOSE_EN[1], O_CUR_X_POS[12:0], O_CUR_Y_POS[12:0], 64, 400, 240, 16, 16 , 2, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, M_EN_LOSE, RESET);
+    OBJECT S_C(S_C_ADDRESS[12:0], OB_LOSE_EN[2], S_CUR_X_POS[12:0], S_CUR_Y_POS[12:0], 80, 464, 240, 16, 16 , 2, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, M_EN_LOSE, RESET);
+    OBJECT E(E_ADDRESS[12:0], OB_LOSE_EN[3], E_CUR_X_POS[12:0], E_CUR_Y_POS[12:0], 96, 528, 240, 16, 16 , 2, 0, 0, 0, HOR_COUNT[9:0], VER_COUNT[9:0], UPDATE_SIGNAL, M_EN_LOSE, RESET);
+
+//Priotity Mux--------------------------------------------------3
 //     Objects are given priority in descending order
 //     If new objects are added must update priority 
 //     add the objects output address and en signal as inputs to the mux 
 //     and within the definition adjust the always block accordingly
-//     module PRIORITY_MUX(
-//output reg [12:0] ADDRESS, 
-//output reg COLOR_DECODER_EN, 
-//output reg [3:0] COR_DATA,
-//input SS_EN, 
-//input RA1_EN, 
-//input RA2_EN,
-//input RA3_EN,
-//input RA4_EN, 
-//input GA1_EN,
-//input GA2_EN,
-//input GA3_EN,
-//input GA4_EN,
-//input BA1_EN,
-//input BA2_EN,
-//input BA3_EN,
-//input BA4_EN,
-//input PA1_EN,
-//input PA2_EN,
-//input PA3_EN,
-//input PA4_EN,
-//input EX_SS_EN,
-//input EX_B_EN,
-//input B_EN,
-//input G_EN,
-//input A1_EN,
-//input L_EN,
-//input A2_EN,
-//input X_EN,
-//input Y_EN,
-//input [12:0] SS_ADDRESS, 
-//input [12:0] RA1_ADDRESS, 
-//input [12:0] RA2_ADDRESS,
-//input [12:0] RA3_ADDRESS,
-//input [12:0] RA4_ADDRESS,
-//input [12:0] GA1_ADDRESS,
-//input [12:0] GA2_ADDRESS,
-//input [12:0] GA3_ADDRESS,
-//input [12:0] GA4_ADDRESS,
-//input [12:0] BA1_ADDRESS,
-//input [12:0] BA2_ADDRESS,
-//input [12:0] BA3_ADDRESS,
-//input [12:0] BA4_ADDRESS,
-//input [12:0] PA1_ADDRESS,
-//input [12:0] PA2_ADDRESS,
-//input [12:0] PA3_ADDRESS,
-//input [12:0] PA4_ADDRESS,
-//input [12:0] EX_SS_ADDRESS,
-//input [12:0] EX_B_ADDRESS,
-//input [12:0] B_ADDRESS,
-//input [12:0] G_ADDRESS,
-//input [12:0] A1_ADDRESS,
-//input [12:0] L_ADDRESS,
-//input [12:0] A2_ADDRESS,
-//input [12:0] X_ADDRESS,
-//input [12:0] Y_ADDRESS,
-//input [3:0] DATA1,
-//input [3:0] DATA2); 
        PRIORITY_MUX pm(
        ADDRESS[12:0], 
        DECODER_EN,
        COR_DATA[3:0], 
-       SS_EN,
-       RA1_EN,
-       RA2_EN,
-       RA3_EN,
-       RA4_EN,
-       GA1_EN,
-       GA2_EN,
-       GA3_EN,
-       GA4_EN,
-       BA1_EN,
-       BA2_EN,
-       BA3_EN,
-       BA4_EN,
-       PA1_EN,
-       PA2_EN,
-       PA3_EN,
-       PA4_EN,                    
+       OB_RED_EN[3:0],
+       OB_GREEN_EN[3:0],
+       OB_BLUE_EN[3:0],
+       OB_PURPLE_EN[3:0],
+       OB_GALAXY_EN[5:0],
+       OB_DIGIT_EN[3:0],
+       OB_SS_LIVES_EN[3:0],
+       OB_WIN_EN[2:0], 
+       OB_LOSE_EN[3:0],           
        EX_SS_EN,
        EX_B_EN,
+       SS_EN,
        B_EN, 
-       G_EN, 
-       A1_EN, 
-       L_EN, 
-       A2_EN, 
-       X_EN, 
-       Y_EN, 
        SS_ADDRESS[12:0], 
        RA1_ADDRESS[12:0], 
        RA2_ADDRESS[12:0],
@@ -424,13 +543,28 @@ PA3_STATE PURPLE_ALIEN_3(CLK, RESET, EN_SIGNALS[15], PA3_speed[9:0], PA3_motion[
        L_ADDRESS[12:0],
        A2_ADDRESS[12:0],
        X_ADDRESS[12:0],
-       Y_ADDRESS[12:0],   
+       Y_ADDRESS[12:0],
+       D1_ADDRESS[12:0],
+       D2_ADDRESS[12:0], 
+       D3_ADDRESS[12:0], 
+       D4_ADDRESS[12:0],
+       SS_LIVE1_ADDRESS[12:0],
+       SS_LIVE2_ADDRESS[12:0],
+       SS_LIVE3_ADDRESS[12:0],
+       SS_LIVE4_ADDRESS[12:0],
+       W_C_ADDRESS[12:0],
+       I_ADDRESS[12:0],
+       N_ADDRESS[12:0],
+       L2_ADDRESS[12:0],
+       O_ADDRESS[12:0],
+       S_C_ADDRESS[12:0],
+       E_ADDRESS[12:0],
        GRAPHICS_DATA[3:0], 
-       TEXT_DATA[3:0]);
+       TEXT_DATA[3:0],
+       WIN_LOSE_DATA[3:0]);
        
 //Priotity Mux--------------------------------------------------
 
-   
 //ROM graphics & Data Color Decoder------------------------------    
     //module COLOR_DECODER(output reg [3:0] VGA_R, output reg [3:0] VGA_G, output reg [3:0] VGA_B, input [3:0] DATA);
     COLOR_DECODER cd(VGA_R[3:0], VGA_G[3:0], VGA_B[3:0], COR_DATA[3:0], DECODER_EN);
@@ -438,32 +572,12 @@ PA3_STATE PURPLE_ALIEN_3(CLK, RESET, EN_SIGNALS[15], PA3_speed[9:0], PA3_motion[
     Graphics g(CLK, 1, ADDRESS[12:0], GRAPHICS_DATA[3:0]);
     
     Text t(CLK, 1, ADDRESS[12:0], TEXT_DATA[3:0]);
+    
+    WINLOSE WL(CLK, 1, ADDRESS[12:0], WIN_LOSE_DATA[3:0]);
 //ROM graphics & Data Color Decoder------------------------------    
 
-//Collsion Detection--------------------------------------------- 
-//module COLLSION_DETECT(
-//    output reg EN_EX,
-//    output reg EN_SPI, 
-//    input SS_EN, 
-//    input RA1_EN, 
-//    input RA2_EN,
-//    input RA3_EN,
-//    input RA4_EN,
-//    input GA1_EN, 
-//    input GA2_EN,
-//    input GA3_EN,
-//    input GA4_EN,
-//    input BA1_EN, 
-//    input BA2_EN,
-//    input BA3_EN,
-//    input BA4_EN,
-//    input PA1_EN, 
-//    input PA2_EN,
-//    input PA3_EN,
-//    input PA4_EN,
-//    input CLK, 
-//    input RESET);  
-    COLLSION_DETECT ct(EN_SS_COL, EN_SPI, SS_EN, RA1_EN, RA2_EN, RA3_EN, RA4_EN, GA1_EN, GA2_EN, GA3_EN, GA4_EN, BA1_EN, BA2_EN, BA3_EN, BA4_EN, PA1_EN, PA2_EN, PA3_EN, PA4_EN, CLK, RESET);
+//Collsion Detection---------------------------------------------  
+    COLLSION_DETECT ct(EN_SS_COL, EN_SPI, SS_EN, OB_RED_EN[3:0], OB_GREEN_EN[3:0], OB_BLUE_EN[3:0], OB_PURPLE_EN[3:0], CLK, RESET);
 //Collsion Detection---------------------------------------------
    
 //SPI Interface--------------------------------------------------        
@@ -477,44 +591,16 @@ PA3_STATE PURPLE_ALIEN_3(CLK, RESET, EN_SIGNALS[15], PA3_speed[9:0], PA3_motion[
     SPI_DATA_DECODER(SS_BUTTONS[7:0], SS_DIR[9:0], READ, SPI_DATA[39:0], EN_SPI);
 //SPI Interface-------------------------------------------------- 
 
-
-//module TEST_STATE(output reg EN, input MC_EN, input RA1_EN, input B_EN, input RESET, input CLK);
-TEST_STATE ts(EN_B_COL, ENREADA1, EN_SIGNALS[1], RA1_EN, B_EN, RESET, CLK);
-
-//Score Display-------------------------------------------------
-    //module SEG_CLOCK(output reg SIGNAL, input CLK, input RESET);
-    SEG_CLOCK sgcl(SEG_REFRESH, CLK, RESET);
-
-    //module SELECT_COUNTER(output reg [1:0] COUNT, input CLK, input RESET);
-    SELECT_COUNTER ssgc(SEG_COUNT[1:0], SEG_REFRESH, RESET);
-
-    //module DIGIT_SELECT(output reg [3:0] HEX, input [3:0] HEX_1, input [3:0] HEX_2, input [3:0] HEX_3, input [3:0] HEX_4, input [1:0] SE);
-    DIGIT_SELECT(DIGIT[3:0], HEX1[3:0], HEX2[3:0], HEX3[3:0], HEX4[3:0], SEG_COUNT[1:0]);
-
-    //module ANODE_MUX(output reg [7:0] AN, output reg P, input [1:0] SE);
-    ANODE_MUX(AN[7:0], P, SEG_COUNT[1:0]);
-
-    //module SCORE_DECODER(output reg [3:0] DIGIT4, output reg [3:0] DIGIT3, output reg [3:0] DIGIT2, output reg [3:0] DIGIT1, input [31:0] COUNT);
-    SCORE_DECODER(HEX4[3:0], HEX3[3:0], HEX2[3:0], HEX1[3:0], SCORE[31:0]);
-
-    //module SEG_DISPLAY(output reg [6:0] SEG, input [3:0] NUM);
-    SEG_DISPLAY(SEG[6:0], DIGIT[3:0]);
+//Score Display-------------------------------------------------   
+    //module SCORE_ADDRESSS(output [12:0] ADDRESS_D1, output [12:0] ADDRESS_D2, output [12:0] ADDRESS_D3, output [12:0] ADDRESS_D4, input [31:0] COUNT);
+    SCORE_ADDRESSS(ADDRESS_D1[12:0], ADDRESS_D2[12:0], ADDRESS_D3[12:0], ADDRESS_D4[12:0], SCORE[31:0]);
 //Score Display-------------------------------------------------    
-
-
+    assign LED[3:0] = SS_LIVES_EN;
+    assign LED[4] = EN_B_EX;
+//Sound-------------------------------------------------------- 
+    //
+    SOUND S(AUD_PWM, AUD_SD, CLK, RESET, EN_B_EX, EN_SS_COL);  
+//Sound--------------------------------------------------------  
 endmodule
-
-    //module GAME_STATE(output reg [9:0] RA_INT_X_POS, output reg [9:0] RA_INT_Y_POS, output reg [9:0] RA_SCALE, output reg [9:0] RA_X_MOVE_RATE, output reg [9:0] RA_Y_MOVE_RATE, output reg [9:0] RA_DIR, input CLK, input RESET);
-    //GAME_STATE gmra(RA_INT_X_POS[9:0], RA_INT_Y_POS[9:0], RA_SCALE[9:0], RA_X_MOVE_RATE[9:0], RA_Y_MOVE_RATE[9:0], RA_DIR[9:0], CLK, RESET);
     
-    //module TEST_BLUE(output reg [9:0] BA_INT_X_POS, output reg [9:0] BA_INT_Y_POS, output reg [9:0] BA_SCALE, output reg [9:0] BA_X_MOVE_RATE, output reg [9:0] BA_Y_MOVE_RATE, output reg [9:0] BA_DIR, input CLK, input RESET);
-    //TEST_BLUE tsb(BA_INT_X_POS[9:0], BA_INT_Y_POS[9:0], BA_SCALE[9:0], BA_X_MOVE_RATE[9:0], BA_Y_MOVE_RATE[9:0], BA_DIR[9:0], CLK, RESET);
-    
-    //PS2------------------------------------------------------------
-    //    //module PS_INTERFACE(output reg [7:0] DATA, output reg EN, input PS2_CLK, input PS2_DATA, input RESET);
-    //    PS_INTERFACE psi(PS_DATA[7:0], 1, PS2_CLK, PS2_DATA, RESET); 
-          
-    //    //module PS2_DECODER(output reg [9:0] DIR, input [7:0] DATA, input CLK);
-    //    PS2_DECODER ps2d(SS_DIR[9:0], PS_DATA[7:0], UPDATE_SIGNAL);            
-    //PS2------------------------------------------------------------      
     

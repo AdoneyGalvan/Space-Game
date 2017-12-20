@@ -20,21 +20,21 @@
 //////////////////////////////////////////////////////////////////////////////////
 module ONE_SEC_CLOCK(output reg SIGNAL, input CLK, input RESET);
     reg [31:0] COUNT;
-    always @ (posedge CLK)
+    always @ (posedge CLK, posedge RESET)
         begin
-        if (RESET == 1)
+        if(RESET == 1)
             begin
             COUNT <= 0;
             SIGNAL <= 0;
-            end
-        if(COUNT <= 49999999)
-            begin
-            COUNT <= COUNT + 1;
             end
         else if(COUNT == 50000000)
             begin
             COUNT <= 0;
             SIGNAL <= ~SIGNAL;
             end
+          else 
+            begin
+            COUNT <= COUNT + 1;
+            end      
         end     
 endmodule

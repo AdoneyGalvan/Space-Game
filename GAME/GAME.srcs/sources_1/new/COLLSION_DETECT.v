@@ -23,23 +23,11 @@
 module COLLSION_DETECT(
     output reg EN_EX, 
     output reg EN_SPI,
-    input SS_EN, 
-    input RA1_EN, 
-    input RA2_EN,
-    input RA3_EN,
-    input RA4_EN,
-    input GA1_EN, 
-    input GA2_EN,
-    input GA3_EN,
-    input GA4_EN,
-    input BA1_EN, 
-    input BA2_EN,
-    input BA3_EN,
-    input BA4_EN,
-    input PA1_EN, 
-    input PA2_EN,
-    input PA3_EN,
-    input PA4_EN,
+    input SS_EN,
+    input [3:0] OB_RED_EN,
+    input [3:0] OB_GREEN_EN,
+    input [3:0] OB_BLUE_EN,
+    input [3:0] OB_PURPLE_EN, 
     input CLK, 
     input RESET);
     
@@ -59,12 +47,12 @@ module COLLSION_DETECT(
         //module TIMER_25(output reg SIGNAL, input CLK, input RESET, input EN);
         TIMER_25 t(COUNTUP, CLK, RESET, EN_TIMER);
         
-        assign COLLSION = ((SS_EN == 1) && (RA1_EN == 1)) || ((SS_EN == 1) && (RA2_EN == 1)) || ((SS_EN == 1) && (RA3_EN == 1)) || ((SS_EN == 1) && (RA4_EN == 1)) ||
-                          ((SS_EN == 1) && (GA1_EN == 1)) || ((SS_EN == 1) && (GA2_EN == 1)) || ((SS_EN == 1) && (GA3_EN == 1)) || ((SS_EN == 1) && (GA4_EN == 1)) ||
-                          ((SS_EN == 1) && (BA1_EN == 1)) || ((SS_EN == 1) && (BA2_EN == 1)) || ((SS_EN == 1) && (BA3_EN == 1)) || ((SS_EN == 1) && (BA4_EN == 1)) ||
-                          ((SS_EN == 1) && (PA1_EN == 1)) || ((SS_EN == 1) && (PA2_EN == 1)) || ((SS_EN == 1) && (PA3_EN == 1)) || ((SS_EN == 1) && (PA4_EN == 1));
-        
-        always @(posedge CLK)
+        assign COLLSION = ((SS_EN == 1) && (OB_RED_EN[0] == 1)) || ((SS_EN == 1) && (OB_RED_EN[1] == 1)) || ((SS_EN == 1) && (OB_RED_EN[2] == 1)) || ((SS_EN == 1) && (OB_RED_EN[3] == 1)) ||
+                          ((SS_EN == 1) && (OB_GREEN_EN[0] == 1)) || ((SS_EN == 1) && (OB_GREEN_EN[1] == 1)) || ((SS_EN == 1) && (OB_GREEN_EN[2] == 1)) || ((SS_EN == 1) && (OB_GREEN_EN[3] == 1)) ||
+                          ((SS_EN == 1) && (OB_BLUE_EN[0] == 1)) || ((SS_EN == 1) && (OB_BLUE_EN[1] == 1)) || ((SS_EN == 1) && (OB_BLUE_EN[2] == 1)) || ((SS_EN == 1) && (OB_BLUE_EN[3] == 1)) ||
+                          ((SS_EN == 1) && (OB_PURPLE_EN[0] == 1)) || ((SS_EN == 1) && (OB_PURPLE_EN[1] == 1)) || ((SS_EN == 1) && (OB_PURPLE_EN[2] == 1)) || ((SS_EN == 1) && (OB_PURPLE_EN[3] == 1));
+                           
+        always @(posedge CLK, posedge RESET)
             begin
             if(RESET)
                 begin
@@ -112,7 +100,9 @@ module COLLSION_DETECT(
             EN_SPI <= OFF;
             EN_EX <= ON;
             NS <= WAIT;
-            end        
+            end
+  
             endcase
             end    
 endmodule
+

@@ -21,7 +21,7 @@
 
 
 module ONE_SEC_COUNT(output reg [31:0] COUNT, input CLK, input RESET, input EN);
-    always @(posedge CLK)
+    always @(posedge CLK, posedge RESET)
         begin
         if(RESET)
             begin

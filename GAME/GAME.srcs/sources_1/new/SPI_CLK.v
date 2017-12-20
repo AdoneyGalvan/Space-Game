@@ -21,21 +21,21 @@
 module SPI_CLK(output reg SIGNAL, input CLK, input RESET);
         
     reg [31:0] COUNT;
-    always @ (posedge CLK)
+    always @ (posedge CLK, posedge RESET)
         begin
         if (RESET == 1)
             begin
             COUNT <= 0;
             SIGNAL <= 0;
             end
-        if(COUNT <= 1249)
-            begin
-            COUNT <= COUNT + 1;
-            end
         else if(COUNT == 1250)
             begin
             COUNT <= 0;
             SIGNAL <= ~SIGNAL;
+            end            
+        else
+            begin
+            COUNT <= COUNT + 1;
             end
         end     
 endmodule

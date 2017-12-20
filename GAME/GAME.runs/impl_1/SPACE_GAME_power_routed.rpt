@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date             : Wed Dec  6 11:02:43 2017
+| Date             : Tue Dec 19 15:51:34 2017
 | Host             : Adoney running 64-bit major release  (build 9200)
 | Command          : report_power -file SPACE_GAME_power_routed.rpt -pb SPACE_GAME_power_summary_routed.pb -rpx SPACE_GAME_power_routed.rpx
 | Design           : SPACE_GAME
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.142        |
+| Total On-Chip Power (W)  | 0.124        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.045        |
+| Dynamic (W)              | 0.027        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.4         |
@@ -52,19 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.004 |        3 |       --- |             --- |
-| Slice Logic    |     0.013 |     8054 |       --- |             --- |
-|   LUT as Logic |     0.011 |     4805 |     63400 |            7.58 |
-|   CARRY4       |     0.002 |     1341 |     15850 |            8.46 |
-|   Register     |    <0.001 |     1073 |    126800 |            0.85 |
+| Clocks         |     0.006 |        3 |       --- |             --- |
+| Slice Logic    |     0.008 |     8398 |       --- |             --- |
+|   LUT as Logic |     0.007 |     4108 |     63400 |            6.48 |
+|   CARRY4       |    <0.001 |     1133 |     15850 |            7.15 |
+|   Register     |    <0.001 |     1617 |    126800 |            1.28 |
 |   BUFG         |    <0.001 |        5 |        32 |           15.63 |
-|   Others       |     0.000 |      175 |       --- |             --- |
-| Signals        |     0.011 |     6466 |       --- |             --- |
-| Block RAM      |     0.004 |        2 |       135 |            1.48 |
-| DSPs           |    <0.001 |       44 |       240 |           18.33 |
-| I/O            |     0.012 |       45 |       210 |           21.43 |
+|   Others       |     0.000 |      215 |       --- |             --- |
+| Signals        |     0.007 |     5952 |       --- |             --- |
+| Block RAM      |     0.006 |        3 |       135 |            2.22 |
+| I/O            |    <0.001 |       29 |       210 |           13.81 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.142 |          |           |                 |
+| Total          |     0.124 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.048 |       0.033 |      0.015 |
-| Vccaux    |       1.800 |     0.019 |       0.000 |      0.018 |
-| Vcco33    |       3.300 |     0.007 |       0.003 |      0.004 |
+| Vccint    |       1.000 |     0.042 |       0.026 |      0.015 |
+| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
+| Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -143,55 +142,100 @@ Table of Contents
 +----------------------------------------------+-----------+
 | Name                                         | Power (W) |
 +----------------------------------------------+-----------+
-| SPACE_GAME                                   |     0.045 |
-|   A1                                         |     0.000 |
-|   A2                                         |     0.000 |
+| SPACE_GAME                                   |     0.027 |
+|   A1                                         |    <0.001 |
+|   A2                                         |    <0.001 |
 |   BA1                                        |    <0.001 |
 |   BA2                                        |    <0.001 |
 |   BA3                                        |    <0.001 |
+|   BA4                                        |    <0.001 |
+|   BC                                         |    <0.001 |
+|     BA1                                      |    <0.001 |
+|     BA2                                      |    <0.001 |
+|     BA3                                      |    <0.001 |
+|     BA4                                      |    <0.001 |
+|     GA1                                      |    <0.001 |
+|     GA2                                      |    <0.001 |
+|     GA3                                      |    <0.001 |
+|     GA4                                      |    <0.001 |
+|     PA1                                      |    <0.001 |
+|     PA2                                      |    <0.001 |
+|     PA3                                      |    <0.001 |
+|     PA4                                      |    <0.001 |
+|     RA1                                      |    <0.001 |
+|     RA2                                      |    <0.001 |
+|     RA3                                      |    <0.001 |
+|     RA4                                      |    <0.001 |
 |   BLUE_ALIEN_1                               |    <0.001 |
 |     tecl                                     |    <0.001 |
 |   BLUE_ALIEN_2                               |    <0.001 |
 |     tecl                                     |    <0.001 |
 |   BLUE_ALIEN_3                               |    <0.001 |
 |     tecl                                     |    <0.001 |
+|   BLUE_ALIEN_4                               |    <0.001 |
+|     tecl                                     |    <0.001 |
+|   BS                                         |    <0.001 |
+|     t25                                      |    <0.001 |
 |   BULLET                                     |    <0.001 |
 |   EXPLOSION_B                                |    <0.001 |
-|   EXPLOSION_SS                               |     0.000 |
+|   EXPLOSION_SS                               |    <0.001 |
 |   ct                                         |    <0.001 |
 |     t                                        |    <0.001 |
-|   GA1                                        |     0.000 |
+|   GA1                                        |    <0.001 |
 |   GA2                                        |    <0.001 |
-|   GA3                                        |     0.000 |
+|   GA3                                        |    <0.001 |
+|   GA4                                        |    <0.001 |
 |   GC                                         |    <0.001 |
+|     tecl                                     |    <0.001 |
 |   GREEN_ALIEN_1                              |    <0.001 |
-|     nolabel_line35                           |    <0.001 |
+|     nolabel_line37                           |    <0.001 |
 |   GREEN_ALIEN_2                              |    <0.001 |
 |     tecl                                     |    <0.001 |
 |   GREEN_ALIEN_3                              |    <0.001 |
 |     tecl                                     |    <0.001 |
-|   L                                          |     0.000 |
+|   GREEN_ALIEN_4                              |    <0.001 |
+|     tecl                                     |    <0.001 |
+|   GSS                                        |    <0.001 |
+|     tecl                                     |    <0.001 |
+|   L                                          |    <0.001 |
+|   LSA                                        |     0.000 |
 |   PA1                                        |    <0.001 |
 |   PA2                                        |    <0.001 |
 |   PA3                                        |    <0.001 |
+|   PA4                                        |    <0.001 |
 |   PURPLE_ALIEN_1                             |    <0.001 |
 |     tecl                                     |    <0.001 |
 |   PURPLE_ALIEN_2                             |    <0.001 |
 |     tecl                                     |    <0.001 |
 |   PURPLE_ALIEN_3                             |    <0.001 |
 |     tecl                                     |    <0.001 |
+|   PURPLE_ALIEN_4                             |    <0.001 |
+|     tecl                                     |    <0.001 |
 |   RA1                                        |    <0.001 |
 |   RA2                                        |    <0.001 |
-|   RA3                                        |     0.000 |
+|   RA3                                        |    <0.001 |
+|   RA4                                        |    <0.001 |
 |   RED_ALIEN_1                                |    <0.001 |
-|     nolabel_line35                           |    <0.001 |
+|     nolabel_line37                           |    <0.001 |
 |   RED_ALIEN_2                                |    <0.001 |
 |     tecl                                     |    <0.001 |
 |   RED_ALIEN_3                                |    <0.001 |
 |     tecl                                     |    <0.001 |
-|   X                                          |     0.000 |
-|   Y                                          |     0.000 |
-|   G                                          |     0.000 |
+|   RED_ALIEN_4                                |    <0.001 |
+|     tecl                                     |    <0.001 |
+|   S                                          |    <0.001 |
+|   SS_LIVE2                                   |    <0.001 |
+|   WL                                         |     0.002 |
+|     U0                                       |     0.002 |
+|       inst_blk_mem_gen                       |     0.002 |
+|         gnbram.gnativebmg.native_blk_mem_gen |     0.002 |
+|           valid.cstr                         |     0.002 |
+|             ramloop[0].ram.r                 |     0.002 |
+|               prim_init.ram                  |     0.002 |
+|   X                                          |    <0.001 |
+|   Y                                          |    <0.001 |
+|   cd                                         |     0.000 |
+|   G                                          |    <0.001 |
 |   g                                          |     0.002 |
 |     U0                                       |     0.002 |
 |       inst_blk_mem_gen                       |     0.002 |
@@ -199,22 +243,18 @@ Table of Contents
 |           valid.cstr                         |     0.002 |
 |             ramloop[0].ram.r                 |     0.002 |
 |               prim_init.ram                  |     0.002 |
-|   hc                                         |     0.004 |
-|   nolabel_line164                            |    <0.001 |
-|   nolabel_line477                            |     0.000 |
-|   nolabel_line492                            |    <0.001 |
-|   nolabel_line495                            |    <0.001 |
-|   nolabel_line498                            |     0.000 |
-|   nolabel_line501                            |     0.000 |
+|   hc                                         |     0.008 |
+|   nolabel_line210                            |    <0.001 |
+|   nolabel_line591                            |    <0.001 |
+|   nolabel_line596                            |    <0.001 |
+|     sd                                       |    <0.001 |
 |   osc                                        |    <0.001 |
 |   pc                                         |    <0.001 |
-|   pm                                         |     0.009 |
+|   pm                                         |    <0.001 |
 |   sc                                         |    <0.001 |
-|   sgcl                                       |    <0.001 |
 |   spic                                       |    <0.001 |
 |   spiint                                     |    <0.001 |
-|   ss                                         |     0.000 |
-|   ssgc                                       |    <0.001 |
+|   ss                                         |    <0.001 |
 |   t                                          |     0.002 |
 |     U0                                       |     0.002 |
 |       inst_blk_mem_gen                       |     0.002 |
@@ -222,8 +262,6 @@ Table of Contents
 |           valid.cstr                         |     0.002 |
 |             ramloop[0].ram.r                 |     0.002 |
 |               prim_init.ram                  |     0.002 |
-|   ts                                         |    <0.001 |
-|     t                                        |    <0.001 |
 |   vc                                         |    <0.001 |
 +----------------------------------------------+-----------+
 

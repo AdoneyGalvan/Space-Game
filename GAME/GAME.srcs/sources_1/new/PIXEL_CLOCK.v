@@ -24,21 +24,21 @@
 // 100MHz/25MHz = 4 >>>> 4/2 = 2 >>>> 2 - 1 = 1; Reset count value when equal to 1 to get 25MHz clock
 module PIXEL_CLOCK(output reg SIGNAL, input CLK, input RESET);
     reg [2:0] COUNT;
-    always @ (posedge CLK)
+    always @ (posedge CLK, posedge RESET)
         begin
         if (RESET == 1)
             begin
             COUNT <= 0;
             SIGNAL <= 0;
             end
-        if(COUNT <= 0)
-            begin
-            COUNT <= COUNT + 1;
-            end
         else if(COUNT == 1)
             begin
             COUNT <= 0;
             SIGNAL <= ~SIGNAL;
+            end            
+        else
+            begin
+            COUNT <= COUNT + 1;
             end
         end     
 endmodule

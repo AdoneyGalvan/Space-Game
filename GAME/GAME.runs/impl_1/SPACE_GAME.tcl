@@ -77,6 +77,7 @@ set rc [catch {
   add_files -quiet {{C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.runs/synth_1/SPACE_GAME.dcp}}
   read_ip -quiet {{C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/ip/Graphics/Graphics.xci}}
   read_ip -quiet {{C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/ip/Text/Text.xci}}
+  read_ip -quiet {{C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME.srcs/sources_1/ip/WINLOSE/WINLOSE.xci}}
   read_xdc {{C:/Users/AdoneyGalvan/Vivado Projects/GAME/GAME_Constraints.xdc}}
   link_design -top SPACE_GAME -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
@@ -93,7 +94,7 @@ start_step opt_design
 set ACTIVE_STEP opt_design
 set rc [catch {
   create_msg_db opt_design.pb
-  opt_design 
+  opt_design -directive RuntimeOptimized
   write_checkpoint -force SPACE_GAME_opt.dcp
   create_report "impl_1_opt_report_drc_0" "report_drc -file SPACE_GAME_drc_opted.rpt -pb SPACE_GAME_drc_opted.pb -rpx SPACE_GAME_drc_opted.rpx"
   close_msg_db -file opt_design.pb
@@ -130,7 +131,7 @@ start_step route_design
 set ACTIVE_STEP route_design
 set rc [catch {
   create_msg_db route_design.pb
-  route_design 
+  route_design -directive RuntimeOptimized
   write_checkpoint -force SPACE_GAME_routed.dcp
   create_report "impl_1_route_report_drc_0" "report_drc -file SPACE_GAME_drc_routed.rpt -pb SPACE_GAME_drc_routed.pb -rpx SPACE_GAME_drc_routed.rpx"
   create_report "impl_1_route_report_methodology_0" "report_methodology -file SPACE_GAME_methodology_drc_routed.rpt -pb SPACE_GAME_methodology_drc_routed.pb -rpx SPACE_GAME_methodology_drc_routed.rpx"

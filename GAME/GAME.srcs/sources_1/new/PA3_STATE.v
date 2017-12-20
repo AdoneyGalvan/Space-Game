@@ -21,19 +21,21 @@
 
 
 module PA3_STATE(input CLK, input RESET, input EN, output reg [9:0] PA3_speed, output reg [9:0] PA3_motion);
-reg [9:0] CS;
+    reg [9:0] CS;
     reg [9:0] NS;
     
     parameter WAIT =  0;
     parameter DELAY1 = 1;
     parameter DELAY2 = 2;
+    parameter RESET1 = 3;
+    parameter RESET2 = 4;
     
     
      wire COUNTUP;
      reg EN_TIMER;
        //module LONG_TIMER(output reg SIGNAL, input CLK, input RESET, input EN);
      LONG_TIMER tecl(COUNTUP, CLK, RESET, EN_TIMER);
-    always @ (posedge CLK) begin
+    always @ (posedge CLK, posedge RESET) begin
 
         if(RESET)begin
             CS <= WAIT;
@@ -55,41 +57,55 @@ reg [9:0] CS;
         if(EN)
             begin
             NS <= DELAY1;
-            end
-            
+            end        
         else
             begin
             NS <= WAIT;
             end            
         end
+        
         DELAY1:begin
         EN_TIMER <= 1;
         PA3_speed <= 6;
         PA3_motion <= 2;
         if(COUNTUP)
             begin
-            EN_TIMER <= 0;
-            NS <= DELAY2;
+            NS <= RESET1;
             end
         else
             begin
             NS <= DELAY1;
             end    
         end
+        
+        RESET1:begin
+        EN_TIMER <= 0;
+        PA3_speed <= 6;
+        PA3_motion <= 2;
+        NS <= DELAY2;
+        end
+        
         DELAY2:begin
         EN_TIMER <= 1;
         PA3_speed <= 4;
         PA3_motion <= 2;
         if(COUNTUP)
             begin
-            EN_TIMER <= 0;
-            NS <= WAIT;
+            NS <= RESET2;
             end
         else
             begin
             NS <= DELAY2;
             end 
         end
+        
+        RESET2:begin
+        EN_TIMER <= 0;
+        PA3_speed <= 4;
+        PA3_motion <= 2;
+        NS <= WAIT;
+        end
+        
         endcase
         
     end
